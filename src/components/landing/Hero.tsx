@@ -10,7 +10,7 @@ export const Hero = () => {
         <img 
           src={heroImage} 
           alt="Mentoria Acelero" 
-          className="w-full h-full object-cover object-center"
+          className="w-full h-full object-cover object-right"
         />
         <div className="absolute inset-0 bg-primary/60" />
       </div>

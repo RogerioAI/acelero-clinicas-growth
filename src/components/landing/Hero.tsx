@@ -10,9 +10,9 @@ export const Hero = () => {
         <img 
           src={heroImage} 
           alt="Foguete Acelero" 
-          className="w-full h-full object-cover opacity-30"
+          className="w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary-dark/90 to-primary/80" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/85 via-primary-dark/75 to-transparent" />
       </div>
 
       {/* Content */}

@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import heroImage from "@/assets/hero-image.jpg";
+import heroImage from "@/assets/hero-rocket.png";
 
 export const Hero = () => {
   return (
@@ -9,10 +9,10 @@ export const Hero = () => {
       <div className="absolute inset-0 z-0">
         <img 
           src={heroImage} 
-          alt="Clínica profissional" 
-          className="w-full h-full object-cover opacity-20"
+          alt="Foguete Acelero" 
+          className="w-full h-full object-cover opacity-30"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary-dark/95 to-primary/90" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary-dark/90 to-primary/80" />
       </div>
 
       {/* Content */}

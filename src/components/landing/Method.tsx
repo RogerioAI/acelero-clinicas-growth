@@ -1,0 +1,118 @@
+import { Button } from "@/components/ui/button";
+import { Target, Users2, Building2, Trophy, Zap, TrendingUp, Rocket } from "lucide-react";
+
+export const Method = () => {
+  const steps = [
+    {
+      letter: "A",
+      title: "Alinhamento Estratégico",
+      description: "Diagnóstico completo e definição de objetivos claros",
+      icon: Target,
+    },
+    {
+      letter: "C",
+      title: "Captação de Leads",
+      description: "Estruture um funil de prospecção eficiente",
+      icon: Users2,
+    },
+    {
+      letter: "E",
+      title: "Estrutura Comercial",
+      description: "Organize processos e defina papéis claros",
+      icon: Building2,
+    },
+    {
+      letter: "L",
+      title: "Liderança Comercial",
+      description: "Desenvolva líderes que multiplicam resultados",
+      icon: Trophy,
+    },
+    {
+      letter: "E",
+      title: "Engrenagem de Vendas",
+      description: "Implemente processos que funcionam no automático",
+      icon: Zap,
+    },
+    {
+      letter: "R",
+      title: "Rampagem Comercial",
+      description: "Acelere vendas com previsibilidade",
+      icon: TrendingUp,
+    },
+    {
+      letter: "O",
+      title: "Ousadia para Escalar",
+      description: "Expanda com segurança e sustentabilidade",
+      icon: Rocket,
+    },
+  ];
+
+  return (
+    <section className="py-24 bg-gradient-subtle">
+      <div className="container mx-auto px-4">
+        <div className="max-w-6xl mx-auto">
+          {/* Header */}
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+              <span className="text-gold">7 etapas</span> para virar o jogo
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              O método A.C.E.L.E.R.O guia sua clínica do caos ao crescimento sustentável
+            </p>
+          </div>
+
+          {/* Timeline */}
+          <div className="relative">
+            {/* Vertical Line */}
+            <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-primary via-gold to-primary transform md:-translate-x-1/2" />
+
+            {/* Steps */}
+            <div className="space-y-12">
+              {steps.map((step, index) => {
+                const Icon = step.icon;
+                const isEven = index % 2 === 0;
+                
+                return (
+                  <div 
+                    key={index}
+                    className={`relative flex items-center ${
+                      isEven ? "md:flex-row" : "md:flex-row-reverse"
+                    } flex-col md:gap-8`}
+                  >
+                    {/* Content Card */}
+                    <div className={`w-full md:w-5/12 ${isEven ? "md:text-right" : "md:text-left"} mb-4 md:mb-0`}>
+                      <div className="bg-card rounded-2xl p-8 shadow-elegant hover:shadow-lift transition-all duration-300 border border-border">
+                        <div className={`flex items-center gap-4 mb-4 ${isEven ? "md:flex-row-reverse" : ""}`}>
+                          <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                            <Icon className="w-6 h-6 text-primary" />
+                          </div>
+                          <h3 className="text-2xl font-bold text-foreground">{step.title}</h3>
+                        </div>
+                        <p className="text-muted-foreground">{step.description}</p>
+                      </div>
+                    </div>
+
+                    {/* Center Circle */}
+                    <div className="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 w-16 h-16 rounded-full bg-gradient-gold flex items-center justify-center shadow-gold z-10">
+                      <span className="text-2xl font-bold text-gold-foreground">{step.letter}</span>
+                    </div>
+
+                    {/* Spacer for opposite side */}
+                    <div className="hidden md:block w-5/12" />
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* CTA */}
+          <div className="text-center mt-16">
+            <Button variant="cta" size="xl">
+              Quero aplicar o método na minha clínica
+            </Button>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};

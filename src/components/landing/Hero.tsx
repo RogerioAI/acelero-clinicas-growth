@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import heroImage from "@/assets/hero-image.jpg";
-import logo from "@/assets/logo-acelero.png";
 
 export const Hero = () => {
   return (
@@ -19,25 +18,16 @@ export const Hero = () => {
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Logo */}
-          <div className="mb-10 animate-fade-in-up">
-            <img 
-              src={logo} 
-              alt="Acelero" 
-              className="h-20 md:h-24 mx-auto"
-            />
-          </div>
-
           {/* Badge */}
-          <div className="mb-8 animate-fade-in-up [animation-delay:100ms]">
+          <div className="mb-8 animate-fade-in-up">
             <Badge className="bg-cyan text-cyan-foreground px-6 py-2 text-sm font-semibold shadow-cyan">
               Mais de 250 clínicas impactadas
             </Badge>
           </div>
 
           {/* Main Headline */}
-          <h1 className="text-4xl md:text-6xl font-bold text-primary-foreground mb-6 animate-fade-in-up [animation-delay:200ms]">
-            Mentoria Comercial
+          <h1 className="text-5xl md:text-7xl font-bold text-primary-foreground mb-6 animate-fade-in-up [animation-delay:200ms]">
+            Mentoria Comercial <span className="text-cyan">A.C.E.L.E.R.O</span>
           </h1>
 
           {/* Subtitle */}

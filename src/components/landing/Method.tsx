@@ -54,7 +54,7 @@ export const Method = () => {
           {/* Header */}
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              <span className="text-gold">7 etapas</span> para virar o jogo
+              <span className="text-cyan">7 etapas</span> para virar o jogo
             </h2>
             <p className="text-xl text-muted-foreground">
               O método A.C.E.L.E.R.O guia sua clínica do caos ao crescimento sustentável
@@ -64,7 +64,7 @@ export const Method = () => {
           {/* Timeline */}
           <div className="relative">
             {/* Vertical Line */}
-            <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-primary via-gold to-primary transform md:-translate-x-1/2" />
+            <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-primary via-cyan to-primary transform md:-translate-x-1/2" />
 
             {/* Steps */}
             <div className="space-y-12">
@@ -93,8 +93,8 @@ export const Method = () => {
                     </div>
 
                     {/* Center Circle */}
-                    <div className="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 w-16 h-16 rounded-full bg-gradient-gold flex items-center justify-center shadow-gold z-10">
-                      <span className="text-2xl font-bold text-gold-foreground">{step.letter}</span>
+                    <div className="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 w-16 h-16 rounded-full bg-gradient-cyan flex items-center justify-center shadow-cyan z-10">
+                      <span className="text-2xl font-bold text-cyan-foreground">{step.letter}</span>
                     </div>
 
                     {/* Spacer for opposite side */}

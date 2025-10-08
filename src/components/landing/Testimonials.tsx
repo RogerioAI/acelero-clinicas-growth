@@ -33,7 +33,7 @@ export const Testimonials = () => {
           {/* Header */}
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Mais de <span className="text-gold">250 clínicas</span> impactadas
+              Mais de <span className="text-cyan">250 clínicas</span> impactadas
             </h2>
             <p className="text-xl text-muted-foreground">
               Veja o que nossos mentorados têm a dizer sobre os resultados
@@ -48,14 +48,14 @@ export const Testimonials = () => {
                 className="bg-card rounded-2xl p-8 shadow-elegant hover:shadow-lift transition-all duration-300 border border-border relative"
               >
                 {/* Quote Icon */}
-                <div className="absolute -top-4 -left-4 w-12 h-12 bg-gold rounded-full flex items-center justify-center shadow-gold">
-                  <Quote className="w-6 h-6 text-gold-foreground" />
+                <div className="absolute -top-4 -left-4 w-12 h-12 bg-cyan rounded-full flex items-center justify-center shadow-cyan">
+                  <Quote className="w-6 h-6 text-cyan-foreground" />
                 </div>
 
                 {/* Rating */}
                 <div className="flex gap-1 mb-4">
                   {Array.from({ length: testimonial.rating }).map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-gold text-gold" />
+                    <Star key={i} className="w-5 h-5 fill-cyan text-cyan" />
                   ))}
                 </div>
 

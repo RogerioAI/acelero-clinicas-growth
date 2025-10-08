@@ -36,7 +36,7 @@ export const Benefits = () => {
           {/* Header */}
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              O que sua clínica <span className="text-gold">ganha</span> com isso?
+              O que sua clínica <span className="text-cyan">ganha</span> com isso?
             </h2>
             <p className="text-xl text-primary-foreground/80">
               Resultados concretos que transformam a realidade do seu negócio
@@ -50,10 +50,10 @@ export const Benefits = () => {
               return (
                 <div 
                   key={index}
-                  className="bg-primary-light/50 rounded-2xl p-8 border border-gold/20 hover:border-gold/40 transition-all duration-300 hover:shadow-lift"
+                  className="bg-primary-light/50 rounded-2xl p-8 border border-cyan/20 hover:border-cyan/40 transition-all duration-300 hover:shadow-lift"
                 >
-                  <div className="w-14 h-14 rounded-xl bg-gold/20 flex items-center justify-center mb-6">
-                    <Icon className="w-7 h-7 text-gold" />
+                  <div className="w-14 h-14 rounded-xl bg-cyan/20 flex items-center justify-center mb-6">
+                    <Icon className="w-7 h-7 text-cyan" />
                   </div>
                   <h3 className="text-xl font-bold mb-3">{benefit.title}</h3>
                   <p className="text-primary-foreground/80 leading-relaxed">{benefit.description}</p>

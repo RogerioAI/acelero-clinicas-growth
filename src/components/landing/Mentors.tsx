@@ -63,7 +63,7 @@ export const Mentors = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/50 to-transparent" />
                   <div className="absolute bottom-6 left-6 right-6">
                     <h3 className="text-2xl font-bold text-primary-foreground mb-1">{mentor.name}</h3>
-                    <p className="text-gold font-semibold">{mentor.title}</p>
+                    <p className="text-cyan font-semibold">{mentor.title}</p>
                   </div>
                 </div>
 
@@ -74,7 +74,7 @@ export const Mentors = () => {
                   <div className="space-y-3">
                     {mentor.highlights.map((highlight, i) => (
                       <div key={i} className="flex items-center gap-3">
-                        <div className="w-2 h-2 rounded-full bg-gold flex-shrink-0" />
+                        <div className="w-2 h-2 rounded-full bg-cyan flex-shrink-0" />
                         <span className="text-foreground font-medium">{highlight}</span>
                       </div>
                     ))}
@@ -95,8 +95,8 @@ export const Mentors = () => {
                 const Icon = item.icon;
                 return (
                   <div key={index} className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-gold/20 flex items-center justify-center flex-shrink-0">
-                      <Icon className="w-6 h-6 text-gold" />
+                    <div className="w-12 h-12 rounded-xl bg-cyan/20 flex items-center justify-center flex-shrink-0">
+                      <Icon className="w-6 h-6 text-cyan" />
                     </div>
                     <p className="text-lg">{item.text}</p>
                   </div>

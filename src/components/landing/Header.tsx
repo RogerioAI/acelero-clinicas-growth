@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
 import { useState } from "react";
+import logo from "@/assets/logo-acelero.png";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,8 +28,11 @@ export const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold text-gold">A.C.E.L.E.R.O</h1>
-            <p className="text-xs text-primary-foreground/70">by Acelero.vc</p>
+            <img 
+              src={logo} 
+              alt="Acelero" 
+              className="h-10"
+            />
           </div>
 
           {/* Desktop Navigation */}
@@ -37,7 +41,7 @@ export const Header = () => {
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="text-primary-foreground hover:text-gold transition-colors font-medium"
+                className="text-primary-foreground hover:text-cyan transition-colors font-medium"
               >
                 {item.name}
               </button>
@@ -46,7 +50,7 @@ export const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button variant="gold" size="default">
+            <Button variant="cyan" size="default">
               Falar com o time
             </Button>
           </div>
@@ -69,12 +73,12 @@ export const Header = () => {
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
-                  className="text-primary-foreground hover:text-gold transition-colors font-medium text-left py-2"
+                  className="text-primary-foreground hover:text-cyan transition-colors font-medium text-left py-2"
                 >
                   {item.name}
                 </button>
               ))}
-              <Button variant="gold" size="default" className="mt-2">
+              <Button variant="cyan" size="default" className="mt-2">
                 Falar com o time
               </Button>
             </nav>

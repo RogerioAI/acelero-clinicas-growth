@@ -25,10 +25,11 @@ export default {
           light: "hsl(var(--primary-light))",
           dark: "hsl(var(--primary-dark))",
         },
-        gold: {
-          DEFAULT: "hsl(var(--gold))",
-          light: "hsl(var(--gold-light))",
-          foreground: "hsl(var(--gold-foreground))",
+        cyan: {
+          DEFAULT: "hsl(var(--cyan))",
+          light: "hsl(var(--cyan-light))",
+          dark: "hsl(var(--cyan-dark))",
+          foreground: "hsl(var(--cyan-foreground))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -57,12 +58,13 @@ export default {
       },
       backgroundImage: {
         'gradient-hero': 'var(--gradient-hero)',
-        'gradient-gold': 'var(--gradient-gold)',
+        'gradient-cyan': 'var(--gradient-cyan)',
         'gradient-subtle': 'var(--gradient-subtle)',
+        'gradient-dark': 'var(--gradient-dark)',
       },
       boxShadow: {
         'elegant': 'var(--shadow-elegant)',
-        'gold': 'var(--shadow-gold)',
+        'cyan': 'var(--shadow-cyan)',
         'lift': 'var(--shadow-lift)',
       },
       borderRadius: {
@@ -96,8 +98,8 @@ export default {
           "100%": { opacity: "1", transform: "translateX(0)" },
         },
         "glow": {
-          "0%, 100%": { boxShadow: "0 0 20px hsl(43 74% 52% / 0.3)" },
-          "50%": { boxShadow: "0 0 30px hsl(43 74% 52% / 0.6)" },
+          "0%, 100%": { boxShadow: "0 0 20px hsl(185 84% 55% / 0.3)" },
+          "50%": { boxShadow: "0 0 30px hsl(185 84% 55% / 0.6)" },
         },
       },
       animation: {

@@ -49,17 +49,17 @@ export const About = () => {
               return (
                 <div 
                   key={index}
-                  className="flex gap-6 p-8 bg-primary-light/50 rounded-2xl hover:shadow-lift transition-all duration-300 border border-border group"
+                  className="bg-primary-light/50 rounded-2xl p-8 border border-cyan/20 hover:border-cyan/40 transition-all duration-300 hover:shadow-lift flex gap-6"
                   style={{ boxShadow: 'var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)' }}
                 >
                   <div className="flex-shrink-0">
-                    <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                      <Icon className="w-7 h-7 text-primary" />
+                    <div className="w-14 h-14 rounded-xl bg-cyan/20 flex items-center justify-center group-hover:bg-cyan/30 transition-colors">
+                      <Icon className="w-7 h-7 text-cyan" />
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-foreground mb-2">{feature.title}</h3>
-                    <p className="text-muted-foreground">{feature.description}</p>
+                    <h3 className="text-xl font-bold text-primary-foreground mb-2">{feature.title}</h3>
+                    <p className="text-primary-foreground/80">{feature.description}</p>
                   </div>
                 </div>
               );

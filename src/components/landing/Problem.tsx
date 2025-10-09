@@ -34,11 +34,11 @@ export const Problem = () => {
             {problems.map((problem, index) => (
               <div 
                 key={index}
-                className="flex items-start gap-4 p-6 bg-primary-light/50 rounded-xl border border-border hover:shadow-md transition-all duration-300"
+                className="bg-primary-light/50 rounded-xl p-6 border border-cyan/20 hover:border-cyan/40 transition-all duration-300 hover:shadow-lift flex items-start gap-4"
                 style={{ boxShadow: 'var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)' }}
               >
-                <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                <p className="text-left text-foreground font-medium">{problem}</p>
+                <div className="w-2 h-2 rounded-full bg-cyan mt-2 flex-shrink-0" />
+                <p className="text-left text-primary-foreground/90 font-medium">{problem}</p>
               </div>
             ))}
           </div>

@@ -101,7 +101,7 @@ export const Method = () => {
 
                     {/* Center Circle */}
                     <motion.div 
-                      className="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 w-16 h-16 rounded-full flex items-center justify-center shadow-cyan z-10"
+                      className="absolute left-8 md:left-1/2 transform -translate-x-1/2 w-16 h-16 rounded-full flex items-center justify-center shadow-cyan z-10"
                       style={{ backgroundImage: 'linear-gradient(135deg, #17C8D0 0%, #3DD4DB 100%)' }}
                       initial={{ opacity: 0, scale: 0 }}
                       whileInView={{ opacity: 1, scale: 1 }}

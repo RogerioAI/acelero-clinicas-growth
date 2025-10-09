@@ -56,12 +56,12 @@ export const Mentors = () => {
                 className="bg-card rounded-2xl overflow-hidden shadow-elegant hover:shadow-lift transition-all duration-300 border border-border"
               >
                 {/* Image Placeholder */}
-                <div className="h-80 bg-gradient-hero relative overflow-hidden">
+                <div className="h-64 bg-gradient-hero relative overflow-hidden">
                   <img 
                     src={index === 0 ? lucasRochaImage : rogerioCintraImage} 
                     alt={mentor.name}
                     className="w-full h-full object-cover"
-                    style={{ objectPosition: index === 0 ? 'center 20%' : 'center 30%' }}
+                    style={{ objectPosition: index === 0 ? 'center 35%' : 'center 40%' }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent" />
                   <div className="absolute bottom-6 left-6 right-6">

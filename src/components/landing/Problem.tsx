@@ -1,16 +1,12 @@
 import { Button } from "@/components/ui/button";
-import { AlertCircle } from "lucide-react";
-import stagnantRevenue from "@/assets/problem-stagnant-revenue.png";
-import noDirection from "@/assets/problem-no-direction.png";
-import disorganized from "@/assets/problem-disorganized.png";
-import lowConversion from "@/assets/problem-low-conversion.png";
+import { AlertCircle, TrendingDown, Navigation, Shuffle, AlertTriangle } from "lucide-react";
 
 export const Problem = () => {
   const problems = [
-    { text: "Agenda cheia, mas faturamento estagnado", icon: stagnantRevenue },
-    { text: "Equipe comercial sem direção clara", icon: noDirection },
-    { text: "Processos de venda desorganizados", icon: disorganized },
-    { text: "Baixa conversão de orçamentos em vendas", icon: lowConversion },
+    { text: "Agenda cheia, mas faturamento estagnado", icon: TrendingDown },
+    { text: "Equipe comercial sem direção clara", icon: Navigation },
+    { text: "Processos de venda desorganizados", icon: Shuffle },
+    { text: "Baixa conversão de orçamentos em vendas", icon: AlertTriangle },
   ];
 
   return (
@@ -35,24 +31,23 @@ export const Problem = () => {
 
           {/* Problems List */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-            {problems.map((problem, index) => (
-              <div 
-                key={index}
-                className="bg-[#13213e] rounded-xl p-6 border border-cyan/20 hover:border-cyan/40 transition-all duration-300 hover:shadow-lift flex items-start gap-4"
-                style={{ boxShadow: 'var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)' }}
-              >
-                <div className="flex-shrink-0">
-                  <div className="w-14 h-14 rounded-xl bg-cyan/20 flex items-center justify-center group-hover:bg-cyan/30 transition-colors">
-                    <img 
-                      src={problem.icon} 
-                      alt={problem.text}
-                      className="w-8 h-8 object-contain"
-                    />
+            {problems.map((problem, index) => {
+              const Icon = problem.icon;
+              return (
+                <div 
+                  key={index}
+                  className="bg-[#13213e] rounded-xl p-6 border border-cyan/20 hover:border-cyan/40 transition-all duration-300 hover:shadow-lift flex items-start gap-4"
+                  style={{ boxShadow: 'var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)' }}
+                >
+                  <div className="flex-shrink-0">
+                    <div className="w-14 h-14 rounded-xl bg-cyan/20 flex items-center justify-center group-hover:bg-cyan/30 transition-colors">
+                      <Icon className="w-7 h-7 text-cyan" />
+                    </div>
                   </div>
+                  <p className="text-left text-primary-foreground/90 font-medium">{problem.text}</p>
                 </div>
-                <p className="text-left text-primary-foreground/90 font-medium">{problem.text}</p>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
           {/* CTA */}

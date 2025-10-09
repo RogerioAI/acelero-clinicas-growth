@@ -64,19 +64,16 @@ export const Benefits = () => {
           </div>
 
           {/* Centered Last Benefit */}
-          <div className="max-w-5xl mx-auto mt-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div></div>
-              <div 
-                className="rounded-2xl p-8 border border-cyan/20 hover:border-cyan/40 transition-all duration-300 hover:shadow-lift"
-                style={{ backgroundColor: '#13213e' }}
-              >
-                <div className="w-14 h-14 rounded-xl bg-cyan/20 flex items-center justify-center mb-6">
-                  <Award className="w-7 h-7 text-cyan" />
-                </div>
-                <h3 className="text-xl font-bold mb-3 text-white">{benefits[4].title}</h3>
-                <p className="text-white/80 leading-relaxed">{benefits[4].description}</p>
+          <div className="max-w-5xl mx-auto mt-8 flex justify-center">
+            <div 
+              className="rounded-2xl p-8 border border-cyan/20 hover:border-cyan/40 transition-all duration-300 hover:shadow-lift w-full md:w-[calc(50%-1rem)]"
+              style={{ backgroundColor: '#13213e' }}
+            >
+              <div className="w-14 h-14 rounded-xl bg-cyan/20 flex items-center justify-center mb-6">
+                <Award className="w-7 h-7 text-cyan" />
               </div>
+              <h3 className="text-xl font-bold mb-3 text-white">{benefits[4].title}</h3>
+              <p className="text-white/80 leading-relaxed">{benefits[4].description}</p>
             </div>
           </div>
         </div>

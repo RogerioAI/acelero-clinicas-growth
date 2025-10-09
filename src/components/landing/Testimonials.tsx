@@ -30,7 +30,7 @@ export const Testimonials = () => {
           {/* Header */}
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Mais de <span style={{ color: '#00B894' }}>250 clínicas</span> impactadas
+              Mais de <span style={{ color: '#17C8D0' }}>250 clínicas</span> impactadas
             </h2>
             <p className="text-xl text-white/70">
               Veja o que nossos mentorados têm a dizer sobre os resultados
@@ -46,9 +46,9 @@ export const Testimonials = () => {
                 name: "#FFFFFF",
                 designation: "rgba(255, 255, 255, 0.7)",
                 testimony: "#FFFFFF",
-                arrowBackground: "#00B894",
+                arrowBackground: "#17C8D0",
                 arrowForeground: "#FFFFFF",
-                arrowHoverBackground: "#00A07E",
+                arrowHoverBackground: "#13B3BA",
               }}
               fontSizes={{
                 name: "28px",

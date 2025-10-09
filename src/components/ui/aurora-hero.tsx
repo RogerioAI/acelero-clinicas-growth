@@ -9,8 +9,8 @@ import {
   animate,
 } from "framer-motion";
 
-// Colors adapted from the site's design system (cyan variants)
-const COLORS_TOP = ["hsl(185, 84%, 55%)", "hsl(220, 60%, 12%)", "hsl(185, 84%, 65%)", "hsl(185, 84%, 45%)"];
+// Colors adapted from the site's design system - using #17C8D0 (hsl(185, 84%, 45%))
+const COLORS_TOP = ["hsl(185, 84%, 45%)", "hsl(220, 60%, 12%)", "hsl(185, 84%, 40%)", "hsl(185, 84%, 45%)"];
 
 interface AuroraHeroProps {
   badge?: string;

@@ -24,15 +24,15 @@ export const Testimonials = () => {
   ];
 
   return (
-    <section className="py-24 bg-background">
+    <section className="py-24" style={{ backgroundColor: '#0A162D' }}>
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Mais de <span className="text-cyan">250 clínicas</span> impactadas
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+              Mais de <span style={{ color: '#00B894' }}>250 clínicas</span> impactadas
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-xl text-white/70">
               Veja o que nossos mentorados têm a dizer sobre os resultados
             </p>
           </div>
@@ -43,12 +43,12 @@ export const Testimonials = () => {
               testimonials={testimonials}
               autoplay={true}
               colors={{
-                name: "hsl(var(--foreground))",
-                designation: "hsl(var(--muted-foreground))",
-                testimony: "hsl(var(--foreground))",
-                arrowBackground: "hsl(var(--cyan))",
-                arrowForeground: "hsl(var(--cyan-foreground))",
-                arrowHoverBackground: "hsl(var(--primary))",
+                name: "#FFFFFF",
+                designation: "rgba(255, 255, 255, 0.7)",
+                testimony: "#FFFFFF",
+                arrowBackground: "#00B894",
+                arrowForeground: "#FFFFFF",
+                arrowHoverBackground: "#00A07E",
               }}
               fontSizes={{
                 name: "28px",

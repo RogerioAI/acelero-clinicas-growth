@@ -1,28 +1,25 @@
 import { Button } from "@/components/ui/button";
-import { Quote, Star } from "lucide-react";
+import { CircularTestimonials } from "@/components/ui/circular-testimonials";
 
 export const Testimonials = () => {
   const testimonials = [
     {
+      quote: "A mentoria A.C.E.L.E.R.O transformou completamente nossa área comercial. Em 6 meses, aumentamos nosso faturamento em 180% com processos estruturados e uma equipe muito mais preparada.",
       name: "Dra. Natália Palmier",
-      role: "Diretora Clínica",
-      clinic: "Clínica Odontológica Premium",
-      content: "A mentoria A.C.E.L.E.R.O transformou completamente nossa área comercial. Em 6 meses, aumentamos nosso faturamento em 180% com processos estruturados e uma equipe muito mais preparada.",
-      rating: 5,
+      designation: "Diretora Clínica - Clínica Odontológica Premium",
+      src: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?q=80&w=1374&auto=format&fit=crop",
     },
     {
+      quote: "Antes da mentoria, tínhamos muitos leads mas pouca conversão. Hoje temos um funil organizado, equipe treinada e resultados previsíveis. Melhor investimento que fizemos na clínica.",
       name: "Dr. Ricardo Santos",
-      role: "Sócio-Proprietário",
-      clinic: "Clínica Odonto Brasil",
-      content: "Antes da mentoria, tínhamos muitos leads mas pouca conversão. Hoje temos um funil organizado, equipe treinada e resultados previsíveis. Melhor investimento que fizemos na clínica.",
-      rating: 5,
+      designation: "Sócio-Proprietário - Clínica Odonto Brasil",
+      src: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=1470&auto=format&fit=crop",
     },
     {
+      quote: "O método é prático e funciona de verdade. Conseguimos implementar tudo com o suporte dos mentores. Nossa taxa de conversão praticamente dobrou e a equipe está muito mais confiante.",
       name: "Dra. Amanda Costa",
-      role: "Gestora Comercial",
-      clinic: "Studio Dental Class",
-      content: "O método é prático e funciona de verdade. Conseguimos implementar tudo com o suporte dos mentores. Nossa taxa de conversão praticamente dobrou e a equipe está muito mais confiante.",
-      rating: 5,
+      designation: "Gestora Comercial - Studio Dental Class",
+      src: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=1470&auto=format&fit=crop",
     },
   ];
 
@@ -40,52 +37,25 @@ export const Testimonials = () => {
             </p>
           </div>
 
-          {/* Testimonials Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            {testimonials.map((testimonial, index) => (
-              <div 
-                key={index}
-                className="bg-card rounded-2xl p-8 shadow-elegant hover:shadow-lift transition-all duration-300 border border-border relative"
-              >
-                {/* Quote Icon */}
-                <div className="absolute -top-4 -left-4 w-12 h-12 bg-cyan rounded-full flex items-center justify-center shadow-cyan">
-                  <Quote className="w-6 h-6 text-cyan-foreground" />
-                </div>
-
-                {/* Rating */}
-                <div className="flex gap-1 mb-4">
-                  {Array.from({ length: testimonial.rating }).map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-cyan text-cyan" />
-                  ))}
-                </div>
-
-                {/* Content */}
-                <p className="text-foreground mb-6 leading-relaxed italic">
-                  "{testimonial.content}"
-                </p>
-
-                {/* Author */}
-                <div className="border-t border-border pt-4">
-                  <div className="font-bold text-foreground">{testimonial.name}</div>
-                  <div className="text-sm text-muted-foreground">{testimonial.role}</div>
-                  <div className="text-sm text-primary font-semibold mt-1">{testimonial.clinic}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Video Placeholder */}
-          <div className="bg-gradient-subtle rounded-2xl p-12 text-center shadow-elegant border border-border">
-            <div className="max-w-2xl mx-auto">
-              <div className="aspect-video bg-muted rounded-xl mb-6 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                    <div className="w-0 h-0 border-t-8 border-t-transparent border-l-12 border-l-primary-foreground border-b-8 border-b-transparent ml-1" />
-                  </div>
-                  <p className="text-muted-foreground">Depoimentos em vídeo dos mentorados</p>
-                </div>
-              </div>
-            </div>
+          {/* Circular Testimonials */}
+          <div className="flex items-center justify-center mb-16">
+            <CircularTestimonials
+              testimonials={testimonials}
+              autoplay={true}
+              colors={{
+                name: "hsl(var(--foreground))",
+                designation: "hsl(var(--muted-foreground))",
+                testimony: "hsl(var(--foreground))",
+                arrowBackground: "hsl(var(--cyan))",
+                arrowForeground: "hsl(var(--cyan-foreground))",
+                arrowHoverBackground: "hsl(var(--primary))",
+              }}
+              fontSizes={{
+                name: "28px",
+                designation: "18px",
+                quote: "20px",
+              }}
+            />
           </div>
 
           {/* CTA */}

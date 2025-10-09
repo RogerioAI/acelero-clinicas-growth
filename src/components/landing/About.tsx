@@ -49,7 +49,7 @@ export const About = () => {
               return (
                 <div 
                   key={index}
-                  className="flex gap-6 p-8 bg-card rounded-2xl hover:shadow-lift transition-all duration-300 border border-border group"
+                  className="flex gap-6 p-8 bg-primary-light/50 rounded-2xl hover:shadow-lift transition-all duration-300 border border-border group"
                   style={{ boxShadow: 'var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)' }}
                 >
                   <div className="flex-shrink-0">

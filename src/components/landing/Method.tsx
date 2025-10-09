@@ -48,15 +48,15 @@ export const Method = () => {
   ];
 
   return (
-    <section className="py-24 bg-gradient-subtle">
+    <section className="py-24 bg-primary">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
               <span className="text-cyan">7 etapas</span> para virar o jogo
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-xl text-primary-foreground/80">
               O método A.C.E.L.E.R.O guia sua clínica do caos ao crescimento sustentável
             </p>
           </div>
@@ -81,14 +81,14 @@ export const Method = () => {
                   >
                     {/* Content Card */}
                     <div className={`w-full md:w-5/12 ${isEven ? "md:text-right" : "md:text-left"} mb-4 md:mb-0`}>
-                      <div className="bg-card rounded-2xl p-8 shadow-elegant hover:shadow-lift transition-all duration-300 border border-border">
+                      <div className="bg-primary-light/50 rounded-2xl p-8 shadow-elegant hover:shadow-lift transition-all duration-300 border border-cyan/20">
                         <div className={`flex items-center gap-4 mb-4 ${isEven ? "md:flex-row-reverse" : ""}`}>
-                          <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
-                            <Icon className="w-6 h-6 text-primary" />
+                          <div className="w-12 h-12 rounded-xl bg-cyan/20 flex items-center justify-center flex-shrink-0">
+                            <Icon className="w-6 h-6 text-cyan" />
                           </div>
-                          <h3 className="text-2xl font-bold text-foreground">{step.title}</h3>
+                          <h3 className="text-2xl font-bold text-primary-foreground">{step.title}</h3>
                         </div>
-                        <p className="text-muted-foreground">{step.description}</p>
+                        <p className="text-primary-foreground/80">{step.description}</p>
                       </div>
                     </div>
 

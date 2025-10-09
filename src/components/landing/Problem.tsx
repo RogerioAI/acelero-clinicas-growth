@@ -1,12 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { AlertCircle } from "lucide-react";
+import stagnantRevenue from "@/assets/problem-stagnant-revenue.png";
+import noDirection from "@/assets/problem-no-direction.png";
+import disorganized from "@/assets/problem-disorganized.png";
+import lowConversion from "@/assets/problem-low-conversion.png";
 
 export const Problem = () => {
   const problems = [
-    "Agenda cheia, mas faturamento estagnado",
-    "Equipe comercial sem direção clara",
-    "Processos de venda desorganizados",
-    "Baixa conversão de orçamentos em vendas",
+    { text: "Agenda cheia, mas faturamento estagnado", icon: stagnantRevenue },
+    { text: "Equipe comercial sem direção clara", icon: noDirection },
+    { text: "Processos de venda desorganizados", icon: disorganized },
+    { text: "Baixa conversão de orçamentos em vendas", icon: lowConversion },
   ];
 
   return (
@@ -37,8 +41,12 @@ export const Problem = () => {
                 className="bg-[#13213e] rounded-xl p-6 border border-cyan/20 hover:border-cyan/40 transition-all duration-300 hover:shadow-lift flex items-start gap-4"
                 style={{ boxShadow: 'var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)' }}
               >
-                <div className="w-2 h-2 rounded-full bg-cyan mt-2 flex-shrink-0" />
-                <p className="text-left text-primary-foreground/90 font-medium">{problem}</p>
+                <img 
+                  src={problem.icon} 
+                  alt={problem.text}
+                  className="w-12 h-12 flex-shrink-0 object-contain"
+                />
+                <p className="text-left text-primary-foreground/90 font-medium">{problem.text}</p>
               </div>
             ))}
           </div>

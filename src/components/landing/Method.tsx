@@ -65,7 +65,7 @@ export const Method = () => {
           {/* Timeline */}
           <div className="relative">
             {/* Vertical Line */}
-            <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 transform -translate-x-1/2" style={{ backgroundImage: 'linear-gradient(to bottom, hsl(220, 60%, 12%), #17C8D0, hsl(220, 60%, 12%))' }} />
+            <div className="absolute left-[31px] md:left-[calc(50%-1px)] top-0 bottom-0 w-0.5" style={{ backgroundImage: 'linear-gradient(to bottom, hsl(220, 60%, 12%), #17C8D0, hsl(220, 60%, 12%))' }} />
 
             {/* Steps */}
             <div className="space-y-12">
@@ -101,7 +101,7 @@ export const Method = () => {
 
                     {/* Center Circle */}
                     <motion.div 
-                      className="absolute left-8 md:left-1/2 transform -translate-x-1/2 w-16 h-16 rounded-full flex items-center justify-center shadow-cyan z-10"
+                      className="absolute left-0 md:left-[calc(50%-2rem)] w-16 h-16 rounded-full flex items-center justify-center shadow-cyan z-10"
                       style={{ backgroundImage: 'linear-gradient(135deg, #17C8D0 0%, #3DD4DB 100%)' }}
                       initial={{ opacity: 0, scale: 0 }}
                       whileInView={{ opacity: 1, scale: 1 }}

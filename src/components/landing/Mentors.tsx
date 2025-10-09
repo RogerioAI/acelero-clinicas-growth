@@ -33,7 +33,7 @@ export const Mentors = () => {
   ];
 
   return (
-    <section className="py-24 bg-gradient-subtle">
+    <section className="py-24" style={{ backgroundColor: '#F6F7FA' }}>
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Header */}

@@ -25,7 +25,7 @@ export const About = () => {
   ];
 
   return (
-    <section className="py-24" style={{ backgroundColor: '#DDE1E7' }}>
+    <section className="py-24" style={{ backgroundColor: '#F6F7FA' }}>
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Header */}

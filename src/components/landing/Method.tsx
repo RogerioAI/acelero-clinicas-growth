@@ -65,7 +65,7 @@ export const Method = () => {
           {/* Timeline */}
           <div className="relative">
             {/* Vertical Line */}
-            <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-1 transform md:-translate-x-1/2" style={{ backgroundImage: 'linear-gradient(to bottom, hsl(220, 60%, 12%), #17C8D0, hsl(220, 60%, 12%))' }} />
+            <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-1 transform -translate-x-1/2" style={{ backgroundImage: 'linear-gradient(to bottom, hsl(220, 60%, 12%), #17C8D0, hsl(220, 60%, 12%))' }} />
 
             {/* Steps */}
             <div className="space-y-12">

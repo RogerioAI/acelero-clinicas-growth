@@ -34,7 +34,7 @@ export const Problem = () => {
             {problems.map((problem, index) => (
               <div 
                 key={index}
-                className="bg-primary-light/50 rounded-xl p-6 border border-cyan/20 hover:border-cyan/40 transition-all duration-300 hover:shadow-lift flex items-start gap-4"
+                className="bg-[#13213e] rounded-xl p-6 border border-cyan/20 hover:border-cyan/40 transition-all duration-300 hover:shadow-lift flex items-start gap-4"
                 style={{ boxShadow: 'var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)' }}
               >
                 <div className="w-2 h-2 rounded-full bg-cyan mt-2 flex-shrink-0" />

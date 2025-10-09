@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import heroImage from "@/assets/hero-background.png";
+import heroImage from "@/assets/hero-mentors.png";
 
 export const Hero = () => {
   return (
@@ -9,10 +9,10 @@ export const Hero = () => {
       <div className="absolute inset-0 z-0">
         <img 
           src={heroImage} 
-          alt="Mentoria Acelero" 
-          className="w-full h-full object-cover object-right"
+          alt="Mentores Acelero - Lucas e Rogério" 
+          className="w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-primary/60" />
+        <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/80 to-primary/50" />
       </div>
 
       {/* Content */}

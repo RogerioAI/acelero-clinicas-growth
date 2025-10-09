@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
+
 import heroImage from "@/assets/hero-mentors.png";
 
 export const Hero = () => {
@@ -12,19 +12,12 @@ export const Hero = () => {
           alt="Mentores Acelero - Lucas e Rogério" 
           className="w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/80 to-primary/50" />
+        <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/60 to-primary/40" />
       </div>
 
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Badge */}
-          <div className="mb-6 animate-fade-in-up">
-            <Badge className="px-5 py-1.5 text-xs font-semibold shadow-cyan" style={{ backgroundColor: '#17C8D0', color: '#FFFFFF' }}>
-              Mais de 250 clínicas impactadas
-            </Badge>
-          </div>
-
           {/* Main Headline */}
           <h1 className="text-4xl md:text-6xl font-bold text-primary-foreground mb-5 animate-fade-in-up [animation-delay:200ms]">
             Mentoria Comercial <span style={{ color: '#17C8D0' }}>A.C.E.L.E.R.O</span>

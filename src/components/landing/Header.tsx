@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
 import { useState } from "react";
-import logo from "@/assets/logo-acelero.png";
+import logo from "@/assets/logo-acelero-white.png";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,11 +27,12 @@ export const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0 relative group">
+            <div className="absolute inset-0 bg-cyan/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full" />
             <img 
               src={logo} 
               alt="Acelero" 
-              className="h-10"
+              className="h-12 relative z-10 drop-shadow-[0_0_8px_rgba(23,200,208,0.6)] transition-all duration-300 group-hover:drop-shadow-[0_0_12px_rgba(23,200,208,0.8)] group-hover:scale-105"
             />
           </div>
 

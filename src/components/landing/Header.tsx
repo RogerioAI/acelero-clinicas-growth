@@ -32,7 +32,7 @@ export const Header = () => {
             <img 
               src={logo} 
               alt="Acelero" 
-              className="h-12 relative z-10 drop-shadow-[0_0_8px_rgba(23,200,208,0.6)] transition-all duration-300 group-hover:drop-shadow-[0_0_12px_rgba(23,200,208,0.8)] group-hover:scale-105"
+              className="h-16 relative z-10 drop-shadow-[0_0_8px_rgba(23,200,208,0.6)] transition-all duration-300 group-hover:drop-shadow-[0_0_12px_rgba(23,200,208,0.8)] group-hover:scale-105"
             />
           </div>
 

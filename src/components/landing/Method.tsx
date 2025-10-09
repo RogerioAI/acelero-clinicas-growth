@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Target, Users2, Building2, Trophy, Zap, TrendingUp, Rocket } from "lucide-react";
+import { motion } from "framer-motion";
 
 export const Method = () => {
   const steps = [
@@ -80,7 +81,13 @@ export const Method = () => {
                     } flex-col md:gap-8`}
                   >
                     {/* Content Card */}
-                    <div className={`w-full md:w-5/12 ${isEven ? "md:text-right" : "md:text-left"} mb-4 md:mb-0`}>
+                    <motion.div 
+                      className={`w-full md:w-5/12 ${isEven ? "md:text-right" : "md:text-left"} mb-4 md:mb-0`}
+                      initial={{ opacity: 0, x: isEven ? -100 : 100 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true, margin: "-100px" }}
+                      transition={{ duration: 0.6, delay: 0.2 }}
+                    >
                       <div className="bg-primary-light/50 rounded-2xl p-8 shadow-elegant hover:shadow-lift transition-all duration-300 border border-cyan/20">
                         <div className={`flex items-center gap-4 mb-4 ${isEven ? "md:flex-row-reverse" : ""}`}>
                           <div className="w-12 h-12 rounded-xl bg-cyan/20 flex items-center justify-center flex-shrink-0">
@@ -90,12 +97,18 @@ export const Method = () => {
                         </div>
                         <p className="text-primary-foreground/80">{step.description}</p>
                       </div>
-                    </div>
+                    </motion.div>
 
                     {/* Center Circle */}
-                    <div className="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 w-16 h-16 rounded-full bg-gradient-cyan flex items-center justify-center shadow-cyan z-10">
+                    <motion.div 
+                      className="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 w-16 h-16 rounded-full bg-gradient-cyan flex items-center justify-center shadow-cyan z-10"
+                      initial={{ opacity: 0, scale: 0 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      viewport={{ once: true, margin: "-100px" }}
+                      transition={{ duration: 0.5, delay: 0.1 }}
+                    >
                       <span className="text-2xl font-bold text-cyan-foreground">{step.letter}</span>
-                    </div>
+                    </motion.div>
 
                     {/* Spacer for opposite side */}
                     <div className="hidden md:block w-5/12" />

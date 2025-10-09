@@ -1,5 +1,6 @@
 import { Award, TrendingUp, Users, Lightbulb } from "lucide-react";
 import mentorsImage from "@/assets/mentors-team.jpg";
+import lucasRochaImage from "@/assets/lucas-rocha.jpg";
 
 export const Mentors = () => {
   const mentors = [
@@ -54,13 +55,14 @@ export const Mentors = () => {
                 className="bg-card rounded-2xl overflow-hidden shadow-elegant hover:shadow-lift transition-all duration-300 border border-border"
               >
                 {/* Image Placeholder */}
-                <div className="h-64 bg-gradient-hero relative overflow-hidden">
+                <div className="h-80 bg-gradient-hero relative overflow-hidden">
                   <img 
-                    src={mentorsImage} 
+                    src={index === 0 ? lucasRochaImage : mentorsImage} 
                     alt={mentor.name}
-                    className="w-full h-full object-cover opacity-60"
+                    className="w-full h-full object-cover"
+                    style={{ objectPosition: index === 0 ? 'center 20%' : 'center' }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/50 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent" />
                   <div className="absolute bottom-6 left-6 right-6">
                     <h3 className="text-2xl font-bold text-primary-foreground mb-1">{mentor.name}</h3>
                     <p className="text-cyan font-semibold">{mentor.title}</p>

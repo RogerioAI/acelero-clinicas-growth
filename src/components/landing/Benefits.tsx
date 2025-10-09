@@ -35,16 +35,16 @@ export const Benefits = () => {
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-primary">
               O que sua clínica <span className="text-cyan">ganha</span> com isso?
             </h2>
-            <p className="text-xl text-primary-foreground/80">
+            <p className="text-xl text-muted-foreground">
               Resultados concretos que transformam a realidade do seu negócio
             </p>
           </div>
 
           {/* Benefits Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {benefits.map((benefit, index) => {
               const Icon = benefit.icon;
               return (
@@ -56,8 +56,8 @@ export const Benefits = () => {
                   <div className="w-14 h-14 rounded-xl bg-cyan/20 flex items-center justify-center mb-6">
                     <Icon className="w-7 h-7 text-cyan" />
                   </div>
-                  <h3 className="text-xl font-bold mb-3">{benefit.title}</h3>
-                  <p className="text-primary-foreground/80 leading-relaxed">{benefit.description}</p>
+                  <h3 className="text-xl font-bold mb-3 text-white">{benefit.title}</h3>
+                  <p className="text-white/80 leading-relaxed">{benefit.description}</p>
                 </div>
               );
             })}

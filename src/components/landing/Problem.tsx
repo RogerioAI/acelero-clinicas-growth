@@ -41,11 +41,15 @@ export const Problem = () => {
                 className="bg-[#13213e] rounded-xl p-6 border border-cyan/20 hover:border-cyan/40 transition-all duration-300 hover:shadow-lift flex items-start gap-4"
                 style={{ boxShadow: 'var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)' }}
               >
-                <img 
-                  src={problem.icon} 
-                  alt={problem.text}
-                  className="w-12 h-12 flex-shrink-0 object-contain"
-                />
+                <div className="flex-shrink-0">
+                  <div className="w-14 h-14 rounded-xl bg-cyan/20 flex items-center justify-center group-hover:bg-cyan/30 transition-colors">
+                    <img 
+                      src={problem.icon} 
+                      alt={problem.text}
+                      className="w-8 h-8 object-contain"
+                    />
+                  </div>
+                </div>
                 <p className="text-left text-primary-foreground/90 font-medium">{problem.text}</p>
               </div>
             ))}

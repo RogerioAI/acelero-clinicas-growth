@@ -36,7 +36,7 @@ export const Benefits = () => {
           {/* Header */}
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-primary">
-              O que sua clínica <span style={{ color: '#00B894' }}>ganha</span> com isso?
+              O que sua clínica <span style={{ color: '#17C8D0' }}>ganha</span> com isso?
             </h2>
             <p className="text-xl text-muted-foreground">
               Resultados concretos que transformam a realidade do seu negócio

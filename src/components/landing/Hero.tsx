@@ -20,20 +20,20 @@ export const Hero = () => {
         <div className="max-w-4xl mx-auto text-center">
           {/* Badge */}
           <div className="mb-6 animate-fade-in-up">
-            <Badge className="bg-cyan text-cyan-foreground px-5 py-1.5 text-xs font-semibold shadow-cyan">
+            <Badge className="px-5 py-1.5 text-xs font-semibold shadow-cyan" style={{ backgroundColor: '#17C8D0', color: '#FFFFFF' }}>
               Mais de 250 clínicas impactadas
             </Badge>
           </div>
 
           {/* Main Headline */}
           <h1 className="text-4xl md:text-6xl font-bold text-primary-foreground mb-5 animate-fade-in-up [animation-delay:200ms]">
-            Mentoria Comercial <span className="text-cyan">A.C.E.L.E.R.O</span>
+            Mentoria Comercial <span style={{ color: '#17C8D0' }}>A.C.E.L.E.R.O</span>
           </h1>
 
           {/* Subtitle */}
           <p className="text-lg md:text-xl text-primary-foreground/90 mb-10 leading-relaxed animate-fade-in-up [animation-delay:400ms]">
             A mentoria que transforma clínicas desorganizadas em{" "}
-            <span className="text-cyan font-semibold">máquinas de vendas consistentes e previsíveis</span>
+            <span style={{ color: '#17C8D0' }} className="font-semibold">máquinas de vendas consistentes e previsíveis</span>
           </p>
 
           {/* CTA Button */}
@@ -46,15 +46,15 @@ export const Hero = () => {
           {/* Stats */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 animate-fade-in-up [animation-delay:800ms]">
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-cyan mb-1.5">250+</div>
+              <div className="text-3xl md:text-4xl font-bold mb-1.5" style={{ color: '#17C8D0' }}>250+</div>
               <div className="text-sm text-primary-foreground/80">Clínicas Impactadas</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-cyan mb-1.5">15+</div>
+              <div className="text-3xl md:text-4xl font-bold mb-1.5" style={{ color: '#17C8D0' }}>15+</div>
               <div className="text-sm text-primary-foreground/80">Anos de Experiência</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-cyan mb-1.5">100%</div>
+              <div className="text-3xl md:text-4xl font-bold mb-1.5" style={{ color: '#17C8D0' }}>100%</div>
               <div className="text-sm text-primary-foreground/80">Método Validado</div>
             </div>
           </div>
@@ -64,7 +64,7 @@ export const Hero = () => {
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <div className="w-6 h-10 border-2 border-primary-foreground/30 rounded-full flex items-start justify-center p-2">
-          <div className="w-1.5 h-3 bg-cyan rounded-full animate-pulse" />
+          <div className="w-1.5 h-3 rounded-full animate-pulse" style={{ backgroundColor: '#17C8D0' }} />
         </div>
       </div>
     </section>

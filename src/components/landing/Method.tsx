@@ -55,7 +55,7 @@ export const Method = () => {
           {/* Header */}
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
-              <span className="text-cyan">7 etapas</span> para virar o jogo
+              <span style={{ color: '#17C8D0' }}>7 etapas</span> para virar o jogo
             </h2>
             <p className="text-xl text-primary-foreground/80">
               O método A.C.E.L.E.R.O guia sua clínica do caos ao crescimento sustentável
@@ -65,7 +65,7 @@ export const Method = () => {
           {/* Timeline */}
           <div className="relative">
             {/* Vertical Line */}
-            <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-primary via-cyan to-primary transform md:-translate-x-1/2" />
+            <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-1 transform md:-translate-x-1/2" style={{ backgroundImage: 'linear-gradient(to bottom, hsl(220, 60%, 12%), #17C8D0, hsl(220, 60%, 12%))' }} />
 
             {/* Steps */}
             <div className="space-y-12">
@@ -88,10 +88,10 @@ export const Method = () => {
                       viewport={{ once: true, margin: "-100px" }}
                       transition={{ duration: 0.6, delay: 0.2 }}
                     >
-                      <div className="bg-primary-light/50 rounded-2xl p-8 shadow-elegant hover:shadow-lift transition-all duration-300 border border-cyan/20">
+                      <div className="bg-primary-light/50 rounded-2xl p-8 shadow-elegant hover:shadow-lift transition-all duration-300" style={{ borderWidth: '1px', borderColor: 'rgba(23, 200, 208, 0.2)' }}>
                         <div className={`flex items-center gap-4 mb-4 ${isEven ? "md:flex-row-reverse" : ""}`}>
-                          <div className="w-12 h-12 rounded-xl bg-cyan/20 flex items-center justify-center flex-shrink-0">
-                            <Icon className="w-6 h-6 text-cyan" />
+                          <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style={{ backgroundColor: 'rgba(23, 200, 208, 0.2)' }}>
+                            <Icon className="w-6 h-6" style={{ color: '#17C8D0' }} />
                           </div>
                           <h3 className="text-2xl font-bold text-primary-foreground">{step.title}</h3>
                         </div>
@@ -101,13 +101,14 @@ export const Method = () => {
 
                     {/* Center Circle */}
                     <motion.div 
-                      className="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 w-16 h-16 rounded-full bg-gradient-cyan flex items-center justify-center shadow-cyan z-10"
+                      className="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 w-16 h-16 rounded-full flex items-center justify-center shadow-cyan z-10"
+                      style={{ backgroundImage: 'linear-gradient(135deg, #17C8D0 0%, #3DD4DB 100%)' }}
                       initial={{ opacity: 0, scale: 0 }}
                       whileInView={{ opacity: 1, scale: 1 }}
                       viewport={{ once: true, margin: "-100px" }}
                       transition={{ duration: 0.5, delay: 0.1 }}
                     >
-                      <span className="text-2xl font-bold text-cyan-foreground">{step.letter}</span>
+                      <span className="text-2xl font-bold" style={{ color: '#FFFFFF' }}>{step.letter}</span>
                     </motion.div>
 
                     {/* Spacer for opposite side */}

@@ -50,7 +50,8 @@ export const Benefits = () => {
               return (
                 <div 
                   key={index}
-                  className="bg-primary-light/50 rounded-2xl p-8 border border-cyan/20 hover:border-cyan/40 transition-all duration-300 hover:shadow-lift"
+                  className="rounded-2xl p-8 border border-cyan/20 hover:border-cyan/40 transition-all duration-300 hover:shadow-lift"
+                  style={{ backgroundColor: '#13213e' }}
                 >
                   <div className="w-14 h-14 rounded-xl bg-cyan/20 flex items-center justify-center mb-6">
                     <Icon className="w-7 h-7 text-cyan" />

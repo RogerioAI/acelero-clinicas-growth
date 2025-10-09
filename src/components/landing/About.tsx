@@ -38,7 +38,7 @@ export const About = () => {
               A <span className="font-bold text-cyan text-3xl">A.C.E.L.E.R.O</span> é uma mentoria comercial para clínicas da saúde. 
               Ao longo de encontros ao vivo, com ferramentas práticas e suporte de mentores experientes, 
               você vai transformar sua operação comercial em um{" "}
-              <span className="font-semibold text-primary">processo previsível e lucrativo</span>.
+              <span className="font-bold text-primary text-2xl">processo previsível e lucrativo</span>.
             </p>
           </div>
 

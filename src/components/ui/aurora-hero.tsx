@@ -16,7 +16,7 @@ interface AuroraHeroProps {
   badge?: string;
   title: React.ReactNode;
   description: string;
-  buttonText: string;
+  buttonText?: string;
   onButtonClick?: () => void;
 }
 
@@ -63,6 +63,25 @@ export const AuroraHero = ({
             {description}
           </p>
         </div>
+        {buttonText && (
+          <motion.button
+            style={{
+              border,
+              boxShadow,
+            }}
+            whileHover={{
+              scale: 1.015,
+            }}
+            whileTap={{
+              scale: 0.985,
+            }}
+            onClick={onButtonClick}
+            className="group relative flex w-fit items-center gap-2 rounded-full bg-cyan/10 px-6 py-3 text-cyan-light transition-colors hover:bg-cyan/20"
+          >
+            {buttonText}
+            <ArrowRight className="transition-transform group-hover:rotate-45 group-active:-rotate-12" />
+          </motion.button>
+        )}
       </div>
 
       <div className="absolute inset-0 z-0">

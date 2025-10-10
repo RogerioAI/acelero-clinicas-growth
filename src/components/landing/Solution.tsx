@@ -10,7 +10,6 @@ export const Solution = () => {
         </>
       }
       description="A Mentoria A.C.E.L.E.R.O estrutura sua área comercial do zero, com metodologia prática, validada em mais de 250 clínicas no Brasil."
-      buttonText="Entenda o método"
     />
   );
 };

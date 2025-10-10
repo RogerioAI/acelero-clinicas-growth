@@ -16,13 +16,13 @@ export const Mentors = () => {
       ],
     },
     {
-      name: "Rogério Cintra",
+      name: "Rogerio Haboski",
       title: "Executivo de Estratégia",
-      bio: "Executivo com mais de 20 anos de experiência em estratégia, marketing e gestão de clínicas de saúde. Especialista em transformação comercial e escalabilidade.",
+      bio: "Executivo com mais de 20 anos de experiência em estratégia, marketing e gestão de empresas. Especialista em organização de processos.",
       highlights: [
-        "20+ anos de experiência executiva",
-        "Especialista em marketing para saúde",
-        "Expert em escalabilidade de negócios",
+        "20+ anos de experiência administrativa",
+        "Especialista em Finanças e Marketing",
+        "Expert em organização de processos",
       ],
     },
   ];

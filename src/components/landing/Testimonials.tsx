@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { CircularTestimonials } from "@/components/ui/circular-testimonials";
 import nataliaPalmierImage from "@/assets/natalia-palmier.png";
+import ricardoSantosImage from "@/assets/ricardo-santos.png";
 
 export const Testimonials = () => {
   const testimonials = [
@@ -14,7 +15,7 @@ export const Testimonials = () => {
       quote: "Antes da mentoria, tínhamos muitos leads mas pouca conversão. Hoje temos um funil organizado, equipe treinada e resultados previsíveis. Melhor investimento que fizemos na clínica.",
       name: "Dr. Ricardo Santos",
       designation: "Sócio-Proprietário - Clínica Odonto Brasil",
-      src: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=1470&auto=format&fit=crop",
+      src: ricardoSantosImage,
     },
     {
       quote: "O método é prático e funciona de verdade. Conseguimos implementar tudo com o suporte dos mentores. Nossa taxa de conversão praticamente dobrou e a equipe está muito mais confiante.",

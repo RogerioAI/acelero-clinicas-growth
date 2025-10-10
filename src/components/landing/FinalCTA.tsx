@@ -6,7 +6,7 @@ export const FinalCTA = () => {
     "Diagnóstico gratuito da sua operação comercial",
     "Entenda como o método A.C.E.L.E.R.O pode ajudar",
     "Plano personalizado para sua clínica",
-    "Sem compromisso, apenas uma conversa estratégica",
+    "Uma conversa estratégica para enxergar novas oportunidades de crescimento",
   ];
 
   return (

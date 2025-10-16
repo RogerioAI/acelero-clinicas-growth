@@ -101,6 +101,18 @@ export default {
           "0%, 100%": { boxShadow: "0 0 20px hsl(165 100% 36% / 0.3)" },
           "50%": { boxShadow: "0 0 30px hsl(165 100% 36% / 0.6)" },
         },
+        "cinematic-reveal": {
+          "0%": {
+            opacity: "0",
+            transform: "scale(1.08)",
+            filter: "blur(8px)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "scale(1)",
+            filter: "blur(0px)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -110,6 +122,7 @@ export default {
         "scale-in": "scale-in 0.5s ease-out",
         "slide-in-right": "slide-in-right 0.7s ease-out",
         "glow": "glow 2s ease-in-out infinite",
+        "cinematic-reveal": "cinematic-reveal 2.5s cubic-bezier(0.4, 0, 0.2, 1) forwards",
       },
     },
   },

@@ -5,32 +5,33 @@ import heroImage from "@/assets/hero-mentors.png";
 import heroVideo from "@/assets/hero-video.mp4";
 
 export const Hero = () => {
-  const [showVideo, setShowVideo] = useState(true);
+  const [imageOpacity, setImageOpacity] = useState(0);
 
-  const handleVideoEnd = () => {
-    setShowVideo(false);
+  const handleTimeUpdate = (e: React.SyntheticEvent<HTMLVideoElement>) => {
+    const video = e.currentTarget;
+    if (video.currentTime >= 5) {
+      setImageOpacity(1);
+    }
   };
 
   return (
     <section className="relative min-h-screen flex items-end pb-24 overflow-hidden bg-gradient-hero">
       {/* Background Video/Image with Overlay */}
       <div className="absolute inset-0 z-0">
-        {showVideo ? (
-          <video
-            src={heroVideo}
-            autoPlay
-            muted
-            playsInline
-            onEnded={handleVideoEnd}
-            className="w-full h-full object-cover object-center transition-opacity duration-1000"
-          />
-        ) : (
-          <img 
-            src={heroImage} 
-            alt="Mentores Acelero - Lucas e Rogério" 
-            className="w-full h-full object-cover object-center animate-fade-in"
-          />
-        )}
+        <video
+          src={heroVideo}
+          autoPlay
+          muted
+          playsInline
+          onTimeUpdate={handleTimeUpdate}
+          className="w-full h-full object-cover object-center"
+        />
+        <img 
+          src={heroImage} 
+          alt="Mentores Acelero - Lucas e Rogério" 
+          className="w-full h-full object-cover object-center absolute inset-0 transition-opacity duration-[2000ms]"
+          style={{ opacity: imageOpacity }}
+        />
         <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/60 to-primary/40" />
       </div>
 

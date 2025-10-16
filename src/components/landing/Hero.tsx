@@ -1,17 +1,36 @@
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
 
 import heroImage from "@/assets/hero-mentors.png";
+import heroVideo from "@/assets/hero-video.mp4";
 
 export const Hero = () => {
+  const [showVideo, setShowVideo] = useState(true);
+
+  const handleVideoEnd = () => {
+    setShowVideo(false);
+  };
+
   return (
     <section className="relative min-h-screen flex items-end pb-24 overflow-hidden bg-gradient-hero">
-      {/* Background Image with Overlay */}
+      {/* Background Video/Image with Overlay */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src={heroImage} 
-          alt="Mentores Acelero - Lucas e Rogério" 
-          className="w-full h-full object-cover object-center"
-        />
+        {showVideo ? (
+          <video
+            src={heroVideo}
+            autoPlay
+            muted
+            playsInline
+            onEnded={handleVideoEnd}
+            className="w-full h-full object-cover object-center"
+          />
+        ) : (
+          <img 
+            src={heroImage} 
+            alt="Mentores Acelero - Lucas e Rogério" 
+            className="w-full h-full object-cover object-center"
+          />
+        )}
         <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/60 to-primary/40" />
       </div>
 

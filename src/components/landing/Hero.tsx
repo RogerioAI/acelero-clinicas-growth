@@ -22,13 +22,13 @@ export const Hero = () => {
             muted
             playsInline
             onEnded={handleVideoEnd}
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-cover object-center transition-opacity duration-1000"
           />
         ) : (
           <img 
             src={heroImage} 
             alt="Mentores Acelero - Lucas e Rogério" 
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-cover object-center animate-fade-in"
           />
         )}
         <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/60 to-primary/40" />

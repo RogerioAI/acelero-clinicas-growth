@@ -93,9 +93,9 @@ export const CircularTestimonials = ({
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Autoplay
+  // Autoplay - só funciona quando o áudio está mutado
   useEffect(() => {
-    if (autoplay) {
+    if (autoplay && isMuted) {
       autoplayIntervalRef.current = setInterval(() => {
         setActiveIndex((prev) => (prev + 1) % testimonialsLength);
       }, 5000);
@@ -103,7 +103,26 @@ export const CircularTestimonials = ({
     return () => {
       if (autoplayIntervalRef.current) clearInterval(autoplayIntervalRef.current);
     };
-  }, [autoplay, testimonialsLength]);
+  }, [autoplay, testimonialsLength, isMuted]);
+
+  // Monitorar quando o vídeo termina
+  useEffect(() => {
+    const currentVideo = videoRefs.current[activeIndex];
+    if (!currentVideo || isMuted) return;
+
+    const handleVideoEnd = () => {
+      // Quando o vídeo termina com áudio ativo
+      setIsMuted(true); // Muta o áudio
+      // Avança para o próximo depoimento
+      setActiveIndex((prev) => (prev + 1) % testimonialsLength);
+      // O autoplay será retomado automaticamente pelo useEffect do autoplay
+    };
+
+    currentVideo.addEventListener('ended', handleVideoEnd);
+    return () => {
+      currentVideo.removeEventListener('ended', handleVideoEnd);
+    };
+  }, [activeIndex, isMuted, testimonialsLength]);
 
   // Keyboard navigation
   useEffect(() => {
@@ -128,10 +147,28 @@ export const CircularTestimonials = ({
     if (autoplayIntervalRef.current) clearInterval(autoplayIntervalRef.current);
   }, [testimonialsLength]);
 
-  // Toggle mute
+  // Toggle mute - pausa/retoma o autoplay
   const toggleMute = useCallback(() => {
-    setIsMuted((prev) => !prev);
-  }, []);
+    setIsMuted((prev) => {
+      const newMutedState = !prev;
+      
+      // Se estiver ativando o áudio (desmutando), pausa o autoplay
+      if (!newMutedState) {
+        if (autoplayIntervalRef.current) {
+          clearInterval(autoplayIntervalRef.current);
+          autoplayIntervalRef.current = null;
+        }
+      }
+      // Se estiver desativando o áudio (mutando), retoma o autoplay
+      else if (autoplay) {
+        autoplayIntervalRef.current = setInterval(() => {
+          setActiveIndex((current) => (current + 1) % testimonialsLength);
+        }, 5000);
+      }
+      
+      return newMutedState;
+    });
+  }, [autoplay, testimonialsLength]);
 
   // Compute transforms for each image (always show 3: left, center, right)
   function getImageStyle(index: number): React.CSSProperties {

@@ -18,11 +18,6 @@ export const Benefits = () => {
       description: "Da captação ao fechamento, cada etapa otimizada para conversão",
     },
     {
-      icon: Workflow,
-      title: "Processos simples e fáceis de aplicar",
-      description: "Metodologia prática que sua equipe consegue implementar imediatamente",
-    },
-    {
       icon: Award,
       title: "Acompanhamento de um mentor com experiência real",
       description: "Mais de 15 anos de vivência em vendas e gestão comercial para clínicas",
@@ -45,7 +40,7 @@ export const Benefits = () => {
 
           {/* Benefits Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {benefits.slice(0, 4).map((benefit, index) => {
+            {benefits.map((benefit, index) => {
               const Icon = benefit.icon;
               return (
                 <div 
@@ -61,20 +56,6 @@ export const Benefits = () => {
                 </div>
               );
             })}
-          </div>
-
-          {/* Centered Last Benefit */}
-          <div className="max-w-5xl mx-auto mt-8 flex justify-center">
-            <div 
-              className="rounded-2xl p-8 border border-cyan/20 hover:border-cyan/40 transition-all duration-300 hover:shadow-lift w-full md:w-[calc(50%-1rem)]"
-              style={{ backgroundColor: '#13213e' }}
-            >
-              <div className="w-14 h-14 rounded-xl bg-cyan/20 flex items-center justify-center mb-6">
-                <Award className="w-7 h-7 text-cyan" />
-              </div>
-              <h3 className="text-xl font-bold mb-3 text-white">{benefits[4].title}</h3>
-              <p className="text-white/80 leading-relaxed">{benefits[4].description}</p>
-            </div>
           </div>
         </div>
       </div>

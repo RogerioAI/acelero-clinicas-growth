@@ -87,8 +87,7 @@ export const Problem = () => {
 
           {/* Description */}
           <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
-            A maioria das clínicas trava na hora de organizar o comercial. Equipe sem rumo, 
-            vendas mal conduzidas e processos que não funcionam.
+            Mesmo clínicas excelentes tecnicamente sofrem no comercial. E estes são alguns problemas que podem frear as suas vendas.
           </p>
 
           {/* Problems List */}

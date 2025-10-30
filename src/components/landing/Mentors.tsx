@@ -2,6 +2,7 @@ import { Award, TrendingUp, Users, Lightbulb } from "lucide-react";
 import mentorsImage from "@/assets/mentors-team.jpg";
 import lucasRochaImage from "@/assets/lucas-rocha.jpg";
 import rogerioCintraImage from "@/assets/rogerio-cintra.jpg";
+import { Button } from "@/components/ui/button";
 
 export const Mentors = () => {
   const mentors = [
@@ -12,7 +13,7 @@ export const Mentors = () => {
       highlights: [
         "15+ anos em vendas e gestão",
         "Criador do método A.C.E.L.E.R.O",
-        "250+ clínicas mentoradas",
+        "250+ clínicas atendidas",
       ],
     },
     {
@@ -28,10 +29,10 @@ export const Mentors = () => {
   ];
 
   const expertise = [
-    { icon: Award, text: "Experiência comprovada no mercado de saúde" },
-    { icon: TrendingUp, text: "Resultados mensuráveis em centenas de clínicas" },
-    { icon: Users, text: "Metodologia validada na prática" },
-    { icon: Lightbulb, text: "Visão estratégica e execução no campo" },
+    { icon: Award, text: "Método validado em 250+ clínicas" },
+    { icon: TrendingUp, text: "Criação de processos cláros para crescimento crescente" },
+    { icon: Users, text: "Executado por especialistas que respiram vendas" },
+    { icon: Lightbulb, text: "Acompanhamento individualizado com os mentores" },
   ];
 
   return (
@@ -44,7 +45,7 @@ export const Mentors = () => {
               Mentoria com quem vive o <span className="text-primary">campo de batalha</span>
             </h2>
             <p className="text-xl text-muted-foreground">
-              Aprenda com quem realmente entende de vendas para clínicas de saúde
+              Aprenda com quem realmente entende de vendas para clínicas.
             </p>
           </div>
 
@@ -89,7 +90,7 @@ export const Mentors = () => {
 
           {/* Expertise Section */}
           <div className="bg-primary text-primary-foreground rounded-2xl p-12 shadow-lift">
-            <h3 className="text-2xl md:text-3xl font-bold text-center mb-12">
+            <h3 className="text-3xl md:text-4xl font-bold text-center mb-12">
               Por que confiar nesta mentoria?
             </h3>
             
@@ -105,6 +106,17 @@ export const Mentors = () => {
                   </div>
                 );
               })}
+            </div>
+            
+            {/* CTA Button */}
+            <div className="flex justify-center mt-12">
+              <Button 
+                variant="cta" 
+                size="xl"
+                onClick={() => window.open('https://wa.me/5511999999999?text=Quero%20conhecer%20meus%20mentores', '_blank')}
+              >
+                Quero conhecer meus mentores
+              </Button>
             </div>
           </div>
         </div>

@@ -44,14 +44,14 @@ export const Hero = () => {
 
           {/* Subtitle */}
           <p className="text-lg md:text-xl text-primary-foreground/90 mb-10 leading-relaxed animate-fade-in-up [animation-delay:400ms]">
-            A mentoria que transforma clínicas desorganizadas em{" "}
-            <span style={{ color: '#17C8D0' }} className="font-semibold">máquinas de vendas consistentes e previsíveis</span>
+            Deixe de ser mais uma clínica com{" "}
+            <span style={{ color: '#17C8D0' }} className="font-semibold">potencial disperdiçado</span> e atinja os objetivos que sempre sonhou
           </p>
 
           {/* CTA Button */}
           <div className="animate-fade-in-up [animation-delay:600ms]">
             <Button variant="cta" size="lg" className="text-base">
-              Quero organizar as vendas da minha clínica
+              Quero acelerar minhas vendas
             </Button>
           </div>
 

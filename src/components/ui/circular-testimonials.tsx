@@ -6,7 +6,7 @@ import React, {
   useMemo,
   useCallback,
 } from "react";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowLeft, ArrowRight, Volume2, VolumeX } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 interface Testimonial {
@@ -69,9 +69,11 @@ export const CircularTestimonials = ({
   const [hoverPrev, setHoverPrev] = useState(false);
   const [hoverNext, setHoverNext] = useState(false);
   const [containerWidth, setContainerWidth] = useState(1200);
+  const [isMuted, setIsMuted] = useState(true);
 
   const imageContainerRef = useRef<HTMLDivElement>(null);
   const autoplayIntervalRef = useRef<NodeJS.Timeout | null>(null);
+  const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
 
   const testimonialsLength = useMemo(() => testimonials.length, [testimonials]);
   const activeTestimonial = useMemo(
@@ -117,12 +119,19 @@ export const CircularTestimonials = ({
   // Navigation handlers
   const handleNext = useCallback(() => {
     setActiveIndex((prev) => (prev + 1) % testimonialsLength);
+    setIsMuted(true); // Reset mute when changing testimonial
     if (autoplayIntervalRef.current) clearInterval(autoplayIntervalRef.current);
   }, [testimonialsLength]);
   const handlePrev = useCallback(() => {
     setActiveIndex((prev) => (prev - 1 + testimonialsLength) % testimonialsLength);
+    setIsMuted(true); // Reset mute when changing testimonial
     if (autoplayIntervalRef.current) clearInterval(autoplayIntervalRef.current);
   }, [testimonialsLength]);
+
+  // Toggle mute
+  const toggleMute = useCallback(() => {
+    setIsMuted((prev) => !prev);
+  }, []);
 
   // Compute transforms for each image (always show 3: left, center, right)
   function getImageStyle(index: number): React.CSSProperties {
@@ -184,19 +193,57 @@ export const CircularTestimonials = ({
           {testimonials.map((testimonial, index) => {
             const isVideo = testimonial.type === "video" || 
               testimonial.src.match(/\.(mp4|webm|mov)$/i);
+            const isActive = index === activeIndex;
             
             return isVideo ? (
-              <video
-                key={testimonial.src}
-                src={testimonial.src}
-                className="testimonial-image"
-                data-index={index}
-                style={getImageStyle(index)}
-                autoPlay
-                muted
-                loop
-                playsInline
-              />
+              <div key={testimonial.src} style={{ position: 'relative', width: '100%', height: '100%' }}>
+                <video
+                  ref={(el) => (videoRefs.current[index] = el)}
+                  src={testimonial.src}
+                  className="testimonial-image"
+                  data-index={index}
+                  style={getImageStyle(index)}
+                  autoPlay
+                  muted={isMuted}
+                  loop
+                  playsInline
+                />
+                {isActive && (
+                  <button
+                    onClick={toggleMute}
+                    className="audio-toggle-button"
+                    style={{
+                      position: 'absolute',
+                      bottom: '1rem',
+                      right: '1rem',
+                      zIndex: 10,
+                      backgroundColor: 'rgba(0, 0, 0, 0.6)',
+                      border: 'none',
+                      borderRadius: '50%',
+                      width: '3rem',
+                      height: '3rem',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      cursor: 'pointer',
+                      transition: 'all 0.3s',
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.backgroundColor = 'rgba(23, 200, 208, 0.9)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.backgroundColor = 'rgba(0, 0, 0, 0.6)';
+                    }}
+                    aria-label={isMuted ? "Ativar som" : "Desativar som"}
+                  >
+                    {isMuted ? (
+                      <VolumeX size={24} color="#ffffff" />
+                    ) : (
+                      <Volume2 size={24} color="#ffffff" />
+                    )}
+                  </button>
+                )}
+              </div>
             ) : (
               <img
                 key={testimonial.src}

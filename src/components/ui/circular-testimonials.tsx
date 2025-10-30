@@ -196,54 +196,18 @@ export const CircularTestimonials = ({
             const isActive = index === activeIndex;
             
             return isVideo ? (
-              <div key={testimonial.src} style={{ position: 'relative', width: '100%', height: '100%' }}>
-                <video
-                  ref={(el) => (videoRefs.current[index] = el)}
-                  src={testimonial.src}
-                  className="testimonial-image"
-                  data-index={index}
-                  style={getImageStyle(index)}
-                  autoPlay
-                  muted={isMuted}
-                  loop
-                  playsInline
-                />
-                {isActive && (
-                  <button
-                    onClick={toggleMute}
-                    className="audio-toggle-button"
-                    style={{
-                      position: 'absolute',
-                      bottom: '1rem',
-                      right: '1rem',
-                      zIndex: 10,
-                      backgroundColor: 'rgba(0, 0, 0, 0.6)',
-                      border: 'none',
-                      borderRadius: '50%',
-                      width: '3rem',
-                      height: '3rem',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      cursor: 'pointer',
-                      transition: 'all 0.3s',
-                    }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.backgroundColor = 'rgba(23, 200, 208, 0.9)';
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.backgroundColor = 'rgba(0, 0, 0, 0.6)';
-                    }}
-                    aria-label={isMuted ? "Ativar som" : "Desativar som"}
-                  >
-                    {isMuted ? (
-                      <VolumeX size={24} color="#ffffff" />
-                    ) : (
-                      <Volume2 size={24} color="#ffffff" />
-                    )}
-                  </button>
-                )}
-              </div>
+              <video
+                key={testimonial.src}
+                ref={(el) => (videoRefs.current[index] = el)}
+                src={testimonial.src}
+                className="testimonial-image"
+                data-index={index}
+                style={getImageStyle(index)}
+                autoPlay
+                muted={isMuted}
+                loop
+                playsInline
+              />
             ) : (
               <img
                 key={testimonial.src}
@@ -253,6 +217,51 @@ export const CircularTestimonials = ({
                 data-index={index}
                 style={getImageStyle(index)}
               />
+            );
+          })}
+          {/* Audio control button - rendered separately to not break layout */}
+          {testimonials.map((testimonial, index) => {
+            const isVideo = testimonial.type === "video" || 
+              testimonial.src.match(/\.(mp4|webm|mov)$/i);
+            const isActive = index === activeIndex;
+            
+            if (!isVideo || !isActive) return null;
+            
+            return (
+              <button
+                key={`audio-${testimonial.src}`}
+                onClick={toggleMute}
+                className="audio-toggle-button"
+                style={{
+                  position: 'absolute',
+                  bottom: '1rem',
+                  right: '1rem',
+                  zIndex: 10,
+                  backgroundColor: 'rgba(0, 0, 0, 0.6)',
+                  border: 'none',
+                  borderRadius: '50%',
+                  width: '3rem',
+                  height: '3rem',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  cursor: 'pointer',
+                  transition: 'all 0.3s',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = 'rgba(23, 200, 208, 0.9)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = 'rgba(0, 0, 0, 0.6)';
+                }}
+                aria-label={isMuted ? "Ativar som" : "Desativar som"}
+              >
+                {isMuted ? (
+                  <VolumeX size={24} color="#ffffff" />
+                ) : (
+                  <Volume2 size={24} color="#ffffff" />
+                )}
+              </button>
             );
           })}
         </div>

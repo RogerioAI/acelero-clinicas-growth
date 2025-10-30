@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 
 export const Problem = () => {
   const problems = [
-    { text: "Agenda cheia, mas faturamento estagnado", icon: TrendingDown },
-    { text: "Equipe comercial sem direção clara", icon: Navigation },
-    { text: "Processos de venda desorganizados", icon: Shuffle },
-    { text: "Baixa conversão de orçamentos em vendas", icon: AlertTriangle },
+    { text: "Faturamento estagnado", icon: TrendingDown },
+    { text: "Equipe comercial sem resultado", icon: Navigation },
+    { text: "Baixa conversão de vendas", icon: Shuffle },
+    { text: "Não saber vender", icon: AlertTriangle },
   ];
 
   return (
@@ -82,7 +82,7 @@ export const Problem = () => {
 
           {/* Headline */}
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Você atrai pacientes, mas o <span className="text-primary">faturamento não cresce?</span>
+            Você trabalha muito, mas o <span className="text-primary">faturamento não cresce?</span>
           </h2>
 
           {/* Description */}
@@ -98,7 +98,7 @@ export const Problem = () => {
               return (
                 <div 
                   key={index}
-                  className="bg-[#13213e] rounded-xl p-6 border border-cyan/20 hover:border-cyan/40 transition-all duration-300 hover:shadow-lift flex items-start gap-4"
+                  className="bg-[#13213e] rounded-xl p-8 border border-cyan/20 hover:border-cyan/40 transition-all duration-300 hover:shadow-lift flex flex-col items-center justify-center gap-4"
                   style={{ boxShadow: 'var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)' }}
                 >
                   <div className="flex-shrink-0">
@@ -106,7 +106,7 @@ export const Problem = () => {
                       <Icon className="w-7 h-7 text-cyan" />
                     </div>
                   </div>
-                  <p className="text-left text-primary-foreground/90 font-medium">{problem.text}</p>
+                  <p className="text-center text-primary-foreground/90 font-semibold text-lg">{problem.text}</p>
                 </div>
               );
             })}

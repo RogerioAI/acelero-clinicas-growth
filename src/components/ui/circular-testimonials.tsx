@@ -14,6 +14,7 @@ interface Testimonial {
   name: string;
   designation: string;
   src: string;
+  type?: "image" | "video";
 }
 interface Colors {
   name?: string;
@@ -180,16 +181,33 @@ export const CircularTestimonials = ({
       <div className="testimonial-grid">
         {/* Images */}
         <div className="image-container" ref={imageContainerRef}>
-          {testimonials.map((testimonial, index) => (
-            <img
-              key={testimonial.src}
-              src={testimonial.src}
-              alt={testimonial.name}
-              className="testimonial-image"
-              data-index={index}
-              style={getImageStyle(index)}
-            />
-          ))}
+          {testimonials.map((testimonial, index) => {
+            const isVideo = testimonial.type === "video" || 
+              testimonial.src.match(/\.(mp4|webm|mov)$/i);
+            
+            return isVideo ? (
+              <video
+                key={testimonial.src}
+                src={testimonial.src}
+                className="testimonial-image"
+                data-index={index}
+                style={getImageStyle(index)}
+                autoPlay
+                muted
+                loop
+                playsInline
+              />
+            ) : (
+              <img
+                key={testimonial.src}
+                src={testimonial.src}
+                alt={testimonial.name}
+                className="testimonial-image"
+                data-index={index}
+                style={getImageStyle(index)}
+              />
+            );
+          })}
         </div>
         {/* Content */}
         <div className="testimonial-content">

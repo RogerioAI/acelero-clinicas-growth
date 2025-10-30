@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { CircularTestimonials } from "@/components/ui/circular-testimonials";
-import nataliaPalmierImage from "@/assets/natalia-palmier.png";
+import nataliaPalmierVideo from "@/assets/natalia-palmier-video.mp4";
 import ricardoSantosImage from "@/assets/ricardo-santos.png";
 
 export const Testimonials = () => {
@@ -9,7 +9,8 @@ export const Testimonials = () => {
       quote: "A mentoria A.C.E.L.E.R.O transformou completamente nossa área comercial. Em 6 meses, aumentamos nosso faturamento em 180% com processos estruturados e uma equipe muito mais preparada.",
       name: "Dra. Natália Palmier",
       designation: "Diretora Clínica - Clínica Odontológica Premium",
-      src: nataliaPalmierImage,
+      src: nataliaPalmierVideo,
+      type: "video" as const,
     },
     {
       quote: "Antes da mentoria, tínhamos muitos leads mas pouca conversão. Hoje temos um funil organizado, equipe treinada e resultados previsíveis. Melhor investimento que fizemos na clínica.",

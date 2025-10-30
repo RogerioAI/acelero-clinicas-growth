@@ -7,43 +7,43 @@ export const Method = () => {
     {
       letter: "A",
       title: "Alinhamento Estratégico",
-      description: "Diagnóstico completo e definição de objetivos claros",
+      description: "Entender a situação atual e definir os objetivos",
       icon: Target,
     },
     {
       letter: "C",
-      title: "Captação de Leads",
-      description: "Estruture um funil de prospecção eficiente",
+      title: "Captação de Oportunidades",
+      description: "Estruturar funis/canais de vendas",
       icon: Users2,
     },
     {
       letter: "E",
       title: "Estrutura Comercial",
-      description: "Organize processos e defina papéis claros",
+      description: "Organizar processos e definir metas",
       icon: Building2,
     },
     {
       letter: "L",
       title: "Liderança Comercial",
-      description: "Desenvolva líderes que multiplicam resultados",
+      description: "Criar um modelo eficiente para uma gestão comercial",
       icon: Trophy,
     },
     {
       letter: "E",
       title: "Engrenagem de Vendas",
-      description: "Implemente processos que funcionam no automático",
+      description: "Executar processos dentro da sua realidade",
       icon: Zap,
     },
     {
       letter: "R",
       title: "Rampagem Comercial",
-      description: "Acelere vendas com previsibilidade",
+      description: "Acelerar vendas com previsibilidade",
       icon: TrendingUp,
     },
     {
       letter: "O",
       title: "Ousadia para Escalar",
-      description: "Expanda com segurança e sustentabilidade",
+      description: "Quem tem processo, tem liberdade para ousar.",
       icon: Rocket,
     },
   ];
@@ -55,7 +55,7 @@ export const Method = () => {
           {/* Header */}
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
-              <span style={{ color: '#17C8D0' }}>7 etapas</span> para virar o jogo
+              <span style={{ color: '#17C8D0' }}>7 etapas</span> para ACELERAR as suas vendas
             </h2>
             <p className="text-xl text-primary-foreground/80">
               O método A.C.E.L.E.R.O guia sua clínica do caos ao crescimento sustentável

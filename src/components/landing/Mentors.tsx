@@ -29,8 +29,8 @@ export const Mentors = () => {
   ];
 
   const expertise = [
-    { icon: Award, text: "Método validado em 250+ clínicas" },
-    { icon: TrendingUp, text: "Criação de processos cláros para crescimento crescente" },
+    { icon: Award, text: "Método validado em mais de 250 clínicas" },
+    { icon: TrendingUp, text: "Organização comercial que impulsiona crescimento real" },
     { icon: Users, text: "Executado por especialistas que respiram vendas" },
     { icon: Lightbulb, text: "Acompanhamento individualizado com os mentores" },
   ];

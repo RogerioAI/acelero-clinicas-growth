@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import { CircularTestimonials } from "@/components/ui/circular-testimonials";
 import nataliaPalmierVideo from "@/assets/natalia-palmier-video.mp4";
 import brunoThaisVideo from "@/assets/bruno-thais-curattio.mp4";
-import ricardoSantosImage from "@/assets/ricardo-santos.png";
 import alinePreislerImage from "@/assets/aline-preisler.png";
 import laisKeilaImage from "@/assets/lais-keila-viva.jpg";
 
@@ -14,12 +13,6 @@ export const Testimonials = () => {
       designation: "",
       src: nataliaPalmierVideo,
       type: "video" as const,
-    },
-    {
-      quote: "Antes da mentoria, tínhamos muitos leads mas pouca conversão. Hoje temos um funil organizado, equipe treinada e resultados previsíveis. Melhor investimento que fizemos na clínica.",
-      name: "Dr. Ricardo Santos",
-      designation: "Sócio-Proprietário - Clínica Odonto Brasil",
-      src: ricardoSantosImage,
     },
     {
       quote: "Depois que contratamos a Acelero, nossa clínica vive uma nova fase. Os treinamentos foram um divisor de águas para nossa equipe, que agora entende a importância da área comercial. Hoje, sentimos que temos uma direção clara e queremos sempre mais.",

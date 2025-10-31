@@ -7,9 +7,9 @@ import alinePreislerImage from "@/assets/aline-preisler.png";
 export const Testimonials = () => {
   const testimonials = [
     {
-      quote: "A mentoria A.C.E.L.E.R.O transformou completamente nossa área comercial. Em 6 meses, aumentamos nosso faturamento em 180% com processos estruturados e uma equipe muito mais preparada.",
+      quote: "A mentoria A.C.E.L.E.R.O transformou completamente nossa área comercial. E os resultados triplicaram já no primeiro mês e eu só tenho a agradecer.",
       name: "Dra. Natália Palmier",
-      designation: "Diretora Clínica - Clínica Odontológica Premium",
+      designation: "",
       src: nataliaPalmierVideo,
       type: "video" as const,
     },

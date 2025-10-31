@@ -2,32 +2,11 @@ import { Header } from "@/components/landing/Header";
 import { Footer } from "@/components/landing/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { blogPosts } from "@/data/blogPosts";
+import { Link } from "react-router-dom";
+import { Clock } from "lucide-react";
 
 const Blog = () => {
-  // Posts mockados para exemplo
-  const blogPosts = [
-    {
-      id: 1,
-      title: "Como Estruturar o Setor Comercial da Sua Clínica",
-      description: "Descubra os 5 pilares fundamentais para criar um setor comercial eficiente e aumentar sua taxa de conversão.",
-      date: "15 Mar 2024",
-      category: "Gestão Comercial",
-    },
-    {
-      id: 2,
-      title: "Estratégias para Aumentar a Conversão de Leads",
-      description: "Aprenda técnicas validadas que aumentaram a conversão de mais de 250 clínicas em todo o Brasil.",
-      date: "10 Mar 2024",
-      category: "Marketing",
-    },
-    {
-      id: 3,
-      title: "O Poder de um Processo Comercial Bem Definido",
-      description: "Entenda por que sua clínica precisa de processos estruturados antes de investir em mais marketing.",
-      date: "05 Mar 2024",
-      category: "Processos",
-    },
-  ];
 
   return (
     <div className="min-h-screen">
@@ -52,35 +31,43 @@ const Blog = () => {
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
               {blogPosts.map((post) => (
-                <Card key={post.id} className="hover:shadow-lg transition-shadow">
-                  <CardHeader>
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-sm text-cyan font-semibold">
-                        {post.category}
-                      </span>
-                      <span className="text-sm text-muted-foreground">
-                        {post.date}
-                      </span>
+                <Link key={post.id} to={`/blog/${post.slug}`}>
+                  <Card className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1 h-full overflow-hidden">
+                    <div className="relative h-48 overflow-hidden">
+                      <img
+                        src={post.thumbnail}
+                        alt={post.title}
+                        className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                      />
                     </div>
-                    <CardTitle className="text-xl mb-2">{post.title}</CardTitle>
-                    <CardDescription className="text-base">
-                      {post.description}
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <Button variant="outline" className="w-full">
-                      Ler artigo
-                    </Button>
-                  </CardContent>
-                </Card>
+                    <CardHeader>
+                      <div className="flex items-center justify-between mb-3">
+                        <span className="inline-block px-3 py-1 bg-cyan/10 text-cyan text-xs font-semibold rounded-full">
+                          {post.category}
+                        </span>
+                        {post.readTime && (
+                          <div className="flex items-center gap-1 text-xs text-muted-foreground">
+                            <Clock className="w-3 h-3" />
+                            <span>{post.readTime}</span>
+                          </div>
+                        )}
+                      </div>
+                      <CardTitle className="text-xl mb-2 line-clamp-2">{post.title}</CardTitle>
+                      <CardDescription className="text-base line-clamp-3">
+                        {post.excerpt}
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="flex items-center justify-between">
+                        <span className="text-sm text-muted-foreground">{post.date}</span>
+                        <Button variant="outline" className="gap-2">
+                          Ler artigo
+                        </Button>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </Link>
               ))}
-            </div>
-
-            {/* Empty State / Coming Soon */}
-            <div className="text-center mt-12">
-              <p className="text-muted-foreground">
-                Novos artigos em breve...
-              </p>
             </div>
           </div>
         </section>

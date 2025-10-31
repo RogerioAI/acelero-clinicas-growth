@@ -19,9 +19,9 @@ export const Testimonials = () => {
       src: ricardoSantosImage,
     },
     {
-      quote: "O método é prático e funciona de verdade. Conseguimos implementar tudo com o suporte dos mentores. Nossa taxa de conversão praticamente dobrou e a equipe está muito mais confiante.",
-      name: "Dra. Amanda Costa",
-      designation: "Gestora Comercial - Studio Dental Class",
+      quote: "Os treinamentos da Acelero foram um divisor de águas na nossa clínica. Sempre soube que a nossa equipe precisava de mais preparo comercial, mas só depois da Acelero percebi o quanto isso impactava diretamente nos resultados. A cada nova capacitação, enxergamos melhorias reais: mais segurança nas abordagens, processos mais claros e uma equipe muito mais engajada em vender com excelência. Por isso, fiz questão de manter os treinamentos contínuos com a Acelero porque crescimento de verdade exige constância.",
+      name: "Dra. Aline Preisler",
+      designation: "Proprietária da Clínica Preisler Odontologia",
       src: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=1470&auto=format&fit=crop",
     },
   ];

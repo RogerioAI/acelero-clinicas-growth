@@ -23,12 +23,12 @@ export const Testimonials = () => {
     {
       quote: "Depois que contratamos a Acelero, nossa clínica vive uma nova fase. Os treinamentos foram um divisor de águas para nossa equipe, que agora entende a importância da área comercial. Hoje, sentimos que temos uma direção clara e queremos sempre mais.",
       name: "Dra. Aline Preisler",
-      designation: "Proprietária da Clínica Preisler Odontologia",
+      designation: "Preisler Odontologia",
       src: alinePreislerImage,
     },
     {
       quote: "Com certeza, a ajuda do Lucas foi essencial para atingirmos nossas metas. Ter alguém experiente ao lado faz toda a diferença. Sozinhas é muito mais difícil, mas com o suporte da Acelero tudo ficou mais claro e possível.",
-      name: "Dra. Laís Araujo e Dra. Keila Ilse",
+      name: "Dras. Laís Araujo e e Dra. Keila Ilse",
       designation: "Viva Odontologia",
       src: laisKeilaImage,
     },

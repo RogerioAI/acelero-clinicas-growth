@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { CircularTestimonials } from "@/components/ui/circular-testimonials";
 import nataliaPalmierVideo from "@/assets/natalia-palmier-video.mp4";
 import ricardoSantosImage from "@/assets/ricardo-santos.png";
+import alinePreislerImage from "@/assets/aline-preisler.png";
 
 export const Testimonials = () => {
   const testimonials = [
@@ -19,10 +20,10 @@ export const Testimonials = () => {
       src: ricardoSantosImage,
     },
     {
-      quote: "Os treinamentos da Acelero foram um divisor de águas na nossa clínica. Sempre soube que a nossa equipe precisava de mais preparo comercial, mas só depois da Acelero percebi o quanto isso impactava diretamente nos resultados. A cada nova capacitação, enxergamos melhorias reais: mais segurança nas abordagens, processos mais claros e uma equipe muito mais engajada em vender com excelência. Por isso, fiz questão de manter os treinamentos contínuos com a Acelero porque crescimento de verdade exige constância.",
+      quote: "Depois que contratamos a Acelero, nossa clínica vive uma nova fase. Os treinamentos foram um divisor de águas para nossa equipe, que agora entende a importância da área comercial. Hoje, sentimos que temos uma direção clara e queremos sempre mais.",
       name: "Dra. Aline Preisler",
       designation: "Proprietária da Clínica Preisler Odontologia",
-      src: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=1470&auto=format&fit=crop",
+      src: alinePreislerImage,
     },
   ];
 

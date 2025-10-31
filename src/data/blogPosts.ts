@@ -3,6 +3,8 @@ import noShowImage from "@/assets/blog/no-show-clinica.jpg";
 import googleMeuNegocioImage from "@/assets/blog/google-meu-negocio.jpg";
 import whatsappLgpdImage from "@/assets/blog/whatsapp-lgpd.jpg";
 import publicidadeOdontoImage from "@/assets/blog/publicidade-odonto.jpg";
+import telemedicinaImage from "@/assets/blog/telemedicina-fluxo-comercial.jpg";
+import planosPetImage from "@/assets/blog/planos-pet-checkups.jpg";
 
 export const blogPosts: BlogPost[] = [
   {
@@ -230,6 +232,167 @@ O WhatsApp é uma ferramenta poderosa quando usada de forma ética e legal. Com 
 É possível atrair mais pacientes com comunicação ética e profissional. Seguindo as diretrizes do CFO, você constrói autoridade de forma sustentável e sem riscos para sua carreira.
 
 **Precisa revisar suas campanhas?** Nossa mentoria oferece consultoria completa sobre comunicação ética e estratégias de marketing digital para odontologia.
+    `,
+  },
+  {
+    id: 5,
+    title: "Telemedicina na captação e fidelização: fluxo comercial em 7 etapas para clínicas médicas",
+    slug: "telemedicina-captacao-fidelizacao-fluxo-comercial-7-etapas",
+    category: "Processos Comerciais",
+    tags: ["telemedicina", "captação", "fidelização", "fluxo comercial", "mentoria"],
+    metaTitle: "Telemedicina: fluxo comercial em 7 etapas para clínicas médicas",
+    metaDescription: "Descubra como estruturar um fluxo comercial de telemedicina em 7 etapas que melhora captação, experiência e fidelização de pacientes.",
+    thumbnail: telemedicinaImage,
+    excerpt: "Telemedicina não é só tecnologia: é processo. Veja como implementar um fluxo em 7 etapas para captar, atender e fidelizar pacientes com eficiência.",
+    date: "28 Out 2024",
+    readTime: "8 min",
+    content: `
+## A telemedicina como extensão da clínica
+
+A telemedicina deixou de ser uma solução emergencial e passou a integrar o modelo híbrido das clínicas modernas.  
+Hoje, clínicas que unem atendimento remoto com um **fluxo comercial bem estruturado** conseguem captar novos pacientes e manter relacionamento contínuo, reduzindo cancelamentos e aumentando retornos.
+
+---
+
+## O fluxo comercial da telemedicina em 7 etapas
+
+### 1️⃣ Captação de leads qualificados
+
+Use formulários simples no site, landing pages com CTA "Agendar avaliação online" e anúncios direcionados para **sintomas comuns** (ex.: "dor de cabeça frequente", "insônia", "ansiedade").  
+Conecte tudo ao seu CRM para registrar a origem do lead e o estágio no funil.
+
+### 2️⃣ Pré-triagem automatizada
+
+Utilize mensagens no WhatsApp ou formulários curtos para entender o motivo do contato, especialidade desejada e histórico breve.  
+Isso prepara o profissional para uma consulta mais assertiva e aumenta a percepção de cuidado.
+
+### 3️⃣ Agendamento inteligente
+
+Disponibilize horários específicos para teleconsultas, com **integração de pagamento** e envio automático do link da chamada.  
+Use cadência de confirmação: **T-24h e T-3h** (via WhatsApp ou SMS).
+
+### 4️⃣ Atendimento remoto humanizado
+
+Oriente a equipe médica sobre **olhar de câmera**, **escuta ativa** e **clareza de instruções**.  
+Pacientes digitais valorizam objetividade e empatia — o tom da conversa é parte da experiência.
+
+### 5️⃣ Pós-consulta automatizado
+
+Envie instruções de uso de medicações, pedidos de exames, lembretes de retorno e pesquisas de satisfação.  
+Inclua um botão **"Agendar retorno presencial"** quando for necessário acompanhamento físico.
+
+### 6️⃣ Fidelização e programas de cuidado contínuo
+
+Agrupe pacientes por condição ou especialidade e crie **programas de acompanhamento** com contatos mensais ou trimestrais.  
+Ex.: "Programa de acompanhamento para hipertensos" ou "Ciclo de saúde mental".
+
+### 7️⃣ Indicadores e feedbacks
+
+Acompanhe:
+
+- Taxa de adesão às teleconsultas
+- No-show digital
+- Satisfação do paciente (NPS)
+- Retorno agendado
+
+Esses dados mostram o quanto o canal digital realmente contribui para o faturamento.
+
+---
+
+## Benefícios diretos
+
+| Resultado | Impacto |
+|-----------|---------|
+| Redução de faltas | -25% com confirmação ativa |
+| Aumento de retornos | +15% em 60 dias |
+| Maior satisfação | NPS médio acima de 85 |
+| Crescimento sustentável | +20% em receita por paciente ativo |
+
+---
+
+## Conclusão
+
+A telemedicina vai além da tecnologia: exige processos bem definidos para captar, atender e fidelizar. Com as 7 etapas implementadas, sua clínica cria um canal digital que gera resultados concretos e sustentáveis.
+
+**Precisa estruturar seu fluxo de telemedicina?** Nossa mentoria oferece consultoria completa para transformar atendimento remoto em receita previsível.
+    `,
+  },
+  {
+    id: 6,
+    title: "Planos pet e check-ups sazonais: calendário comercial do ano",
+    slug: "planos-pet-checkups-sazonais-calendario-comercial",
+    category: "Marketing & Processos",
+    tags: ["veterinária", "planos pet", "check-up", "fidelização", "marketing veterinário"],
+    metaTitle: "Planos pet e check-ups sazonais: calendário comercial anual",
+    metaDescription: "Aprenda a estruturar planos pet e campanhas sazonais que geram retorno previsível para clínicas veterinárias. Inclui calendário comercial completo.",
+    thumbnail: planosPetImage,
+    excerpt: "Transforme sazonalidade em previsibilidade. Crie planos pet e campanhas de check-up para manter sua clínica cheia o ano inteiro.",
+    date: "20 Out 2024",
+    readTime: "7 min",
+    content: `
+## O desafio da sazonalidade nas clínicas veterinárias
+
+O fluxo de pacientes em clínicas veterinárias costuma oscilar durante o ano.  
+Para evitar meses de baixa, a estratégia ideal é criar **planos de recorrência e campanhas sazonais** que mantenham o tutor próximo e o caixa estável.
+
+---
+
+## Estruturando o plano pet
+
+Um bom plano pet tem três pilares: **previsibilidade, valor e relacionamento**.
+
+### 🐶 Itens essenciais do plano:
+
+- Vacinas anuais (V8, V10, Antirrábica)
+- Check-ups semestrais
+- Descontos em exames e cirurgias
+- Atendimento prioritário
+- Benefícios para múltiplos pets
+
+💡 **Dica:** valorize o benefício "tranquilidade" — o tutor paga menos em emergências e mantém o pet monitorado.
+
+---
+
+## Campanhas sazonais (por trimestre)
+
+| Mês | Campanha | Tema | Ação sugerida |
+|-----|----------|------|---------------|
+| Janeiro–Março | "Verão Saudável" | Parasitas e hidratação | Post + lembrança via WhatsApp |
+| Abril–Junho | "Outono de Vacinas" | Imunização anual | Envio de lembrete automatizado |
+| Julho–Setembro | "Inverno Pet Feliz" | Doenças respiratórias | Check-up preventivo + sorteio |
+| Outubro–Dezembro | "Natal do Pet" | Fidelização e agradecimento | Brindes + campanha solidária |
+
+Cada trimestre mantém a clínica **relevante e presente**, sem parecer "vendedora".
+
+---
+
+## Como conectar planos + calendário no comercial
+
+1️⃣ Crie landing pages simples para adesão online.  
+2️⃣ Cadastre no CRM e monitore vencimentos.  
+3️⃣ Configure lembretes automáticos no WhatsApp (D-30 e D-7).  
+4️⃣ Envie pesquisas rápidas de satisfação após cada consulta.
+
+Esses gatilhos mantêm a **recorrência viva** — e o tutor envolvido com a clínica.
+
+---
+
+## Indicadores para acompanhar
+
+| Indicador | Meta |
+|-----------|------|
+| Adesões ao plano | +10/mês |
+| Taxa de renovação | ≥ 80% |
+| Check-ups realizados | ≥ 90% da base ativa |
+| Engajamento em campanhas | ≥ 70% dos tutores contatados |
+
+---
+
+## Conclusão
+
+Planos pet e campanhas sazonais transformam oscilação em previsibilidade. Com estrutura comercial clara e comunicação constante, sua clínica mantém fluxo estável de pacientes o ano todo.
+
+**Quer implementar planos pet na sua clínica?** Nossa mentoria oferece modelos prontos e estratégias de fidelização veterinária comprovadas.
     `,
   },
 ];

@@ -1,23 +1,44 @@
 import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
 import { useState } from "react";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import logo from "@/assets/logo-acelero-white.png";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const navigation = [
-    { name: "Início", href: "#hero" },
-    { name: "Método", href: "#method" },
-    { name: "Benefícios", href: "#benefits" },
-    { name: "Depoimentos", href: "#testimonials" },
-    { name: "Mentores", href: "#mentors" },
+    { name: "Início", href: "#hero", type: "scroll" },
+    { name: "Método", href: "#method", type: "scroll" },
+    { name: "Benefícios", href: "#benefits", type: "scroll" },
+    { name: "Depoimentos", href: "#testimonials", type: "scroll" },
+    { name: "Mentores", href: "#mentors", type: "scroll" },
+    { name: "Blog", href: "/blog", type: "route" },
   ];
 
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+  const handleNavigation = (item: typeof navigation[0]) => {
+    if (item.type === "route") {
+      navigate(item.href);
+      setIsMenuOpen(false);
+    } else {
+      // Se estiver em outra página, navega para home primeiro
+      if (location.pathname !== "/") {
+        navigate("/");
+        // Aguarda navegação completar antes de fazer scroll
+        setTimeout(() => {
+          const element = document.querySelector(item.href);
+          if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+          }
+        }, 100);
+      } else {
+        const element = document.querySelector(item.href);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }
       setIsMenuOpen(false);
     }
   };
@@ -41,7 +62,7 @@ export const Header = () => {
             {navigation.map((item) => (
               <button
                 key={item.name}
-                onClick={() => scrollToSection(item.href)}
+                onClick={() => handleNavigation(item)}
                 className="text-primary-foreground hover:text-cyan transition-colors font-medium"
               >
                 {item.name}
@@ -73,7 +94,7 @@ export const Header = () => {
               {navigation.map((item) => (
                 <button
                   key={item.name}
-                  onClick={() => scrollToSection(item.href)}
+                  onClick={() => handleNavigation(item)}
                   className="text-primary-foreground hover:text-cyan transition-colors font-medium text-left py-2"
                 >
                   {item.name}

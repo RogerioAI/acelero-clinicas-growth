@@ -3,6 +3,7 @@ import { CircularTestimonials } from "@/components/ui/circular-testimonials";
 import nataliaPalmierVideo from "@/assets/natalia-palmier-video.mp4";
 import ricardoSantosImage from "@/assets/ricardo-santos.png";
 import alinePreislerImage from "@/assets/aline-preisler.png";
+import laisKeilaImage from "@/assets/lais-keila-viva.jpg";
 
 export const Testimonials = () => {
   const testimonials = [
@@ -24,6 +25,12 @@ export const Testimonials = () => {
       name: "Dra. Aline Preisler",
       designation: "Proprietária da Clínica Preisler Odontologia",
       src: alinePreislerImage,
+    },
+    {
+      quote: "Com certeza, a ajuda do Lucas foi essencial para atingirmos nossas metas. Ter alguém experiente ao lado faz toda a diferença. Sozinhas é muito mais difícil, mas com o suporte da Acelero tudo ficou mais claro e possível.",
+      name: "Dra. Laís Araujo e Dra. Keila Ilse",
+      designation: "Viva Odontologia",
+      src: laisKeilaImage,
     },
   ];
 

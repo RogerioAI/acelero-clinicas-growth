@@ -69,7 +69,9 @@ export const CircularTestimonials = ({
   const [hoverPrev, setHoverPrev] = useState(false);
   const [hoverNext, setHoverNext] = useState(false);
   const [containerWidth, setContainerWidth] = useState(1200);
-  const [isMuted, setIsMuted] = useState(true);
+  const [mutedStates, setMutedStates] = useState<boolean[]>(() => 
+    new Array(testimonials.length).fill(true)
+  );
 
   const imageContainerRef = useRef<HTMLDivElement>(null);
   const autoplayIntervalRef = useRef<NodeJS.Timeout | null>(null);
@@ -93,9 +95,23 @@ export const CircularTestimonials = ({
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Autoplay - só funciona quando o áudio está mutado
+  // Sincronizar mutedStates com mudanças no array de testimonials
   useEffect(() => {
-    if (autoplay && isMuted) {
+    setMutedStates((prev) => {
+      const newStates = new Array(testimonials.length).fill(true);
+      // Manter estados existentes quando possível
+      prev.forEach((state, idx) => {
+        if (idx < newStates.length) {
+          newStates[idx] = state;
+        }
+      });
+      return newStates;
+    });
+  }, [testimonials.length]);
+
+  // Autoplay - só funciona quando o vídeo ativo está mutado
+  useEffect(() => {
+    if (autoplay && mutedStates[activeIndex] !== false) {
       autoplayIntervalRef.current = setInterval(() => {
         setActiveIndex((prev) => (prev + 1) % testimonialsLength);
       }, 5000);
@@ -103,16 +119,20 @@ export const CircularTestimonials = ({
     return () => {
       if (autoplayIntervalRef.current) clearInterval(autoplayIntervalRef.current);
     };
-  }, [autoplay, testimonialsLength, isMuted]);
+  }, [autoplay, testimonialsLength, mutedStates, activeIndex]);
 
   // Monitorar quando o vídeo termina
   useEffect(() => {
     const currentVideo = videoRefs.current[activeIndex];
-    if (!currentVideo || isMuted) return;
+    if (!currentVideo || mutedStates[activeIndex]) return;
 
     const handleVideoEnd = () => {
       // Quando o vídeo termina com áudio ativo
-      setIsMuted(true); // Muta o áudio
+      setMutedStates((prev) => {
+        const newStates = [...prev];
+        newStates[activeIndex] = true; // Muta apenas este vídeo
+        return newStates;
+      });
       // Avança para o próximo depoimento
       setActiveIndex((prev) => (prev + 1) % testimonialsLength);
       // O autoplay será retomado automaticamente pelo useEffect do autoplay
@@ -122,7 +142,7 @@ export const CircularTestimonials = ({
     return () => {
       currentVideo.removeEventListener('ended', handleVideoEnd);
     };
-  }, [activeIndex, isMuted, testimonialsLength]);
+  }, [activeIndex, mutedStates, testimonialsLength]);
 
   // Keyboard navigation
   useEffect(() => {
@@ -138,19 +158,19 @@ export const CircularTestimonials = ({
   // Navigation handlers
   const handleNext = useCallback(() => {
     setActiveIndex((prev) => (prev + 1) % testimonialsLength);
-    setIsMuted(true); // Reset mute when changing testimonial
     if (autoplayIntervalRef.current) clearInterval(autoplayIntervalRef.current);
   }, [testimonialsLength]);
   const handlePrev = useCallback(() => {
     setActiveIndex((prev) => (prev - 1 + testimonialsLength) % testimonialsLength);
-    setIsMuted(true); // Reset mute when changing testimonial
     if (autoplayIntervalRef.current) clearInterval(autoplayIntervalRef.current);
   }, [testimonialsLength]);
 
   // Toggle mute - pausa/retoma o autoplay
-  const toggleMute = useCallback(() => {
-    setIsMuted((prev) => {
-      const newMutedState = !prev;
+  const toggleMute = useCallback((videoIndex: number) => {
+    setMutedStates((prev) => {
+      const newStates = [...prev];
+      const newMutedState = !prev[videoIndex];
+      newStates[videoIndex] = newMutedState;
       
       // Se estiver ativando o áudio (desmutando), pausa o autoplay
       if (!newMutedState) {
@@ -160,15 +180,15 @@ export const CircularTestimonials = ({
         }
       }
       // Se estiver desativando o áudio (mutando), retoma o autoplay
-      else if (autoplay) {
+      else if (autoplay && videoIndex === activeIndex) {
         autoplayIntervalRef.current = setInterval(() => {
           setActiveIndex((current) => (current + 1) % testimonialsLength);
         }, 5000);
       }
       
-      return newMutedState;
+      return newStates;
     });
-  }, [autoplay, testimonialsLength]);
+  }, [autoplay, testimonialsLength, activeIndex]);
 
   // Compute transforms for each image (always show 3: left, center, right)
   function getImageStyle(index: number): React.CSSProperties {
@@ -241,7 +261,7 @@ export const CircularTestimonials = ({
                 data-index={index}
                 style={getImageStyle(index)}
                 autoPlay
-                muted={isMuted}
+                muted={mutedStates[index]}
                 loop
                 playsInline
               />
@@ -267,7 +287,7 @@ export const CircularTestimonials = ({
             return (
               <button
                 key={`audio-${testimonial.src}`}
-                onClick={toggleMute}
+                onClick={() => toggleMute(index)}
                 className="audio-toggle-button"
                 style={{
                   position: 'absolute',
@@ -291,9 +311,9 @@ export const CircularTestimonials = ({
                 onMouseLeave={(e) => {
                   e.currentTarget.style.backgroundColor = 'rgba(0, 0, 0, 0.6)';
                 }}
-                aria-label={isMuted ? "Ativar som" : "Desativar som"}
+                aria-label={mutedStates[index] ? "Ativar som" : "Desativar som"}
               >
-                {isMuted ? (
+                {mutedStates[index] ? (
                   <VolumeX size={24} color="#ffffff" />
                 ) : (
                   <Volume2 size={24} color="#ffffff" />

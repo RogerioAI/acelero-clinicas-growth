@@ -28,7 +28,7 @@ export const Testimonials = () => {
     },
     {
       quote: "Com certeza, a ajuda do Lucas foi essencial para atingirmos nossas metas. Ter alguém experiente ao lado faz toda a diferença. Sozinhas é muito mais difícil, mas com o suporte da Acelero tudo ficou mais claro e possível.",
-      name: "Dras. Laís Araujo e e Dra. Keila Ilse",
+      name: "Dras. Laís Araujo e Keila Ilse",
       designation: "Viva Odontologia",
       src: laisKeilaImage,
     },

@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { CircularTestimonials } from "@/components/ui/circular-testimonials";
 import nataliaPalmierVideo from "@/assets/natalia-palmier-video.mp4";
+import brunoThaisVideo from "@/assets/bruno-thais-curattio.mp4";
 import ricardoSantosImage from "@/assets/ricardo-santos.png";
 import alinePreislerImage from "@/assets/aline-preisler.png";
 import laisKeilaImage from "@/assets/lais-keila-viva.jpg";
@@ -31,6 +32,13 @@ export const Testimonials = () => {
       name: "Dras. Laís Araujo e Keila Ilse",
       designation: "Viva Odontologia",
       src: laisKeilaImage,
+    },
+    {
+      quote: "A Acelero revolucionou a forma como administramos nossa clínica e conduzimos nosso marketing. Trouxe clareza, estratégia e nos ajudou a tomar decisões mais assertivas",
+      name: "Dr. Bruno e Dra. Thaís",
+      designation: "Clínica Curattio",
+      src: brunoThaisVideo,
+      type: "video" as const,
     },
   ];
 

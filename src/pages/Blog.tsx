@@ -60,7 +60,7 @@ const Blog = () => {
                     <CardContent>
                       <div className="flex items-center justify-between">
                         <span className="text-sm text-muted-foreground">{post.date}</span>
-                        <Button variant="outline" className="gap-2">
+                        <Button variant="ghost" className="gap-2 hover:text-cyan">
                           Ler artigo
                         </Button>
                       </div>

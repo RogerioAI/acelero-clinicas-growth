@@ -15,7 +15,7 @@ export const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-end pb-24 overflow-hidden bg-gradient-hero">
+    <section className="relative min-h-[calc(100vh-4rem)] flex items-center justify-center pb-16 md:pb-24 pt-24 md:pt-0 overflow-hidden bg-gradient-hero">
       {/* Background Video/Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <video
@@ -35,46 +35,46 @@ export const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-6 md:px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           {/* Main Headline */}
-          <h1 className="text-4xl md:text-6xl font-bold text-primary-foreground mb-5 animate-fade-in-up [animation-delay:200ms]">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-5 animate-fade-in-up [animation-delay:200ms]">
             Mentoria Comercial <span style={{ color: '#17C8D0' }}>A.C.E.L.E.R.O</span>
           </h1>
 
           {/* Subtitle */}
-          <p className="text-lg md:text-xl text-primary-foreground/90 mb-10 leading-relaxed animate-fade-in-up [animation-delay:400ms]">
+          <p className="text-base sm:text-lg md:text-xl text-primary-foreground/90 mb-8 sm:mb-10 leading-relaxed animate-fade-in-up [animation-delay:400ms]">
             Deixe de ser mais uma clínica com{" "}
             <span style={{ color: '#17C8D0' }} className="font-semibold">potencial disperdiçado</span> e atinja os objetivos que sempre sonhou
           </p>
 
           {/* CTA Button */}
           <div className="animate-fade-in-up [animation-delay:600ms]">
-            <Button variant="cta" size="lg" className="text-base">
+            <Button variant="cta" size="default" className="text-sm sm:text-base md:text-lg px-6 py-3 sm:px-8 sm:py-4 md:px-10 h-auto">
               Quero acelerar minhas vendas
             </Button>
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 animate-fade-in-up [animation-delay:800ms]">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 mt-12 sm:mt-14 md:mt-16 animate-fade-in-up [animation-delay:800ms]">
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold mb-1.5" style={{ color: '#17C8D0' }}>250+</div>
-              <div className="text-sm text-primary-foreground/80">Clínicas Impactadas</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold mb-1.5" style={{ color: '#17C8D0' }}>250+</div>
+              <div className="text-xs sm:text-sm text-primary-foreground/80">Clínicas Impactadas</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold mb-1.5" style={{ color: '#17C8D0' }}>15+</div>
-              <div className="text-sm text-primary-foreground/80">Anos de Experiência</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold mb-1.5" style={{ color: '#17C8D0' }}>15+</div>
+              <div className="text-xs sm:text-sm text-primary-foreground/80">Anos de Experiência</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold mb-1.5" style={{ color: '#17C8D0' }}>100%</div>
-              <div className="text-sm text-primary-foreground/80">Método Validado</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold mb-1.5" style={{ color: '#17C8D0' }}>100%</div>
+              <div className="text-xs sm:text-sm text-primary-foreground/80">Método Validado</div>
             </div>
           </div>
         </div>
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce hidden sm:flex">
         <div className="w-6 h-10 border-2 border-primary-foreground/30 rounded-full flex items-start justify-center p-2">
           <div className="w-1.5 h-3 rounded-full animate-pulse" style={{ backgroundColor: '#17C8D0' }} />
         </div>

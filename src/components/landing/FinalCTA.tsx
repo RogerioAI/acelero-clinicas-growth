@@ -25,27 +25,27 @@ export const FinalCTA = () => {
           </div>
 
           {/* Headline */}
-          <h2 className="text-4xl md:text-6xl font-bold mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             Quer ACELERAR as vendas da sua clínica?
           </h2>
 
           {/* Description */}
-          <p className="text-xl md:text-2xl text-primary-foreground/90 mb-12 leading-relaxed">
+          <p className="text-lg sm:text-xl md:text-2xl text-primary-foreground/90 mb-12 leading-relaxed">
             Agende uma seção exclusiva e descubra como o Método A.C.E.L.E.R.O irá transformar a sua realidade comercial
           </p>
 
           {/* Features List */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12 max-w-2xl mx-auto">
+          <div className="grid grid-cols-1 gap-3 sm:gap-4 md:grid-cols-2 mb-12 max-w-2xl mx-auto">
             {features.map((feature, index) => (
               <div key={index} className="flex items-center gap-3 text-left">
-                <CheckCircle2 className="w-6 h-6 flex-shrink-0" style={{ color: '#17C8D0' }} />
-                <span className="text-primary-foreground/90">{feature}</span>
+                <CheckCircle2 className="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" style={{ color: '#17C8D0' }} />
+                <span className="text-sm sm:text-base text-primary-foreground/90">{feature}</span>
               </div>
             ))}
           </div>
 
           {/* CTA Button */}
-          <Button variant="cta" size="xl" className="text-xl">
+          <Button variant="cta" size="default" className="text-base sm:text-lg md:text-xl px-8 py-4 sm:px-10 sm:py-5 md:px-12 h-auto touch-manipulation">
             SIM eu quero
           </Button>
         </div>

@@ -19,7 +19,7 @@ const buttonVariants = cva(
           cta: "text-white shadow-cyan hover:shadow-lift hover:scale-105 animate-glow font-bold",
         },
       size: {
-        default: "h-12 px-6 py-3",
+        default: "h-12 px-6 py-3 min-h-[44px]",
         sm: "h-9 rounded-md px-4",
         lg: "h-14 rounded-lg px-10 text-base",
         xl: "h-16 rounded-xl px-12 text-lg",

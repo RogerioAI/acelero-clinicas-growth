@@ -46,14 +46,14 @@ export const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-sm border-b border-primary-foreground/10">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <div className="flex-shrink-0 relative group">
             <div className="absolute inset-0 bg-cyan/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full" />
             <img 
               src={logo} 
               alt="Acelero" 
-              className="h-16 relative z-10 drop-shadow-[0_0_8px_rgba(23,200,208,0.6)] transition-all duration-300 group-hover:drop-shadow-[0_0_12px_rgba(23,200,208,0.8)] group-hover:scale-105"
+              className="h-12 md:h-16 relative z-10 drop-shadow-[0_0_8px_rgba(23,200,208,0.6)] transition-all duration-300 group-hover:drop-shadow-[0_0_12px_rgba(23,200,208,0.8)] group-hover:scale-105"
             />
           </div>
 
@@ -89,18 +89,18 @@ export const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-primary-foreground/10">
-            <nav className="flex flex-col gap-4">
+          <div className="md:hidden py-4 border-t border-primary-foreground/10 max-h-[calc(100vh-4rem)] overflow-y-auto">
+            <nav className="flex flex-col gap-4 px-2">
               {navigation.map((item) => (
                 <button
                   key={item.name}
                   onClick={() => handleNavigation(item)}
-                  className="text-primary-foreground hover:text-cyan transition-colors font-medium text-left py-2"
+                  className="text-primary-foreground hover:text-cyan transition-colors font-medium text-left py-2 touch-manipulation"
                 >
                   {item.name}
                 </button>
               ))}
-              <Button variant="cyan" size="default" className="mt-2">
+              <Button variant="cyan" size="default" className="mt-2 touch-manipulation">
                 Falar com o time
               </Button>
             </nav>

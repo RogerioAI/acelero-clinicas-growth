@@ -109,13 +109,17 @@ O algoritmo local considera três pilares:
 
 ## Reviews: o ouro do ranqueamento
 
-Peça feedback no momento certo — até 48h após o atendimento.
+Peça feedback no momento certo: até 48h após o atendimento.
 
 **Script (WhatsApp):**
 
-> Oi [Nome], tudo bem? 😊 Sua opinião nos ajuda muito! Pode avaliar nossa clínica neste link? [link]
+> Oi, [nome]! Tudo bem? 😊
+> Aqui é da [nome da clínica]. Ficamos muito felizes em ter você com a gente hoje!
+> Se o atendimento te deixou satisfeito, você pode deixar sua avaliação no Google?
+> Ajuda bastante o nosso trabalho e inspira outras pessoas a cuidarem do sorriso também 🦷💙
+> ➡️ [link da avaliação]
 
-📈 **Dica:** responda todas as avaliações, inclusive as 4 estrelas — mostram atenção genuína.
+📈 **Dica:** responda todas as avaliações, inclusive as 4 estrelas: mostram atenção genuína.
 
 ## Perguntas & Respostas
 
@@ -128,60 +132,165 @@ Peça feedback no momento certo — até 48h após o atendimento.
 
 Um perfil bem otimizado no Google Meu Negócio não só aumenta sua visibilidade local, mas também estabelece confiança antes mesmo do primeiro contato. Dedique 20 minutos por semana para manter seu perfil atualizado e ativo.
 
-**Precisa de ajuda para otimizar seu perfil?** Nossa mentoria oferece análise completa e estratégias personalizadas para sua clínica aparecer na frente dos concorrentes.
+**Precisa estruturar o comercial da sua clínica?**  
+Nossa mentoria oferece acompanhamento completo em gestão de vendas, atendimento e posicionamento comercial, para transformar seu fluxo de pacientes em faturamento.
     `,
   },
   {
     id: 3,
-    title: "WhatsApp na clínica: como usar com consentimento e segurança (LGPD)",
-    slug: "whatsapp-na-clinica-lgpd-consentimento-e-seguranca",
-    category: "LGPD & Ética",
-    tags: ["lgpd", "whatsapp", "odontologia", "consentimento"],
-    metaTitle: "WhatsApp na clínica: uso seguro e legal (LGPD)",
-    metaDescription: "Use o WhatsApp de forma profissional e legal: consentimento, cadência, e boas práticas com LGPD. Inclui modelo de TCLE.",
+    title: "SPIN Selling na odontologia: como transformar conversas em fechamento de tratamentos",
+    slug: "spin-selling-odontologia-transformar-conversas-fechamento",
+    category: "Processos Comerciais",
+    tags: ["spin selling", "vendas consultivas", "odontologia", "mentoria comercial", "fechamento"],
+    metaTitle: "SPIN Selling na odontologia: transformar conversas em fechamentos",
+    metaDescription: "Aprenda a aplicar o método SPIN Selling na sua clínica odontológica para conduzir conversas estratégicas que aumentam conversão e fecham mais tratamentos.",
     thumbnail: whatsappLgpdImage,
-    excerpt: "O WhatsApp acelera o contato, mas sem consentimento pode virar risco. Veja como usá-lo com segurança e eficiência.",
-    date: "10 Nov 2024",
-    readTime: "7 min",
+    excerpt: "Vender na odontologia não é sobre convencer, é sobre conduzir conversas inteligentes. Descubra como aplicar o SPIN Selling para transformar atendimentos em fechamentos.",
+    date: "17 Nov 2024",
+    readTime: "10 min",
     content: `
-## Princípios básicos de conformidade
+Em um mercado odontológico cada vez mais competitivo, onde o paciente tem inúmeras opções e a decisão de fechar um tratamento depende mais da conversa do que do preço, muitos dentistas ainda cometem o erro de tratar o atendimento como uma simples etapa burocrática. O resultado? Orçamentos parados, pacientes indecisos e oportunidades perdidas.
 
-- **Finalidade clara:** agendamento, confirmação e orientação.
-- **Consentimento explícito:** TCLE assinado (art. 7º, LGPD).
-- **Evite dados sensíveis:** nada de diagnósticos ou exames abertos.
-- **Segurança:** números oficiais e controle de acesso.
+Vender na odontologia não é sobre "convencer". É sobre conduzir uma conversa inteligente, que faça o paciente entender o valor do tratamento antes mesmo de falar em preço. E existe um método comprovado para isso: o SPIN Selling, uma das técnicas de vendas consultivas mais eficazes do mundo e que se encaixa perfeitamente na rotina de clínicas odontológicas.
 
-## Estrutura do TCLE
+Neste artigo, eu, Lucas Rocha, CEO da Acelero.vc, especialista em estruturação comercial e mentor de clínicas odontológicas em todo o Brasil, vou te mostrar como aplicar o SPIN Selling na prática, transformar conversas em fechamentos e elevar o desempenho comercial da sua clínica a um novo patamar.
 
-- Identificação da clínica e **canais oficiais**.
-- Finalidades de uso.
-- Direito de **revogação a qualquer momento**.
-- Tempo de **retenção** de dados limitado.
+A Acelero.vc é uma aceleradora comercial com mais de 5 anos de atuação no mercado odontológico, que já ajudou centenas de clínicas a construir processos de vendas previsíveis, treinar equipes de alto desempenho e aumentar o faturamento de forma sustentável.
 
-## Cadência ideal
+Tendo dito isso, vamos ao que interessa.
 
-| Etapa | Quando | Objetivo |
-|-------|--------|----------|
-| T+0 | Imediato | Agradecer contato |
-| T+1h | 1 hora depois | Reforço de agendamento |
-| T+24h | 1 dia depois | Fechamento de agenda |
-| T-24h / T-3h | Antes da consulta | Confirmação dupla |
-| D+2 | Após consulta | Pós-atendimento + review |
+**Texto por Lucas Rocha**  
+**Boa leitura!**
 
-## Boas práticas
+## O que é o método SPIN Selling e por que ele é tão poderoso
 
-- Mensagens curtas, respeitosas e profissionais.
-- Ícones e respostas rápidas humanizam o contato.
-- Crie **checklist interno** com orientações para o time.
-- Faça auditorias amostrais trimestrais.
+O SPIN Selling nasceu de uma pesquisa conduzida por Neil Rackham, que analisou mais de 35 mil interações de vendas complexas. O estudo revelou um padrão: os vendedores de maior sucesso não falavam mais, eles faziam perguntas melhores!
 
----
+SPIN é um acrônimo que representa as quatro etapas dessas perguntas, que ajudam o paciente a reconhecer suas próprias necessidades:
 
-## Profissionalismo e segurança juntos
+**S – Situação:** entender o contexto atual do paciente.
 
-O WhatsApp é uma ferramenta poderosa quando usada de forma ética e legal. Com o TCLE adequado e processos bem definidos, você protege sua clínica e oferece uma experiência profissional aos pacientes.
+**P – Problema:** identificar o que realmente o incomoda.
 
-**Precisa de templates de TCLE e cadências prontas?** Nossa mentoria oferece todo o material necessário para você usar o WhatsApp com segurança total.
+**I – Implicação:** mostrar o impacto e as consequências de não resolver o problema.
+
+**N – Necessidade de solução:** despertar o desejo genuíno de tratar.
+
+O objetivo do SPIN não é "vender tratamento", e sim guiar o paciente até a percepção de valor. É uma abordagem que inverte a lógica tradicional: você escuta para entender, não fala para convencer.
+
+Segundo o Huthwaite Research Group (empresa responsável pela pesquisa original), profissionais que aplicam o SPIN aumentam suas taxas de fechamento em até 20% em vendas consultivas e, no contexto odontológico, o impacto é ainda maior, porque o fator "confiança" é decisivo.
+
+## Como aplicar o SPIN Selling no dia a dia da clínica (com exemplos práticos)
+
+Aplicar o SPIN na sua clínica significa transformar cada atendimento em uma conversa estratégica, onde cada pergunta tem um propósito bem definido. Quando bem conduzidas, essas perguntas fazem o paciente compreender, por conta própria, a importância do tratamento.
+
+### 1. Situação: conecte-se e entenda o momento do paciente
+
+O foco aqui é construir conexão e entender o cenário atual. Perguntas como:
+
+"Há quanto tempo você sente esse incômodo no dente?"
+
+"Você tem dificuldade para mastigar de um lado específico?"
+
+"Você costuma evitar sorrir em fotos?"
+
+Essas perguntas criam empatia e coletam informações que guiam toda a conversa.
+
+### 2. Problema: ajude o paciente a reconhecer o desconforto
+
+Nesta etapa, o objetivo é que o paciente perceba que existe um problema real.
+
+"Você percebe que essa sensibilidade tem piorado nos últimos meses?"
+
+"Isso tem te atrapalhado em alguma atividade do dia a dia?"
+
+Quando o próprio paciente verbaliza o problema, ele se envolve emocionalmente com a busca pela solução.
+
+### 3. Implicação: revele as consequências de não agir
+
+Aqui está a virada de chave. É o momento de mostrar o impacto de adiar o tratamento:
+
+"Se esse desgaste continuar, pode ser que você precise de um tratamento mais invasivo no futuro. Você já tinha pensado nisso?"
+
+"Essa dor tem te feito evitar certos alimentos? E como isso impacta sua rotina?"
+
+A implicação aumenta o senso de urgência e faz o paciente perceber o custo de não tratar.
+
+### 4. Necessidade de solução: desperte o desejo de transformação
+
+Agora é a hora de guiar o paciente para a visão de melhoria.
+
+"Se resolvêssemos essa dor e melhorássemos sua mastigação, como isso impactaria no seu dia a dia?"
+
+"Se você pudesse sorrir com mais confiança, o que mudaria pra você?"
+
+Essas perguntas transformam tratamento em transformação. Na prática, o paciente não busca apenas resolver um problema odontológico, ele quer recuperar qualidade de vida, autoconfiança e bem-estar.
+
+## Por que o SPIN Selling é perfeito para clínicas odontológicas
+
+O SPIN se encaixa naturalmente no modelo de venda consultiva, o formato mais eficaz para o setor odontológico. Aqui, o profissional atua como um consultor de confiança, e não como um vendedor.
+
+Essa metodologia funciona porque:
+
+**Cria empatia e confiança:** o paciente se sente ouvido e compreendido.
+
+**Melhora a adesão aos planos de tratamento:** quando entende o porquê, a decisão vem naturalmente.
+
+**Reduz objeções de preço:** quem percebe valor, compreende o investimento.
+
+**Aumenta o valor percebido da clínica:** o atendimento se torna humano, profissional e personalizado.
+
+Em diversas mentorias comerciais que conduzimos na Acelero, o SPIN é sempre uma das primeiras bases ensinadas às equipes, porque as perguntas certas valem mais do que qualquer argumento elaborado.
+
+## Como o Clinicorp ajuda a aplicar o SPIN Selling na prática
+
+A aplicação do SPIN depende de organização e registro de informações, e é exatamente aí que o Clinicorp se torna um diferencial competitivo.
+
+Dentro do sistema, a equipe da clínica pode:
+
+**Usar o CRM** para mapear o histórico do paciente, registrar objeções e anotar detalhes sobre contexto e dores, que são fundamentais para as etapas de Situação e Problema.
+
+**Aproveitar as observações** do paciente para personalizar abordagens em retornos ou follow-ups, reforçando as etapas de Implicação e Necessidade.
+
+**Acompanhar relatórios** de orçamentos em aberto, criando estratégias de reconexão com perguntas que despertem urgência e valor.
+
+**No módulo CRC,** identificar pacientes faltantes e aplicar perguntas estratégicas que fortalecem o compromisso e reduzem as ausências em novos agendamentos.
+
+Em resumo: o Clinicorp permite colocar o SPIN Selling em prática com método, dados e tecnologia, garantindo que cada conversa gere aprendizado, registro e previsibilidade comercial.
+
+## Dicas essenciais para treinar a equipe da clínica
+
+Dominar o SPIN não é responsabilidade apenas dos dentistas. A equipe de atendimento e o CRC também precisam estar alinhados, afinal, a venda começa na recepção e se consolida no fechamento.
+
+Algumas práticas eficazes para integrar o SPIN à rotina da clínica:
+
+**Treine a secretária** para usar perguntas SPIN desde o primeiro contato. Em vez de "Quer marcar uma avaliação?", pergunte: "O que te motivou a procurar esse atendimento agora?".
+
+**Realize simulações** de atendimento. Grave ligações, revise abordagens e corrija vícios de linguagem.
+
+**Crie scripts personalizados** dentro do Clinicorp, baseados em cada etapa do SPIN, para padronizar o discurso sem perder naturalidade.
+
+**Dê feedbacks semanais** com base nos resultados de conversão, pois isso ajuda o time a visualizar o impacto real de uma boa conversa.
+
+Treinar a equipe comercial não é sobre decorar frases, e sim compreender a lógica da conversa. Quando o time entende o raciocínio por trás de cada pergunta, o paciente sente segurança, que é um importante primeiro passo para o fechamento.
+
+## Conclusão: o dentista que domina conversas, domina resultados
+
+No fim das contas, o SPIN Selling mostra que vender não é sobre convencer, mas sobre conduzir. Na odontologia, quem domina a arte de perguntar bem transforma consultas em relacionamentos duradouros e resultados previsíveis.
+
+O dentista que escuta com propósito, entende o que realmente incomoda o paciente e conduz o diálogo com empatia, não apenas fecha mais tratamentos, mas fideliza e cresce de forma sustentável.
+
+Se você quer implementar essa metodologia de forma prática, integrada à rotina da sua clínica e com o suporte tecnológico certo, o Clinicorp é o parceiro ideal.
+
+E se quiser dar o próximo passo e treinar seu time comercial para dominar técnicas como o SPIN Selling, duas opções podem acelerar esse processo:
+
+**Assista ao episódio do meu podcast sobre o tema:** https://www.youtube.com/watch?v=vjoLpwfKwcc
+
+**Conheça a Mentoria A.C.E.L.E.R.O.,** onde estruturamos processos, treinamentos e indicadores de conversão para clínicas em todo o Brasil.
+
+Organize seu comercial, aplique o SPIN e veja suas conversas se transformarem em fechamentos de tratamentos.
+
+**Boas vendas!**
     `,
   },
   {
@@ -231,7 +340,8 @@ O WhatsApp é uma ferramenta poderosa quando usada de forma ética e legal. Com 
 
 É possível atrair mais pacientes com comunicação ética e profissional. Seguindo as diretrizes do CFO, você constrói autoridade de forma sustentável e sem riscos para sua carreira.
 
-**Precisa revisar suas campanhas?** Nossa mentoria oferece consultoria completa sobre comunicação ética e estratégias de marketing digital para odontologia.
+**Precisa estruturar o comercial da sua clínica?**  
+Nossa mentoria oferece acompanhamento completo em gestão de vendas, atendimento e posicionamento comercial, para transformar seu fluxo de pacientes em faturamento.
     `,
   },
   {
@@ -314,7 +424,8 @@ Esses dados mostram o quanto o canal digital realmente contribui para o faturame
 
 A telemedicina vai além da tecnologia: exige processos bem definidos para captar, atender e fidelizar. Com as 7 etapas implementadas, sua clínica cria um canal digital que gera resultados concretos e sustentáveis.
 
-**Precisa estruturar seu fluxo de telemedicina?** Nossa mentoria oferece consultoria completa para transformar atendimento remoto em receita previsível.
+**Precisa estruturar o comercial da sua clínica?**  
+Nossa mentoria oferece acompanhamento completo em gestão de vendas, atendimento e posicionamento comercial, para transformar seu fluxo de pacientes em faturamento.
     `,
   },
   {
@@ -392,7 +503,8 @@ Esses gatilhos mantêm a **recorrência viva** — e o tutor envolvido com a cl�
 
 Planos pet e campanhas sazonais transformam oscilação em previsibilidade. Com estrutura comercial clara e comunicação constante, sua clínica mantém fluxo estável de pacientes o ano todo.
 
-**Quer implementar planos pet na sua clínica?** Nossa mentoria oferece modelos prontos e estratégias de fidelização veterinária comprovadas.
+**Precisa estruturar o comercial da sua clínica?**  
+Nossa mentoria oferece acompanhamento completo em gestão de vendas, atendimento e posicionamento comercial, para transformar seu fluxo de pacientes em faturamento.
     `,
   },
 ];

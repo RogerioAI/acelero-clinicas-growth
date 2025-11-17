@@ -409,16 +409,6 @@ Esses dados mostram o quanto o canal digital realmente contribui para o faturame
 
 ---
 
-## Benefícios diretos
-
-| Resultado | Impacto |
-|-----------|---------|
-| Redução de faltas | -25% com confirmação ativa |
-| Aumento de retornos | +15% em 60 dias |
-| Maior satisfação | NPS médio acima de 85 |
-| Crescimento sustentável | +20% em receita por paciente ativo |
-
----
 
 ## Conclusão
 
@@ -464,18 +454,6 @@ Um bom plano pet tem três pilares: **previsibilidade, valor e relacionamento**.
 
 ---
 
-## Campanhas sazonais (por trimestre)
-
-| Mês | Campanha | Tema | Ação sugerida |
-|-----|----------|------|---------------|
-| Janeiro–Março | "Verão Saudável" | Parasitas e hidratação | Post + lembrança via WhatsApp |
-| Abril–Junho | "Outono de Vacinas" | Imunização anual | Envio de lembrete automatizado |
-| Julho–Setembro | "Inverno Pet Feliz" | Doenças respiratórias | Check-up preventivo + sorteio |
-| Outubro–Dezembro | "Natal do Pet" | Fidelização e agradecimento | Brindes + campanha solidária |
-
-Cada trimestre mantém a clínica **relevante e presente**, sem parecer "vendedora".
-
----
 
 ## Como conectar planos + calendário no comercial
 
@@ -488,16 +466,6 @@ Esses gatilhos mantêm a **recorrência viva** — e o tutor envolvido com a cl�
 
 ---
 
-## Indicadores para acompanhar
-
-| Indicador | Meta |
-|-----------|------|
-| Adesões ao plano | +10/mês |
-| Taxa de renovação | ≥ 80% |
-| Check-ups realizados | ≥ 90% da base ativa |
-| Engajamento em campanhas | ≥ 70% dos tutores contatados |
-
----
 
 ## Conclusão
 

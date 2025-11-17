@@ -384,7 +384,7 @@ Use cadência de confirmação: **T-24h e T-3h** (via WhatsApp ou SMS).
 ### 4️⃣ Atendimento remoto humanizado
 
 Oriente a equipe médica sobre **olhar de câmera**, **escuta ativa** e **clareza de instruções**.  
-Pacientes digitais valorizam objetividade e empatia — o tom da conversa é parte da experiência.
+Pacientes digitais valorizam objetividade e empatia.
 
 ### 5️⃣ Pós-consulta automatizado
 
@@ -450,7 +450,7 @@ Um bom plano pet tem três pilares: **previsibilidade, valor e relacionamento**.
 - Atendimento prioritário
 - Benefícios para múltiplos pets
 
-💡 **Dica:** valorize o benefício "tranquilidade" — o tutor paga menos em emergências e mantém o pet monitorado.
+💡 **Dica:** valorize o benefício "tranquilidade".
 
 ---
 
@@ -462,7 +462,7 @@ Um bom plano pet tem três pilares: **previsibilidade, valor e relacionamento**.
 3️⃣ Configure lembretes automáticos no WhatsApp (D-30 e D-7).  
 4️⃣ Envie pesquisas rápidas de satisfação após cada consulta.
 
-Esses gatilhos mantêm a **recorrência viva** — e o tutor envolvido com a clínica.
+Esses gatilhos mantêm a **recorrência viva**.
 
 ---
 

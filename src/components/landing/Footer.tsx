@@ -41,21 +41,27 @@ export const Footer = () => {
               <h4 className="font-semibold mb-4">Redes Sociais</h4>
               <div className="flex gap-4">
                 <a 
-                  href="#" 
+                  href="https://instagram.com.br/acelero.vc" 
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full bg-primary-foreground/10 hover:bg-cyan/20 flex items-center justify-center transition-colors"
                   aria-label="Instagram"
                 >
                   <Instagram className="w-5 h-5" />
                 </a>
                 <a 
-                  href="#" 
+                  href="https://www.youtube.com/@clinicasemcaos" 
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full bg-primary-foreground/10 hover:bg-cyan/20 flex items-center justify-center transition-colors"
                   aria-label="YouTube"
                 >
                   <Youtube className="w-5 h-5" />
                 </a>
                 <a 
-                  href="#" 
+                  href="https://www.linkedin.com/company/acelerovc/" 
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full bg-primary-foreground/10 hover:bg-cyan/20 flex items-center justify-center transition-colors"
                   aria-label="LinkedIn"
                 >

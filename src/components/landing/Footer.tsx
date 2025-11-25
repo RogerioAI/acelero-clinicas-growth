@@ -6,7 +6,7 @@ export const Footer = () => {
     <footer className="bg-primary text-primary-foreground py-12">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Logo and Description */}
             <div className="md:col-span-1">
               <img src={logo} alt="Acelero" className="h-30 mb-4 drop-shadow-[0_0_8px_rgba(23,200,208,0.4)]" />
@@ -47,7 +47,7 @@ export const Footer = () => {
                   <Linkedin className="w-5 h-5" />
                 </a>
               </div>
-            </div>
+          
           </div>
 
           {/* Copyright */}

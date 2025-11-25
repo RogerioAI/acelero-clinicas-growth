@@ -16,9 +16,9 @@ export const Footer = () => {
             </div>
 
             {/* Social Media */}
-            <div className="md:col-span-1 md:text-right sm:text-center">
+            <div className="md:col-span-1 md:text-right text-center">
               <h4 className="font-semibold mb-4">Redes Sociais</h4>
-              <div className="flex gap-4 md:justify-end sm:justify-center">
+              <div className="flex gap-4 md:justify-end justify-center">
                 <a
                   href="https://instagram.com.br/acelero.vc"
                   target="_blank"

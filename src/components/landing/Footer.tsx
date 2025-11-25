@@ -10,7 +10,7 @@ export const Footer = () => {
             {/* Logo and Description */}
             <div className="md:col-span-1">
               <img src={logo} alt="Acelero" className="h-20 mb-6" />
-              <p className="text-primary-foreground/80 text-sm leading-relaxed max-w-sm">
+              <p className="text-primary-foreground/80 text-sm leading-relaxed max-w-sm text-center">
                 Acelero.vc organiza, capacita e acelera o seu faturamento
               </p>
             </div>

@@ -3,6 +3,7 @@ import mentorsImage from "@/assets/mentors-team.jpg";
 import lucasRochaImage from "@/assets/lucas-rocha.jpg";
 import rogerioCintraImage from "@/assets/rogerio-cintra.jpg";
 import { Button } from "@/components/ui/button";
+import { getWhatsAppLink } from "@/config/contact";
 
 export const Mentors = () => {
   const mentors = [
@@ -113,7 +114,7 @@ export const Mentors = () => {
               <Button 
                 variant="cta" 
                 size="xl"
-                onClick={() => window.open('https://wa.me/5511999999999?text=Quero%20conhecer%20meus%20mentores', '_blank')}
+                onClick={() => window.open(getWhatsAppLink("Quero conhecer meus mentores"), '_blank')}
               >
                 Quero conhecer meus mentores
               </Button>

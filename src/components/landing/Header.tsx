@@ -3,6 +3,7 @@ import { Menu } from "lucide-react";
 import { useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import logo from "@/assets/logo-acelero-white.png";
+import { getWhatsAppLink } from "@/config/contact";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -72,7 +73,11 @@ export const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button variant="cyan" size="default">
+            <Button 
+              variant="cyan" 
+              size="default"
+              onClick={() => window.open(getWhatsAppLink("Quero falar com o time da Acelero"), '_blank')}
+            >
               Falar com o time
             </Button>
           </div>
@@ -100,7 +105,12 @@ export const Header = () => {
                   {item.name}
                 </button>
               ))}
-              <Button variant="cyan" size="default" className="mt-2 touch-manipulation">
+              <Button 
+                variant="cyan" 
+                size="default" 
+                className="mt-2 touch-manipulation"
+                onClick={() => window.open(getWhatsAppLink("Quero falar com o time da Acelero"), '_blank')}
+              >
                 Falar com o time
               </Button>
             </nav>

@@ -1,24 +1,24 @@
 import { Instagram, Youtube, Linkedin } from "lucide-react";
-import logo from "@/assets/logo-acelero-white.png";
+import logo from "@/assets/logo-acelero.png";
 
 export const Footer = () => {
   return (
     <footer className="bg-primary text-primary-foreground py-12">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
             {/* Logo and Description */}
             <div className="md:col-span-1">
-              <img src={logo} alt="Acelero" className="h-30 mb-4 drop-shadow-[0_0_8px_rgba(23,200,208,0.4)]" />
-              <p className="text-primary-foreground/80 text-sm leading-relaxed">
+              <img src={logo} alt="Acelero" className="h-20 mb-6" />
+              <p className="text-primary-foreground/80 text-sm leading-relaxed max-w-sm">
                 Acelero.vc organiza, capacita e acelera o seu faturamento
               </p>
             </div>
 
             {/* Social Media */}
-            <div className="md:col-span-1">
+            <div className="md:col-span-1 md:text-right">
               <h4 className="font-semibold mb-4">Redes Sociais</h4>
-              <div className="flex gap-4">
+              <div className="flex gap-4 md:justify-end">
                 <a
                   href="https://instagram.com.br/acelero.vc"
                   target="_blank"

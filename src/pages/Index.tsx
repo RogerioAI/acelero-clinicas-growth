@@ -8,6 +8,7 @@ import { Testimonials } from "@/components/landing/Testimonials";
 import { Mentors } from "@/components/landing/Mentors";
 import { FinalCTA } from "@/components/landing/FinalCTA";
 import { Footer } from "@/components/landing/Footer";
+import { WhatsAppFloat } from "@/components/landing/WhatsAppFloat";
 
 const Index = () => {
   return (
@@ -34,6 +35,7 @@ const Index = () => {
         <FinalCTA />
       </main>
       <Footer />
+      <WhatsAppFloat />
     </div>
   );
 };

@@ -9,26 +9,30 @@ import laisKeilaImage from "@/assets/lais-keila-viva.jpg";
 export const Testimonials = () => {
   const testimonials = [
     {
-      quote: "A mentoria A.C.E.L.E.R.O transformou completamente nossa área comercial. E os resultados triplicaram já no primeiro mês e eu só tenho a agradecer.",
+      quote:
+        "A mentoria A.C.E.L.E.R.O transformou completamente nossa área comercial. E os resultados triplicaram já no primeiro mês e eu só tenho a agradecer.",
       name: "Dra. Natália Palmier",
       designation: "",
       src: nataliaPalmierVideo,
       type: "video" as const,
     },
     {
-      quote: "Depois que contratamos a Acelero, nossa clínica vive uma nova fase. Os treinamentos foram um divisor de águas para nossa equipe, que agora entende a importância da área comercial. Hoje, sentimos que temos uma direção clara e queremos sempre mais.",
+      quote:
+        "Depois que contratamos a Acelero, nossa clínica vive uma nova fase. Os treinamentos foram um divisor de águas para nossa equipe, que agora entende a importância da área comercial. Hoje, sentimos que temos uma direção clara e queremos sempre mais.",
       name: "Dra. Aline Preisler",
       designation: "Preisler Odontologia",
       src: alinePreislerImage,
     },
     {
-      quote: "Com certeza, a ajuda do Lucas foi essencial para atingirmos nossas metas. Ter alguém experiente ao lado faz toda a diferença. Sozinhas é muito mais difícil, mas com o suporte da Acelero tudo ficou mais claro e possível.",
+      quote:
+        "Com certeza, a ajuda do Lucas foi essencial para atingirmos nossas metas. Ter alguém experiente ao lado faz toda a diferença. Sozinhas é muito mais difícil, mas com o suporte da Acelero tudo ficou mais claro e possível.",
       name: "Dras. Laís Araujo e Keila Ilse",
       designation: "Viva Odontologia",
       src: laisKeilaImage,
     },
     {
-      quote: "A Acelero revolucionou a forma como administramos nossa clínica e conduzimos nosso marketing. Trouxe clareza, estratégia e nos ajudou a tomar decisões mais assertivas",
+      quote:
+        "A Acelero revolucionou a forma como administramos nossa clínica e conduzimos nosso marketing. Trouxe clareza, estratégia e nos ajudou a tomar decisões mais assertivas",
       name: "Dr. Bruno e Dra. Thaís",
       designation: "Clínica Curattio",
       src: brunoThaisVideo,
@@ -37,17 +41,15 @@ export const Testimonials = () => {
   ];
 
   return (
-    <section className="py-24" style={{ backgroundColor: '#0A162D' }}>
+    <section className="py-24" style={{ backgroundColor: "#0A162D" }}>
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Mais de <span style={{ color: '#17C8D0' }}>250 clínicas</span> impactadas
+              Mais de <span style={{ color: "#17C8D0" }}>250 clínicas</span> impactadas
             </h2>
-            <p className="text-xl text-white/70">
-              Veja o que nossos mentorados têm a dizer sobre os resultados
-            </p>
+            <p className="text-xl text-white/70">Veja o que nossos mentorados têm a dizer sobre os resultados</p>
           </div>
 
           {/* Circular Testimonials */}
@@ -73,12 +75,12 @@ export const Testimonials = () => {
 
           {/* CTA */}
           <div className="text-center mt-12">
-            <Button 
-              variant="cta" 
+            <Button
+              variant="cta"
               size="xl"
-              onClick={() => window.open(getWhatsAppLink("Quero resultados assim na minha clínica"), '_blank')}
+              onClick={() => window.open(getWhatsAppLink("Quero resultados assim na minha clínica"), "_blank")}
             >
-              Quero resultados assim na minha clínica
+              Quero resultados assim <br></br>na minha clínica
             </Button>
           </div>
         </div>

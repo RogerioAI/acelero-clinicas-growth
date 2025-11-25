@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
 import { useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
-import logo from "@/assets/logo-acelero-white.png";
+import logo from "@/assets/logo-acelero-header.png";
 import { getWhatsAppLink } from "@/config/contact";
 
 export const Header = () => {
@@ -50,11 +50,11 @@ export const Header = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <div className="flex-shrink-0 relative group">
-            <div className="absolute inset-0 bg-cyan/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full" />
+            <div className="absolute inset-0 bg-white/10 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             <img 
               src={logo} 
               alt="Acelero" 
-              className="h-12 md:h-16 relative z-10 drop-shadow-[0_0_8px_rgba(23,200,208,0.6)] transition-all duration-300 group-hover:drop-shadow-[0_0_12px_rgba(23,200,208,0.8)] group-hover:scale-105"
+              className="h-10 md:h-14 relative z-10 transition-all duration-300 group-hover:scale-105"
             />
           </div>
 

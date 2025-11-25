@@ -127,7 +127,7 @@ export const Method = () => {
               size="xl"
               onClick={() => window.open(getWhatsAppLink("Quero aplicar o método A.C.E.L.E.R.O na minha clínica"), '_blank')}
             >
-              Quero aplicar o método na minha clínica
+              Quero aplicar o método <br> na minha clínica
             </Button>
           </div>
         </div>

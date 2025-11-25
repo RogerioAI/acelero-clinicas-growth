@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import { getWhatsAppLink } from "@/config/contact";
 
 import heroImage from "@/assets/hero-mentors.png";
 import heroVideo from "@/assets/hero-video.mp4";
@@ -50,7 +51,12 @@ export const Hero = () => {
 
           {/* CTA Button */}
           <div className="animate-fade-in-up [animation-delay:600ms]">
-            <Button variant="cta" size="default" className="text-sm sm:text-base md:text-lg px-6 py-3 sm:px-8 sm:py-4 md:px-10 h-auto">
+            <Button 
+              variant="cta" 
+              size="default" 
+              className="text-sm sm:text-base md:text-lg px-6 py-3 sm:px-8 sm:py-4 md:px-10 h-auto"
+              onClick={() => window.open(getWhatsAppLink("Quero acelerar minhas vendas"), '_blank')}
+            >
               Quero acelerar minhas vendas
             </Button>
           </div>

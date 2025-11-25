@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Target, Users2, Building2, Trophy, Zap, TrendingUp, Rocket } from "lucide-react";
 import { motion } from "framer-motion";
+import { getWhatsAppLink } from "@/config/contact";
 
 export const Method = () => {
   const steps = [
@@ -121,7 +122,11 @@ export const Method = () => {
 
           {/* CTA */}
           <div className="text-center mt-16">
-            <Button variant="cta" size="xl">
+            <Button 
+              variant="cta" 
+              size="xl"
+              onClick={() => window.open(getWhatsAppLink("Quero aplicar o método A.C.E.L.E.R.O na minha clínica"), '_blank')}
+            >
               Quero aplicar o método na minha clínica
             </Button>
           </div>

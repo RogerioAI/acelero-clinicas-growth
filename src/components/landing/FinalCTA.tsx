@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Calendar, CheckCircle2 } from "lucide-react";
+import { getWhatsAppLink } from "@/config/contact";
 
 export const FinalCTA = () => {
   const features = [
@@ -45,7 +46,12 @@ export const FinalCTA = () => {
           </div>
 
           {/* CTA Button */}
-          <Button variant="cta" size="default" className="text-base sm:text-lg md:text-xl px-8 py-4 sm:px-10 sm:py-5 md:px-12 h-auto touch-manipulation">
+          <Button 
+            variant="cta" 
+            size="default" 
+            className="text-base sm:text-lg md:text-xl px-8 py-4 sm:px-10 sm:py-5 md:px-12 h-auto touch-manipulation"
+            onClick={() => window.open(getWhatsAppLink("Quero agendar uma sessão estratégica"), '_blank')}
+          >
             SIM eu quero
           </Button>
         </div>

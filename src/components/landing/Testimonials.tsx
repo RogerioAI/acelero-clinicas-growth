@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { CircularTestimonials } from "@/components/ui/circular-testimonials";
+import { getWhatsAppLink } from "@/config/contact";
 import nataliaPalmierVideo from "@/assets/natalia-palmier-video.mp4";
 import brunoThaisVideo from "@/assets/bruno-thais-curattio.mp4";
 import alinePreislerImage from "@/assets/aline-preisler.png";
@@ -72,7 +73,11 @@ export const Testimonials = () => {
 
           {/* CTA */}
           <div className="text-center mt-12">
-            <Button variant="cta" size="xl">
+            <Button 
+              variant="cta" 
+              size="xl"
+              onClick={() => window.open(getWhatsAppLink("Quero resultados assim na minha clínica"), '_blank')}
+            >
               Quero resultados assim na minha clínica
             </Button>
           </div>

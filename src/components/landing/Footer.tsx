@@ -14,17 +14,9 @@ export const Footer = () => {
                 alt="Acelero" 
                 className="h-20 mb-4 drop-shadow-[0_0_8px_rgba(23,200,208,0.4)]"
               />
-              <p className="text-primary-foreground/80 text-sm leading-relaxed mb-4">
+              <p className="text-primary-foreground/80 text-sm leading-relaxed">
                 Acelero.vc organiza, capacita e acelera o seu faturamento
               </p>
-              <a 
-                href="https://wa.me/5541991129504" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-primary-foreground/80 hover:text-cyan transition-colors text-sm flex items-center gap-2"
-              >
-                <span>📱</span> (41) 99112-9504
-              </a>
             </div>
 
             {/* Links */}

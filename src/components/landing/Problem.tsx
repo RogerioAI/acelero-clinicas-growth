@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { AlertCircle, TrendingDown, Navigation, Shuffle, AlertTriangle } from "lucide-react";
 import { motion } from "framer-motion";
+import { getWhatsAppLink } from "@/config/contact";
 
 export const Problem = () => {
   const problems = [
@@ -112,7 +113,11 @@ export const Problem = () => {
           </div>
 
           {/* CTA */}
-          <Button variant="default" size="lg">
+          <Button 
+            variant="default" 
+            size="lg"
+            onClick={() => window.open(getWhatsAppLink("Quero destravar o comercial da minha clínica"), '_blank')}
+          >
             Descubra como destravar o comercial da sua clínica
           </Button>
         </div>

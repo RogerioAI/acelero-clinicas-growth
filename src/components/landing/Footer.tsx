@@ -9,39 +9,18 @@ export const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             {/* Logo and Description */}
             <div className="md:col-span-1">
-              <img 
-                src={logo} 
-                alt="Acelero" 
-                className="h-20 mb-4 drop-shadow-[0_0_8px_rgba(23,200,208,0.4)]"
-              />
+              <img src={logo} alt="Acelero" className="h-20 mb-4 drop-shadow-[0_0_8px_rgba(23,200,208,0.4)]" />
               <p className="text-primary-foreground/80 text-sm leading-relaxed">
                 Acelero.vc organiza, capacita e acelera o seu faturamento
               </p>
-            </div>
-
-            {/* Links */}
-            <div className="md:col-span-1">
-              <h4 className="font-semibold mb-4">Links Importantes</h4>
-              <ul className="space-y-2 text-sm">
-                <li>
-                  <a href="#" className="text-primary-foreground/80 hover:text-cyan transition-colors">
-                    Política de Privacidade
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-primary-foreground/80 hover:text-cyan transition-colors">
-                    Termos de Uso
-                  </a>
-                </li>
-              </ul>
             </div>
 
             {/* Social Media */}
             <div className="md:col-span-1">
               <h4 className="font-semibold mb-4">Redes Sociais</h4>
               <div className="flex gap-4">
-                <a 
-                  href="https://instagram.com.br/acelero.vc" 
+                <a
+                  href="https://instagram.com.br/acelero.vc"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full bg-primary-foreground/10 hover:bg-cyan/20 flex items-center justify-center transition-colors"
@@ -49,8 +28,8 @@ export const Footer = () => {
                 >
                   <Instagram className="w-5 h-5" />
                 </a>
-                <a 
-                  href="https://www.youtube.com/@clinicasemcaos" 
+                <a
+                  href="https://www.youtube.com/@clinicasemcaos"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full bg-primary-foreground/10 hover:bg-cyan/20 flex items-center justify-center transition-colors"
@@ -58,8 +37,8 @@ export const Footer = () => {
                 >
                   <Youtube className="w-5 h-5" />
                 </a>
-                <a 
-                  href="https://www.linkedin.com/company/acelerovc/" 
+                <a
+                  href="https://www.linkedin.com/company/acelerovc/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full bg-primary-foreground/10 hover:bg-cyan/20 flex items-center justify-center transition-colors"

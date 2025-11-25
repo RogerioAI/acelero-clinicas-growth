@@ -12,11 +12,11 @@ export const Problem = () => {
   ];
 
   return (
-    <section className="py-24" style={{ backgroundColor: '#F6F7FA' }}>
+    <section className="py-24" style={{ backgroundColor: "#F6F7FA" }}>
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           {/* Icon */}
-          <motion.div 
+          <motion.div
             className="mb-8 inline-flex items-center justify-center relative"
             animate={{
               scale: [1, 1.05, 1],
@@ -24,29 +24,29 @@ export const Problem = () => {
             transition={{
               duration: 2,
               repeat: Infinity,
-              ease: "easeInOut"
+              ease: "easeInOut",
             }}
           >
             {/* Outer glow ring - animated */}
-            <motion.div 
+            <motion.div
               className="absolute w-32 h-32 rounded-full"
-              style={{ 
-                background: 'radial-gradient(circle, rgba(23, 200, 208, 0.3) 0%, rgba(23, 200, 208, 0) 70%)',
-                filter: 'blur(8px)'
+              style={{
+                background: "radial-gradient(circle, rgba(23, 200, 208, 0.3) 0%, rgba(23, 200, 208, 0) 70%)",
+                filter: "blur(8px)",
               }}
               animate={{
                 scale: [1, 1.2, 1],
-                opacity: [0.5, 0.8, 0.5]
+                opacity: [0.5, 0.8, 0.5],
               }}
               transition={{
                 duration: 2,
                 repeat: Infinity,
-                ease: "easeInOut"
+                ease: "easeInOut",
               }}
             />
-            
+
             {/* Middle ring */}
-            <motion.div 
+            <motion.div
               className="absolute w-24 h-24 rounded-full border-2 border-cyan/30"
               animate={{
                 rotate: 360,
@@ -54,16 +54,16 @@ export const Problem = () => {
               transition={{
                 duration: 8,
                 repeat: Infinity,
-                ease: "linear"
+                ease: "linear",
               }}
             />
-            
+
             {/* Inner circle with gradient */}
-            <div 
+            <div
               className="relative w-20 h-20 rounded-full flex items-center justify-center"
-              style={{ 
-                background: 'linear-gradient(135deg, #17C8D0 0%, #3DD4DB 100%)',
-                boxShadow: '0 0 30px rgba(23, 200, 208, 0.5), inset 0 0 20px rgba(255, 255, 255, 0.2)'
+              style={{
+                background: "linear-gradient(135deg, #17C8D0 0%, #3DD4DB 100%)",
+                boxShadow: "0 0 30px rgba(23, 200, 208, 0.5), inset 0 0 20px rgba(255, 255, 255, 0.2)",
               }}
             >
               <motion.div
@@ -73,7 +73,7 @@ export const Problem = () => {
                 transition={{
                   duration: 1.5,
                   repeat: Infinity,
-                  ease: "easeInOut"
+                  ease: "easeInOut",
                 }}
               >
                 <AlertTriangle className="w-10 h-10 text-white drop-shadow-lg" strokeWidth={2.5} />
@@ -88,7 +88,8 @@ export const Problem = () => {
 
           {/* Description */}
           <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
-            Mesmo clínicas excelentes tecnicamente sofrem no comercial. E estes são alguns problemas que podem frear as suas vendas.
+            Mesmo clínicas excelentes tecnicamente sofrem no comercial. E estes são alguns problemas que podem frear as
+            suas vendas.
           </p>
 
           {/* Problems List */}
@@ -96,10 +97,13 @@ export const Problem = () => {
             {problems.map((problem, index) => {
               const Icon = problem.icon;
               return (
-                <div 
+                <div
                   key={index}
                   className="bg-[#13213e] rounded-xl p-8 border border-cyan/20 hover:border-cyan/40 transition-all duration-300 hover:shadow-lift flex flex-col items-center justify-center gap-4"
-                  style={{ boxShadow: 'var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)' }}
+                  style={{
+                    boxShadow:
+                      "var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)",
+                  }}
                 >
                   <div className="flex-shrink-0">
                     <div className="w-14 h-14 rounded-xl bg-cyan/20 flex items-center justify-center group-hover:bg-cyan/30 transition-colors">
@@ -113,12 +117,12 @@ export const Problem = () => {
           </div>
 
           {/* CTA */}
-          <Button 
-            variant="default" 
+          <Button
+            variant="default"
             size="lg"
-            onClick={() => window.open(getWhatsAppLink("Quero destravar o comercial da minha clínica"), '_blank')}
+            onClick={() => window.open(getWhatsAppLink("Quero destravar o comercial da minha clínica"), "_blank")}
           >
-            Descubra como destravar o comercial da sua clínica
+            Destrave o comercial da sua clínica
           </Button>
         </div>
       </div>

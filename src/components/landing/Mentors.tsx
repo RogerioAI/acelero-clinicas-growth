@@ -11,11 +11,7 @@ export const Mentors = () => {
       name: "Lucas Rocha",
       title: "Fundador da Acelero.vc",
       bio: "Especialista em vendas e estruturação comercial com mais de 15 anos de experiência no mercado de saúde. Criador do método A.C.E.L.E.R.O que já transformou mais de 250 clínicas.",
-      highlights: [
-        "15+ anos em vendas e gestão",
-        "Criador do método A.C.E.L.E.R.O",
-        "250+ clínicas atendidas",
-      ],
+      highlights: ["15+ anos em vendas e gestão", "Criador do método A.C.E.L.E.R.O", "250+ clínicas atendidas"],
     },
     {
       name: "Rogerio Haboski",
@@ -37,7 +33,7 @@ export const Mentors = () => {
   ];
 
   return (
-    <section className="py-24" style={{ backgroundColor: '#F6F7FA' }}>
+    <section className="py-24" style={{ backgroundColor: "#F6F7FA" }}>
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
@@ -45,25 +41,23 @@ export const Mentors = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               Mentoria com quem vive o <span className="text-primary">campo de batalha</span>
             </h2>
-            <p className="text-xl text-muted-foreground">
-              Aprenda com quem realmente entende de vendas para clínicas.
-            </p>
+            <p className="text-xl text-muted-foreground">Aprenda com quem realmente entende de vendas para clínicas.</p>
           </div>
 
           {/* Mentors Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             {mentors.map((mentor, index) => (
-              <div 
+              <div
                 key={index}
                 className="bg-card rounded-2xl overflow-hidden shadow-elegant hover:shadow-lift transition-all duration-300 border border-border"
               >
                 {/* Image Placeholder */}
                 <div className="h-96 bg-gradient-hero relative overflow-hidden">
-                  <img 
-                    src={index === 0 ? lucasRochaImage : rogerioCintraImage} 
+                  <img
+                    src={index === 0 ? lucasRochaImage : rogerioCintraImage}
                     alt={mentor.name}
                     className="w-full h-full object-cover"
-                    style={{ objectPosition: 'center top' }}
+                    style={{ objectPosition: "center top" }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent" />
                   <div className="absolute bottom-6 left-6 right-6">
@@ -75,7 +69,7 @@ export const Mentors = () => {
                 {/* Content */}
                 <div className="p-8">
                   <p className="text-muted-foreground mb-6 leading-relaxed">{mentor.bio}</p>
-                  
+
                   <div className="space-y-3">
                     {mentor.highlights.map((highlight, i) => (
                       <div key={i} className="flex items-center gap-3">
@@ -91,10 +85,8 @@ export const Mentors = () => {
 
           {/* Expertise Section */}
           <div className="bg-primary text-primary-foreground rounded-2xl p-12 shadow-lift">
-            <h3 className="text-3xl md:text-4xl font-bold text-center mb-12">
-              Por que confiar nesta mentoria?
-            </h3>
-            
+            <h3 className="text-3xl md:text-4xl font-bold text-center mb-12">Por que confiar nesta mentoria?</h3>
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {expertise.map((item, index) => {
                 const Icon = item.icon;
@@ -108,15 +100,15 @@ export const Mentors = () => {
                 );
               })}
             </div>
-            
+
             {/* CTA Button */}
             <div className="flex justify-center mt-12">
-              <Button 
-                variant="cta" 
+              <Button
+                variant="cta"
                 size="xl"
-                onClick={() => window.open(getWhatsAppLink("Quero conhecer meus mentores"), '_blank')}
+                onClick={() => window.open(getWhatsAppLink("Quero conhecer meus mentores"), "_blank")}
               >
-                Quero conhecer meus mentores
+                Quero conhecer<br></br> meus mentores
               </Button>
             </div>
           </div>

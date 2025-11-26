@@ -40,7 +40,7 @@ export const Hero = () => {
         <div className="max-w-4xl mx-auto text-center">
           {/* Main Headline */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-5 animate-fade-in-up [animation-delay:200ms]">
-            Mentoria Comercial <span style={{ color: '#17C8D0' }}>A.C.E.L.E.R.O</span>
+            Mentoria Comercial <span style={{ color: '#17C8D0' }}>ACELERO</span>
           </h1>
 
           {/* Subtitle */}

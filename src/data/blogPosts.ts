@@ -17,7 +17,7 @@ export const blogPosts: BlogPost[] = [
     metaDescription: "Descubra como reduzir no-show com economia comportamental: compromisso verbal, triagem de risco, sunk cost e gatilhos de escassez. Inclui scripts práticos de WhatsApp.",
     thumbnail: noShowImage,
     excerpt: "O custo invisível do no-show pode drenar R$ 200.000/ano. Veja 5 táticas avançadas baseadas em psicologia e comportamento para blindar sua agenda.",
-    date: "25 Nov 2024",
+    date: "18 Mar 2026",
     readTime: "10 min",
     content: `
 ## Introdução: O Custo Invisível do "Não Compareceu"

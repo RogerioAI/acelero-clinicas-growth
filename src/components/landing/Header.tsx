@@ -49,14 +49,14 @@ export const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <div className="flex-shrink-0 relative group">
+          <Link to="/" className="flex-shrink-0 relative group">
             <div className="absolute inset-0 bg-white/10 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             <img 
               src={logo} 
               alt="Acelero" 
               className="h-10 md:h-14 relative z-10 transition-all duration-300 group-hover:scale-105"
             />
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">

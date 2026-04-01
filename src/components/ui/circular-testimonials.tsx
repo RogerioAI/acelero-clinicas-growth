@@ -74,7 +74,7 @@ export const CircularTestimonials = ({
   );
 
   const imageContainerRef = useRef<HTMLDivElement>(null);
-  const autoplayIntervalRef = useRef<NodeJS.Timeout | null>(null);
+  const autoplayIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
 
   const testimonialsLength = useMemo(() => testimonials.length, [testimonials]);

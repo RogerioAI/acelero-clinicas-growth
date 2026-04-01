@@ -109,7 +109,7 @@ Reduzir o no-show não é sobre tecnologia, é sobre cultura. Quando sua clínic
     metaDescription: "Otimize seu perfil no Google e transforme visualizações em agendamentos. Aprenda como gerar reviews éticos e melhorar sua presença local.",
     thumbnail: googleMeuNegocioImage,
     excerpt: "Seu perfil no Google é a vitrine da clínica. Descubra como reviews, fotos e descrições certas geram mais pacientes.",
-    date: "18 Nov 2024",
+    date: "20 Fev 2026",
     readTime: "6 min",
     content: `
 ## O que o Google valoriza

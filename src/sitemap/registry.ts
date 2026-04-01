@@ -5,7 +5,8 @@
  * Add new content providers here as the site grows.
  */
 
-import { blogPosts } from "@/data/blogPosts";
+import { blogPosts } from "../data/blogPosts";
+import type { BlogPost } from "../types/blog";
 
 const DOMAIN = "https://acelero.vc";
 

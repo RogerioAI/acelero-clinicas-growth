@@ -8,23 +8,23 @@ import {
 const faqItems = [
   {
     question: "O que é a Mentoria A.C.E.L.E.R.O?",
-    answer: "É um programa de transformação comercial para clínicas de saúde com duração de 4 a 6 meses, sessões quinzenais, diagnóstico inicial, dashboards de indicadores, scripts de vendas e templates operacionais. O programa é dividido em 7 fases que cobrem desde alinhamento estratégico até escalabilidade do faturamento."
+    answer: "É um programa de transformação comercial para clínicas médicas e odontológicas com duração de 6 a 12 meses, sessões semanais, diagnóstico inicial, dashboards de indicadores, scripts de vendas e templates operacionais. O programa é dividido em 7 fases que cobrem desde alinhamento estratégico até escalabilidade do faturamento."
   },
   {
     question: "Para quem é a mentoria comercial da Acelero?",
-    answer: "Para gestores e proprietários de clínicas de saúde e odontológicas que querem estruturar sua área comercial, aumentar o faturamento com previsibilidade e parar de depender exclusivamente de indicações."
+    answer: "Para gestores e proprietários de clínicas médicas e odontológicas que querem estruturar sua área comercial, aumentar o faturamento com previsibilidade e parar de depender exclusivamente de indicações."
   },
   {
     question: "Quanto tempo dura a mentoria?",
-    answer: "O programa tem duração de 4 a 6 meses com sessões quinzenais. São mais de 16 encontros divididos em 7 fases progressivas, cada uma com entregas específicas e mensuráveis."
+    answer: "O programa tem duração de 6 a 12 meses com sessões semanais. São encontros divididos em 7 fases progressivas, cada uma com entregas específicas e mensuráveis."
   },
   {
     question: "Quem é o mentor da Acelero?",
-    answer: "Lucas Rocha, consultor comercial com vasta experiência em gestão comercial de clínicas de saúde e odontológicas. Especializado em crescimento de faturamento, treinamento de equipes comerciais e implementação de processos de vendas para clínicas."
+    answer: "Lucas Rocha, consultor comercial com vasta experiência em gestão comercial de clínicas médicas e odontológicas. Especializado em crescimento de faturamento, treinamento de equipes comerciais e implementação de processos de vendas para clínicas."
   },
   {
     question: "A mentoria funciona para clínicas de qualquer especialidade?",
-    answer: "Sim. O método A.C.E.L.E.R.O foi desenvolvido para clínicas de saúde em geral — odontológicas, médicas, estéticas e de especialidades. Os princípios de gestão comercial e vendas são adaptados à realidade de cada clínica durante o diagnóstico inicial."
+    answer: "O método A.C.E.L.E.R.O foi desenvolvido para clínicas médicas e odontológicas. Os princípios de gestão comercial e vendas são adaptados à realidade de cada clínica durante o diagnóstico inicial."
   },
   {
     question: "Quais resultados posso esperar?",
@@ -36,7 +36,7 @@ const faqItems = [
   },
   {
     question: "A mentoria é online ou presencial?",
-    answer: "A mentoria é 100% online, com sessões quinzenais via videoconferência. Isso permite que clínicas de qualquer cidade do Brasil participem sem deslocamento. Todo o material de apoio — dashboards, scripts, templates — é entregue digitalmente e acessível a qualquer momento."
+    answer: "A mentoria é 100% online, com sessões semanais via videoconferência. Isso permite que clínicas de qualquer cidade do Brasil participem sem deslocamento. Todo o material de apoio (dashboards, scripts, templates) é entregue digitalmente e acessível a qualquer momento."
   },
   {
     question: "Preciso ter equipe comercial para participar?",
@@ -44,7 +44,7 @@ const faqItems = [
   },
   {
     question: "Como é o acompanhamento durante a mentoria?",
-    answer: "Além das sessões quinzenais, o mentorado tem acesso a um canal de comunicação para dúvidas entre sessões. A cada encontro, revisamos os indicadores, avaliamos a implementação das ações anteriores e definimos as próximas entregas. O progresso é acompanhado via dashboard compartilhado com métricas atualizadas."
+    answer: "Além das sessões semanais, o mentorado tem acesso a um canal de comunicação para dúvidas entre sessões. A cada encontro, revisamos os indicadores, avaliamos a implementação das ações anteriores e definimos as próximas entregas. O progresso é acompanhado via dashboard compartilhado com métricas atualizadas."
   },
 ];
 

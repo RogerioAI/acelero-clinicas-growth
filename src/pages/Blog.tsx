@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { Header } from "@/components/landing/Header";
 import { Footer } from "@/components/landing/Footer";
 import { Button } from "@/components/ui/button";
@@ -9,6 +10,12 @@ import { Clock } from "lucide-react";
 const Blog = () => {
 
   return (
+    <>
+      <Helmet>
+        <title>Blog Acelero | Conteúdo sobre Vendas e Gestão Comercial para Clínicas</title>
+        <meta name="description" content="Artigos, guias e insights sobre como estruturar vendas, captar pacientes e escalar faturamento em clínicas de saúde e odontológicas." />
+        <link rel="canonical" href="https://acelero.vc/blog" />
+      </Helmet>
     <div className="min-h-screen">
       <Header />
       <main className="pt-20">
@@ -74,6 +81,7 @@ const Blog = () => {
       </main>
       <Footer />
     </div>
+    </>
   );
 };
 

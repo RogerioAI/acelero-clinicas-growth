@@ -4,7 +4,7 @@ import { Footer } from "@/components/landing/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Clock, Calendar } from "lucide-react";
 import { blogPosts } from "@/data/blogPosts";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -17,10 +17,11 @@ const BlogPost = () => {
   return (
     <>
       <Helmet>
-        <title>{post.metaTitle}</title>
-        <meta name="description" content={post.metaDescription} />
-        <meta property="og:title" content={post.metaTitle} />
-        <meta property="og:description" content={post.metaDescription} />
+        <title>{post.metaTitle} | Blog Acelero</title>
+        <meta name="description" content={post.metaDescription.substring(0, 155)} />
+        <link rel="canonical" href={`https://acelero.vc/blog/${post.slug}`} />
+        <meta property="og:title" content={`${post.metaTitle} | Blog Acelero`} />
+        <meta property="og:description" content={post.metaDescription.substring(0, 155)} />
         <meta property="og:image" content={post.thumbnail} />
         <meta property="og:type" content="article" />
       </Helmet>

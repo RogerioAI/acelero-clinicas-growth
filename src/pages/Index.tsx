@@ -30,7 +30,7 @@ const organizationSchema = {
     "url": "https://acelero.vc/sobre",
     "sameAs": [
       "https://www.instagram.com/acelero.vc/",
-      "https://www.linkedin.com/in/lucas-rocha-acelero"
+      "https://www.linkedin.com/in/lucasgrocha"
     ]
   },
   "address": {

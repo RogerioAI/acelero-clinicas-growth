@@ -179,8 +179,21 @@ const BlogPost = () => {
                   }) }} />
                 </div>
 
+                {/* Author Box */}
+                <div className="mt-16 p-8 bg-muted/50 rounded-2xl flex flex-col sm:flex-row items-center gap-6">
+                  <img src={lucasRochaImage} alt="Lucas Rocha" width={96} height={96} loading="lazy" className="w-24 h-24 rounded-full object-cover flex-shrink-0" />
+                  <div>
+                    <h3 className="text-lg font-bold mb-1">Sobre o autor</h3>
+                    <p className="text-sm font-semibold text-cyan mb-2">Lucas Rocha · Consultor Comercial para Clínicas de Saúde</p>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      Fundador da Acelero.vc, Lucas Rocha é especialista em gestão comercial de clínicas de saúde e odontológicas. Com mais de 15 anos de experiência e +250 clínicas transformadas, desenvolveu o método A.C.E.L.E.R.O para estruturar áreas comerciais e escalar faturamento com previsibilidade.
+                    </p>
+                    <Link to="/sobre" className="text-sm text-cyan font-semibold hover:underline mt-2 inline-block">Conheça mais →</Link>
+                  </div>
+                </div>
+
                 {/* CTA Section */}
-                <div className="mt-16 p-8 bg-gradient-to-br from-primary to-primary/95 rounded-2xl text-center">
+                <div className="mt-12 p-8 bg-gradient-to-br from-primary to-primary/95 rounded-2xl text-center">
                   <h3 className="text-2xl font-bold text-white mb-4">
                     Quer implementar essas estratégias na sua clínica?
                   </h3>

@@ -12,6 +12,12 @@ import { WhatsAppFloat } from "@/components/landing/WhatsAppFloat";
 
 const Index = () => {
   return (
+    <>
+      <Helmet>
+        <title>Acelero | Mentoria Comercial para Clínicas de Saúde</title>
+        <meta name="description" content="Mentoria comercial especializada para clínicas de saúde. Método A.C.E.L.E.R.O para estruturar sua área comercial e aumentar faturamento com previsibilidade. +250 clínicas transformadas." />
+        <link rel="canonical" href="https://acelero.vc/" />
+      </Helmet>
     <div className="min-h-screen">
       <Header />
       <main>
@@ -37,6 +43,7 @@ const Index = () => {
       <Footer />
       <WhatsAppFloat />
     </div>
+    </>
   );
 };
 

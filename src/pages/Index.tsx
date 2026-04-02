@@ -10,6 +10,7 @@ import { Mentors } from "@/components/landing/Mentors";
 import { FinalCTA } from "@/components/landing/FinalCTA";
 import { Footer } from "@/components/landing/Footer";
 import { WhatsAppFloat } from "@/components/landing/WhatsAppFloat";
+import { FAQ } from "@/components/landing/FAQ";
 import { JsonLd } from "@/components/JsonLd";
 
 const organizationSchema = {
@@ -189,6 +190,7 @@ const Index = () => {
         <div id="mentors">
           <Mentors />
         </div>
+        <FAQ />
         <FinalCTA />
       </main>
       <Footer />

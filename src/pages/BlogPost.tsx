@@ -2,11 +2,12 @@ import { useParams, Link, Navigate } from "react-router-dom";
 import { Header } from "@/components/landing/Header";
 import { Footer } from "@/components/landing/Footer";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Clock, Calendar } from "lucide-react";
+import { ArrowLeft, Clock, Calendar, User } from "lucide-react";
 import { blogPosts } from "@/data/blogPosts";
 import { Helmet } from "react-helmet-async";
 import { JsonLd } from "@/components/JsonLd";
 import { ptDateToISO } from "@/lib/dateUtils";
+import lucasRochaImage from "@/assets/lucas-rocha.jpg";
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -111,10 +112,24 @@ const BlogPost = () => {
                   <h1 className="text-4xl md:text-5xl font-bold mb-4">
                     {post.title}
                   </h1>
-                  <div className="flex items-center gap-4 text-muted-foreground">
+
+                  {/* Author line */}
+                  <div className="flex items-center gap-3 mb-4">
+                    <img src={lucasRochaImage} alt="Lucas Rocha" width={40} height={40} className="w-10 h-10 rounded-full object-cover" loading="lazy" />
+                    <div>
+                      <p className="text-sm font-semibold">Por Lucas Rocha</p>
+                      <p className="text-xs text-muted-foreground">Consultor Comercial para Clínicas de Saúde</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-4 text-muted-foreground text-sm">
                     <div className="flex items-center gap-2">
                       <Calendar className="w-4 h-4" />
-                      <span>{post.date}</span>
+                      <span>Publicado em {post.date}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Calendar className="w-4 h-4" />
+                      <span>Atualizado em {post.date}</span>
                     </div>
                     {post.readTime && (
                       <div className="flex items-center gap-2">
@@ -164,8 +179,21 @@ const BlogPost = () => {
                   }) }} />
                 </div>
 
+                {/* Author Box */}
+                <div className="mt-16 p-8 bg-muted/50 rounded-2xl flex flex-col sm:flex-row items-center gap-6">
+                  <img src={lucasRochaImage} alt="Lucas Rocha" width={96} height={96} loading="lazy" className="w-24 h-24 rounded-full object-cover flex-shrink-0" />
+                  <div>
+                    <h3 className="text-lg font-bold mb-1">Sobre o autor</h3>
+                    <p className="text-sm font-semibold text-cyan mb-2">Lucas Rocha · Consultor Comercial para Clínicas de Saúde</p>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      Fundador da Acelero.vc, Lucas Rocha é especialista em gestão comercial de clínicas de saúde e odontológicas. Com mais de 15 anos de experiência e +250 clínicas transformadas, desenvolveu o método A.C.E.L.E.R.O para estruturar áreas comerciais e escalar faturamento com previsibilidade.
+                    </p>
+                    <Link to="/sobre" className="text-sm text-cyan font-semibold hover:underline mt-2 inline-block">Conheça mais →</Link>
+                  </div>
+                </div>
+
                 {/* CTA Section */}
-                <div className="mt-16 p-8 bg-gradient-to-br from-primary to-primary/95 rounded-2xl text-center">
+                <div className="mt-12 p-8 bg-gradient-to-br from-primary to-primary/95 rounded-2xl text-center">
                   <h3 className="text-2xl font-bold text-white mb-4">
                     Quer implementar essas estratégias na sua clínica?
                   </h3>

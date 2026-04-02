@@ -16,7 +16,7 @@ export const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-[calc(100vh-4rem)] flex items-center justify-center pb-16 md:pb-24 pt-24 md:pt-0 overflow-hidden bg-gradient-hero">
+    <section className="relative min-h-screen flex items-center justify-center pb-16 md:pb-24 pt-24 md:pt-24 overflow-hidden bg-gradient-hero">
       {/* Background Video/Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <video

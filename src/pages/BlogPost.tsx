@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft, Clock, Calendar } from "lucide-react";
 import { blogPosts } from "@/data/blogPosts";
 import { Helmet } from "react-helmet-async";
+import { JsonLd } from "@/components/JsonLd";
+import { ptDateToISO } from "@/lib/dateUtils";
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -13,6 +15,36 @@ const BlogPost = () => {
   if (!post) {
     return <Navigate to="/blog" replace />;
   }
+
+  const isoDate = ptDateToISO(post.date);
+
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": post.title,
+    "description": post.metaDescription.substring(0, 155),
+    "author": {
+      "@type": "Person",
+      "name": "Lucas Rocha",
+      "url": "https://acelero.vc/sobre",
+      "jobTitle": "Consultor Comercial para Clínicas de Saúde"
+    },
+    "publisher": { "@id": "https://acelero.vc/#organization" },
+    "datePublished": isoDate,
+    "dateModified": isoDate,
+    "mainEntityOfPage": `https://acelero.vc/blog/${post.slug}`,
+    "image": post.thumbnail
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://acelero.vc" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://acelero.vc/blog" },
+      { "@type": "ListItem", "position": 3, "name": post.title, "item": `https://acelero.vc/blog/${post.slug}` }
+    ]
+  };
 
   return (
     <>
@@ -25,6 +57,8 @@ const BlogPost = () => {
         <meta property="og:image" content={post.thumbnail} />
         <meta property="og:type" content="article" />
       </Helmet>
+      <JsonLd data={articleSchema} />
+      <JsonLd data={breadcrumbSchema} />
       
       <div className="min-h-screen bg-background">
         <Header />

@@ -6,9 +6,18 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { blogPosts } from "@/data/blogPosts";
 import { Link } from "react-router-dom";
 import { Clock } from "lucide-react";
+import { JsonLd } from "@/components/JsonLd";
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://acelero.vc" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://acelero.vc/blog" }
+  ]
+};
 
 const Blog = () => {
-
   return (
     <>
       <Helmet>
@@ -16,6 +25,7 @@ const Blog = () => {
         <meta name="description" content="Artigos, guias e insights sobre como estruturar vendas, captar pacientes e escalar faturamento em clínicas de saúde e odontológicas." />
         <link rel="canonical" href="https://acelero.vc/blog" />
       </Helmet>
+      <JsonLd data={breadcrumbSchema} />
     <div className="min-h-screen">
       <Header />
       <main className="pt-20">

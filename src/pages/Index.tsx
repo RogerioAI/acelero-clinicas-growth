@@ -99,7 +99,7 @@ const faqSchema = {
       "name": "O que é a Mentoria A.C.E.L.E.R.O?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "É um programa de transformação comercial para clínicas de saúde com duração de 4 a 6 meses, sessões quinzenais, diagnóstico inicial, dashboards de indicadores, scripts de vendas e templates operacionais. O programa é dividido em 7 fases que cobrem desde alinhamento estratégico até escalabilidade do faturamento."
+        "text": "É um programa de transformação comercial para clínicas médicas e odontológicas com duração de 6 a 12 meses, sessões semanais, diagnóstico inicial, dashboards de indicadores, scripts de vendas e templates operacionais. O programa é dividido em 7 fases que cobrem desde alinhamento estratégico até escalabilidade do faturamento."
       }
     },
     {
@@ -107,7 +107,7 @@ const faqSchema = {
       "name": "Para quem é a mentoria comercial da Acelero?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Para gestores e proprietários de clínicas de saúde e odontológicas que querem estruturar sua área comercial, aumentar o faturamento com previsibilidade e parar de depender exclusivamente de indicações."
+        "text": "Para gestores e proprietários de clínicas médicas e odontológicas que querem estruturar sua área comercial, aumentar o faturamento com previsibilidade e parar de depender exclusivamente de indicações."
       }
     },
     {
@@ -115,7 +115,7 @@ const faqSchema = {
       "name": "Quanto tempo dura a mentoria?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "O programa tem duração de 4 a 6 meses com sessões quinzenais. São mais de 16 encontros divididos em 7 fases progressivas, cada uma com entregas específicas e mensuráveis."
+        "text": "O programa tem duração de 6 a 12 meses com sessões semanais. São encontros divididos em 7 fases progressivas, cada uma com entregas específicas e mensuráveis."
       }
     },
     {
@@ -123,7 +123,7 @@ const faqSchema = {
       "name": "Quem é o mentor da Acelero?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Lucas Rocha, consultor comercial com vasta experiência em gestão comercial de clínicas de saúde e odontológicas. Especializado em crescimento de faturamento, treinamento de equipes comerciais e implementação de processos de vendas para clínicas."
+        "text": "Lucas Rocha, consultor comercial com vasta experiência em gestão comercial de clínicas médicas e odontológicas. Especializado em crescimento de faturamento, treinamento de equipes comerciais e implementação de processos de vendas para clínicas."
       }
     },
     {
@@ -131,7 +131,7 @@ const faqSchema = {
       "name": "A mentoria funciona para clínicas de qualquer especialidade?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sim. O método A.C.E.L.E.R.O foi desenvolvido para clínicas de saúde em geral — odontológicas, médicas, estéticas e de especialidades. Os princípios de gestão comercial e vendas são adaptados à realidade de cada clínica durante o diagnóstico inicial."
+        "text": "O método A.C.E.L.E.R.O foi desenvolvido para clínicas médicas e odontológicas. Os princípios de gestão comercial e vendas são adaptados à realidade de cada clínica durante o diagnóstico inicial."
       }
     },
     {

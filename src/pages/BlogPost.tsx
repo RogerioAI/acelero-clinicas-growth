@@ -2,11 +2,12 @@ import { useParams, Link, Navigate } from "react-router-dom";
 import { Header } from "@/components/landing/Header";
 import { Footer } from "@/components/landing/Footer";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Clock, Calendar } from "lucide-react";
+import { ArrowLeft, Clock, Calendar, User } from "lucide-react";
 import { blogPosts } from "@/data/blogPosts";
 import { Helmet } from "react-helmet-async";
 import { JsonLd } from "@/components/JsonLd";
 import { ptDateToISO } from "@/lib/dateUtils";
+import lucasRochaImage from "@/assets/lucas-rocha.jpg";
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -111,10 +112,24 @@ const BlogPost = () => {
                   <h1 className="text-4xl md:text-5xl font-bold mb-4">
                     {post.title}
                   </h1>
-                  <div className="flex items-center gap-4 text-muted-foreground">
+
+                  {/* Author line */}
+                  <div className="flex items-center gap-3 mb-4">
+                    <img src={lucasRochaImage} alt="Lucas Rocha" width={40} height={40} className="w-10 h-10 rounded-full object-cover" loading="lazy" />
+                    <div>
+                      <p className="text-sm font-semibold">Por Lucas Rocha</p>
+                      <p className="text-xs text-muted-foreground">Consultor Comercial para Clínicas de Saúde</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-4 text-muted-foreground text-sm">
                     <div className="flex items-center gap-2">
                       <Calendar className="w-4 h-4" />
-                      <span>{post.date}</span>
+                      <span>Publicado em {post.date}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Calendar className="w-4 h-4" />
+                      <span>Atualizado em {post.date}</span>
                     </div>
                     {post.readTime && (
                       <div className="flex items-center gap-2">

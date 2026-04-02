@@ -23,7 +23,8 @@ const Blog = () => {
        <Helmet>
         <title>Blog Acelero | Conteúdo sobre Vendas e Gestão Comercial para Clínicas</title>
         <meta name="description" content="Artigos, guias e insights sobre como estruturar vendas, captar pacientes e escalar faturamento em clínicas de saúde e odontológicas." />
-        <link rel="canonical" href="https://acelero.vc/blog" />
+        <link rel="alternate" hrefLang="pt-BR" href="https://acelero.vc/blog" />
+        <link rel="alternate" hrefLang="x-default" href="https://acelero.vc/blog" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://acelero.vc/blog" />
         <meta property="og:title" content="Blog Acelero | Conteúdo sobre Vendas e Gestão Comercial para Clínicas" />

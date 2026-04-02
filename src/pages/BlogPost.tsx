@@ -53,6 +53,8 @@ const BlogPost = () => {
         <title>{post.metaTitle} | Blog Acelero</title>
         <meta name="description" content={post.metaDescription.substring(0, 155)} />
         <link rel="canonical" href={`https://acelero.vc/blog/${post.slug}`} />
+        <link rel="alternate" hrefLang="pt-BR" href={`https://acelero.vc/blog/${post.slug}`} />
+        <link rel="alternate" hrefLang="x-default" href={`https://acelero.vc/blog/${post.slug}`} />
         <meta property="og:type" content="article" />
         <meta property="og:url" content={`https://acelero.vc/blog/${post.slug}`} />
         <meta property="og:title" content={`${post.metaTitle} | Blog Acelero`} />

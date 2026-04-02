@@ -17,6 +17,11 @@ const BlogPost = () => {
     return <Navigate to="/blog" replace />;
   }
 
+  const relatedPosts = blogPosts
+    .filter((p) => p.slug !== post.slug)
+    .filter((p) => p.category === post.category || p.tags?.some((t) => post.tags?.includes(t)))
+    .slice(0, 3);
+
   const isoDate = ptDateToISO(post.date);
 
   const articleSchema = {
@@ -53,6 +58,8 @@ const BlogPost = () => {
         <title>{post.metaTitle} | Blog Acelero</title>
         <meta name="description" content={post.metaDescription.substring(0, 155)} />
         <link rel="canonical" href={`https://acelero.vc/blog/${post.slug}`} />
+        <link rel="alternate" hrefLang="pt-BR" href={`https://acelero.vc/blog/${post.slug}`} />
+        <link rel="alternate" hrefLang="x-default" href={`https://acelero.vc/blog/${post.slug}`} />
         <meta property="og:type" content="article" />
         <meta property="og:url" content={`https://acelero.vc/blog/${post.slug}`} />
         <meta property="og:title" content={`${post.metaTitle} | Blog Acelero`} />
@@ -74,7 +81,7 @@ const BlogPost = () => {
       
       <div className="min-h-screen bg-background">
         <Header />
-        <main className="pt-20">
+        <main id="main-content" className="pt-20">
           {/* Breadcrumb */}
           <section className="py-6 bg-muted/30">
             <div className="container mx-auto px-4">
@@ -206,6 +213,28 @@ const BlogPost = () => {
                     </a>
                   </Button>
                 </div>
+
+                {/* Related Posts */}
+                {relatedPosts.length > 0 && (
+                  <div className="mt-16">
+                    <h2 className="text-2xl font-bold mb-8">Artigos Relacionados</h2>
+                    <div className="grid md:grid-cols-3 gap-6">
+                      {relatedPosts.map((related) => (
+                        <Link key={related.id} to={`/blog/${related.slug}`} className="group">
+                          <div className="bg-card border border-border rounded-xl overflow-hidden hover:shadow-lg transition-shadow">
+                            <div className="h-36 overflow-hidden">
+                              <img src={related.thumbnail} alt={related.title} width={400} height={144} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
+                            </div>
+                            <div className="p-4">
+                              <span className="text-xs text-cyan font-semibold">{related.category}</span>
+                              <h3 className="text-sm font-bold mt-1 line-clamp-2 group-hover:text-cyan transition-colors">{related.title}</h3>
+                            </div>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           </section>

@@ -23,7 +23,8 @@ const Blog = () => {
        <Helmet>
         <title>Blog Acelero | Conteúdo sobre Vendas e Gestão Comercial para Clínicas</title>
         <meta name="description" content="Artigos, guias e insights sobre como estruturar vendas, captar pacientes e escalar faturamento em clínicas de saúde e odontológicas." />
-        <link rel="canonical" href="https://acelero.vc/blog" />
+        <link rel="alternate" hrefLang="pt-BR" href="https://acelero.vc/blog" />
+        <link rel="alternate" hrefLang="x-default" href="https://acelero.vc/blog" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://acelero.vc/blog" />
         <meta property="og:title" content="Blog Acelero | Conteúdo sobre Vendas e Gestão Comercial para Clínicas" />
@@ -41,7 +42,7 @@ const Blog = () => {
       <JsonLd data={breadcrumbSchema} />
     <div className="min-h-screen">
       <Header />
-      <main className="pt-20">
+      <main id="main-content" className="pt-20">
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-b from-primary to-primary/95">
           <div className="container mx-auto px-4">

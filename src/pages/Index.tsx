@@ -152,6 +152,8 @@ const Index = () => {
         <title>Acelero | Mentoria Comercial para Clínicas de Saúde</title>
         <meta name="description" content="Mentoria comercial especializada para clínicas de saúde. Método A.C.E.L.E.R.O para estruturar sua área comercial e aumentar faturamento com previsibilidade. +250 clínicas transformadas." />
         <link rel="canonical" href="https://acelero.vc/" />
+        <link rel="alternate" hrefLang="pt-BR" href="https://acelero.vc/" />
+        <link rel="alternate" hrefLang="x-default" href="https://acelero.vc/" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://acelero.vc/" />
         <meta property="og:title" content="Acelero | Mentoria Comercial para Clínicas de Saúde" />
@@ -170,9 +172,10 @@ const Index = () => {
       <JsonLd data={websiteSchema} />
       <JsonLd data={breadcrumbSchema} />
       <JsonLd data={faqSchema} />
+    <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:bg-primary focus:text-primary-foreground focus:px-4 focus:py-2 focus:rounded">Pular para conteúdo</a>
     <div className="min-h-screen">
       <Header />
-      <main>
+      <main id="main-content">
         <div id="hero">
           <Hero />
         </div>

@@ -54,6 +54,12 @@ function buildSitemapXml(posts: Array<{ slug: string; date: string }>): string {
     <priority>1.0</priority>
   </url>`);
   entries.push(`  <url>
+    <loc>${DOMAIN}/sobre</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>`);
+  entries.push(`  <url>
     <loc>${DOMAIN}/mentoria</loc>
     <lastmod>${today}</lastmod>
     <changefreq>monthly</changefreq>

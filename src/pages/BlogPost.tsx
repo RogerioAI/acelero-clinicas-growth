@@ -128,7 +128,11 @@ const BlogPost = () => {
                 <img
                   src={post.thumbnail}
                   alt={post.title}
+                  width={800}
+                  height={400}
+                  loading="lazy"
                   className="w-full h-[400px] object-cover rounded-xl mb-12"
+                  style={{ aspectRatio: '2/1' }}
                 />
 
                 <div className="prose prose-lg max-w-none prose-headings:font-bold prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4 prose-p:text-muted-foreground prose-p:leading-relaxed prose-a:text-cyan prose-a:no-underline hover:prose-a:underline prose-strong:text-foreground prose-ul:my-6 prose-li:my-2 prose-blockquote:border-l-4 prose-blockquote:border-cyan prose-blockquote:bg-muted/30 prose-blockquote:py-4 prose-blockquote:px-6 prose-blockquote:rounded-r-lg prose-table:w-full prose-th:bg-muted prose-th:p-3 prose-th:text-left prose-td:p-3 prose-td:border-t prose-td:border-border">

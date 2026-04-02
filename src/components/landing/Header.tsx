@@ -57,7 +57,7 @@ export const Header = () => {
               width={160}
               height={56}
               loading="eager"
-              className="h-10 md:h-14 relative z-10 transition-all duration-300 group-hover:scale-105"
+              className="h-10 md:h-14 w-auto relative z-10 transition-all duration-300 group-hover:scale-105"
             />
           </Link>
 

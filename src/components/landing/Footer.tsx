@@ -9,7 +9,7 @@ export const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
             {/* Logo and Description */}
             <div className="md:col-span-1">
-              <img src={logo} alt="Acelero" className="h-20 mb-6" width={200} height={80} loading="lazy" />
+              <img src={logo} alt="Acelero" className="h-20 w-auto mb-6" width={200} height={80} loading="lazy" />
               <p className="text-primary-foreground/80 text-sm leading-relaxed max-w-sm text-center">
                 Acelero.vc organiza, capacita e acelera o seu faturamento
               </p>

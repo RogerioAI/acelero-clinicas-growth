@@ -213,6 +213,28 @@ const BlogPost = () => {
                     </a>
                   </Button>
                 </div>
+
+                {/* Related Posts */}
+                {relatedPosts.length > 0 && (
+                  <div className="mt-16">
+                    <h2 className="text-2xl font-bold mb-8">Artigos Relacionados</h2>
+                    <div className="grid md:grid-cols-3 gap-6">
+                      {relatedPosts.map((related) => (
+                        <Link key={related.id} to={`/blog/${related.slug}`} className="group">
+                          <div className="bg-card border border-border rounded-xl overflow-hidden hover:shadow-lg transition-shadow">
+                            <div className="h-36 overflow-hidden">
+                              <img src={related.thumbnail} alt={related.title} width={400} height={144} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
+                            </div>
+                            <div className="p-4">
+                              <span className="text-xs text-cyan font-semibold">{related.category}</span>
+                              <h3 className="text-sm font-bold mt-1 line-clamp-2 group-hover:text-cyan transition-colors">{related.title}</h3>
+                            </div>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           </section>

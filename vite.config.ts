@@ -121,6 +121,9 @@ function sitemapPlugin(): Plugin {
   };
 }
 
+const blogSlugs = extractBlogDataFromSource().map((p) => `/blog/${p.slug}`);
+const prerenderRoutes = ["/", "/blog", ...blogSlugs];
+
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
   server: {
@@ -131,6 +134,21 @@ export default defineConfig(({ mode }) => ({
     react(),
     mode === "development" && componentTagger(),
     sitemapPlugin(),
+    mode === "production" &&
+      prerender({
+        routes: prerenderRoutes,
+        renderer: new PuppeteerRenderer({
+          renderAfterTime: 3000,
+          headless: true,
+          args: ["--no-sandbox", "--disable-setuid-sandbox"],
+        }),
+        postProcess(renderedRoute) {
+          // Ensure meta tags from Helmet are in the final HTML
+          renderedRoute.html = renderedRoute.html
+            .replace(/<script[^>]*data-react-helmet[^>]*><\/script>/g, "");
+          return renderedRoute;
+        },
+      }),
   ].filter(Boolean),
   resolve: {
     alias: {

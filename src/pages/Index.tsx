@@ -151,6 +151,19 @@ const Index = () => {
         <title>Acelero | Mentoria Comercial para Clínicas de Saúde</title>
         <meta name="description" content="Mentoria comercial especializada para clínicas de saúde. Método A.C.E.L.E.R.O para estruturar sua área comercial e aumentar faturamento com previsibilidade. +250 clínicas transformadas." />
         <link rel="canonical" href="https://acelero.vc/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://acelero.vc/" />
+        <meta property="og:title" content="Acelero | Mentoria Comercial para Clínicas de Saúde" />
+        <meta property="og:description" content="Método A.C.E.L.E.R.O para estruturar sua área comercial e aumentar faturamento com previsibilidade. +250 clínicas transformadas." />
+        <meta property="og:image" content="https://acelero.vc/og-image-home.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:locale" content="pt_BR" />
+        <meta property="og:site_name" content="Acelero" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Acelero | Mentoria Comercial para Clínicas de Saúde" />
+        <meta name="twitter:description" content="Método A.C.E.L.E.R.O para estruturar sua área comercial e aumentar faturamento com previsibilidade." />
+        <meta name="twitter:image" content="https://acelero.vc/og-image-home.jpg" />
       </Helmet>
       <JsonLd data={organizationSchema} />
       <JsonLd data={websiteSchema} />

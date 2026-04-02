@@ -17,6 +17,11 @@ const BlogPost = () => {
     return <Navigate to="/blog" replace />;
   }
 
+  const relatedPosts = blogPosts
+    .filter((p) => p.slug !== post.slug)
+    .filter((p) => p.category === post.category || p.tags?.some((t) => post.tags?.includes(t)))
+    .slice(0, 3);
+
   const isoDate = ptDateToISO(post.date);
 
   const articleSchema = {

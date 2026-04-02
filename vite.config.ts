@@ -3,15 +3,9 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 import { writeFileSync, readFileSync, mkdirSync } from "fs";
-import prerender from "@prerenderer/rollup-plugin";
-import PuppeteerRenderer from "@prerenderer/renderer-puppeteer";
 
 const DOMAIN = "https://acelero.vc";
 
-/**
- * Extracts blog post slugs and dates from the source file without importing it.
- * This avoids issues with Vite aliases and image imports in Node context.
- */
 function extractBlogDataFromSource(): Array<{ slug: string; date: string }> {
   const src = readFileSync(path.resolve(__dirname, "src/data/blogPosts.ts"), "utf-8");
   const posts: Array<{ slug: string; date: string }> = [];
@@ -43,10 +37,8 @@ function parsePtDate(dateStr: string): string | undefined {
 
 function buildSitemapXml(posts: Array<{ slug: string; date: string }>): string {
   const entries: string[] = [];
-
   const today = new Date().toISOString().split("T")[0];
 
-  // Static pages
   entries.push(`  <url>
     <loc>${DOMAIN}/</loc>
     <lastmod>${today}</lastmod>
@@ -78,7 +70,6 @@ function buildSitemapXml(posts: Array<{ slug: string; date: string }>): string {
     <priority>0.5</priority>
   </url>`);
 
-  // Blog posts
   for (const post of posts) {
     const lastmod = parsePtDate(post.date);
     let xml = `  <url>\n    <loc>${DOMAIN}/blog/${post.slug}</loc>`;
@@ -127,10 +118,6 @@ function sitemapPlugin(): Plugin {
   };
 }
 
-const blogSlugs = extractBlogDataFromSource().map((p) => `/blog/${p.slug}`);
-const prerenderRoutes = ["/", "/sobre", "/mentoria", "/blog", ...blogSlugs];
-
-// https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
@@ -140,19 +127,6 @@ export default defineConfig(({ mode }) => ({
     react(),
     mode === "development" && componentTagger(),
     sitemapPlugin(),
-    mode === "production" &&
-      prerender({
-        routes: prerenderRoutes,
-        renderer: new PuppeteerRenderer({
-          renderAfterTime: 3000,
-          headless: true,
-          args: ["--no-sandbox", "--disable-setuid-sandbox"],
-        }),
-        postProcess(renderedRoute) {
-          renderedRoute.html = renderedRoute.html
-            .replace(/<script[^>]*data-react-helmet[^>]*><\/script>/g, "");
-        },
-      }),
   ].filter(Boolean),
   resolve: {
     alias: {

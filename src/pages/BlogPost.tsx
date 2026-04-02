@@ -81,7 +81,7 @@ const BlogPost = () => {
       
       <div className="min-h-screen bg-background">
         <Header />
-        <main className="pt-20">
+        <main id="main-content" className="pt-20">
           {/* Breadcrumb */}
           <section className="py-6 bg-muted/30">
             <div className="container mx-auto px-4">

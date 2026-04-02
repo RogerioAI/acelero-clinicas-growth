@@ -20,10 +20,23 @@ const breadcrumbSchema = {
 const Blog = () => {
   return (
     <>
-      <Helmet>
+       <Helmet>
         <title>Blog Acelero | Conteúdo sobre Vendas e Gestão Comercial para Clínicas</title>
         <meta name="description" content="Artigos, guias e insights sobre como estruturar vendas, captar pacientes e escalar faturamento em clínicas de saúde e odontológicas." />
         <link rel="canonical" href="https://acelero.vc/blog" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://acelero.vc/blog" />
+        <meta property="og:title" content="Blog Acelero | Conteúdo sobre Vendas e Gestão Comercial para Clínicas" />
+        <meta property="og:description" content="Artigos, guias e insights sobre como estruturar vendas, captar pacientes e escalar faturamento em clínicas de saúde e odontológicas." />
+        <meta property="og:image" content="https://acelero.vc/og-image-home.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:locale" content="pt_BR" />
+        <meta property="og:site_name" content="Acelero" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Blog Acelero | Conteúdo sobre Vendas e Gestão Comercial para Clínicas" />
+        <meta name="twitter:description" content="Artigos, guias e insights sobre como estruturar vendas, captar pacientes e escalar faturamento em clínicas de saúde e odontológicas." />
+        <meta name="twitter:image" content="https://acelero.vc/og-image-home.jpg" />
       </Helmet>
       <JsonLd data={breadcrumbSchema} />
     <div className="min-h-screen">

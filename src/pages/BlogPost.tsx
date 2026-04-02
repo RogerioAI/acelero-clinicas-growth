@@ -52,10 +52,21 @@ const BlogPost = () => {
         <title>{post.metaTitle} | Blog Acelero</title>
         <meta name="description" content={post.metaDescription.substring(0, 155)} />
         <link rel="canonical" href={`https://acelero.vc/blog/${post.slug}`} />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content={`https://acelero.vc/blog/${post.slug}`} />
         <meta property="og:title" content={`${post.metaTitle} | Blog Acelero`} />
         <meta property="og:description" content={post.metaDescription.substring(0, 155)} />
-        <meta property="og:image" content={post.thumbnail} />
-        <meta property="og:type" content="article" />
+        <meta property="og:image" content={post.thumbnail || "https://acelero.vc/og-image-home.jpg"} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:locale" content="pt_BR" />
+        <meta property="og:site_name" content="Acelero" />
+        <meta property="article:published_time" content={isoDate} />
+        <meta property="article:author" content="Lucas Rocha" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`${post.metaTitle} | Blog Acelero`} />
+        <meta name="twitter:description" content={post.metaDescription.substring(0, 155)} />
+        <meta name="twitter:image" content={post.thumbnail || "https://acelero.vc/og-image-home.jpg"} />
       </Helmet>
       <JsonLd data={articleSchema} />
       <JsonLd data={breadcrumbSchema} />

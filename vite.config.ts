@@ -128,7 +128,7 @@ function sitemapPlugin(): Plugin {
 }
 
 const blogSlugs = extractBlogDataFromSource().map((p) => `/blog/${p.slug}`);
-const prerenderRoutes = ["/", "/blog", ...blogSlugs];
+const prerenderRoutes = ["/", "/sobre", "/mentoria", "/blog", ...blogSlugs];
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({

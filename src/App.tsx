@@ -10,6 +10,8 @@ import NotFound from "./pages/NotFound";
 
 const Blog = lazy(() => import("./pages/Blog"));
 const BlogPost = lazy(() => import("./pages/BlogPost"));
+const Sobre = lazy(() => import("./pages/Sobre"));
+const Mentoria = lazy(() => import("./pages/Mentoria"));
 
 const queryClient = new QueryClient();
 
@@ -23,6 +25,8 @@ const App = () => (
         <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="w-8 h-8 border-4 border-primary border-t-transparent rounded-full animate-spin" /></div>}>
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/sobre" element={<Sobre />} />
+            <Route path="/mentoria" element={<Mentoria />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

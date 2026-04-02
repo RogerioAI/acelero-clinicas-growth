@@ -42,16 +42,32 @@ function parsePtDate(dateStr: string): string | undefined {
 function buildSitemapXml(posts: Array<{ slug: string; date: string }>): string {
   const entries: string[] = [];
 
+  const today = new Date().toISOString().split("T")[0];
+
   // Static pages
   entries.push(`  <url>
     <loc>${DOMAIN}/</loc>
+    <lastmod>${today}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>`);
   entries.push(`  <url>
+    <loc>${DOMAIN}/mentoria</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>`);
+  entries.push(`  <url>
     <loc>${DOMAIN}/blog</loc>
+    <lastmod>${today}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>`);
+  entries.push(`  <url>
+    <loc>${DOMAIN}/contato</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>`);
 
   // Blog posts

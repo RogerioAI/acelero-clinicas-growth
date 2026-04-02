@@ -72,7 +72,7 @@ const Sobre = () => {
 
       <div className="min-h-screen">
         <Header />
-        <main className="pt-20">
+        <main id="main-content" className="pt-20">
           {/* Hero */}
           <section className="py-20 bg-gradient-to-b from-primary to-primary/95">
             <div className="container mx-auto px-4">

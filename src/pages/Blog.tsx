@@ -67,6 +67,9 @@ const Blog = () => {
                       <img
                         src={post.thumbnail}
                         alt={post.title}
+                        width={400}
+                        height={192}
+                        loading="lazy"
                         className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                       />
                     </div>

@@ -56,6 +56,9 @@ export const Mentors = () => {
                   <img
                     src={index === 0 ? lucasRochaImage : rogerioCintraImage}
                     alt={mentor.name}
+                    width={400}
+                    height={384}
+                    loading="lazy"
                     className="w-full h-full object-cover"
                     style={{ objectPosition: "center top" }}
                   />

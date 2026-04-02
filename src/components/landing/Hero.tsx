@@ -26,10 +26,16 @@ export const Hero = () => {
           playsInline
           onTimeUpdate={handleTimeUpdate}
           className="w-full h-full object-cover object-center"
+          width={1920}
+          height={1080}
         />
         <img 
           src={heroImage} 
-          alt="Mentores Acelero - Lucas e Rogério" 
+          alt="Mentores Acelero - Lucas e Rogério"
+          width={1920}
+          height={1080}
+          loading="eager"
+          fetchPriority="high"
           className={`w-full h-full object-cover object-center absolute inset-0 ${imageOpacity > 0 ? 'animate-cinematic-reveal' : 'opacity-0'}`}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/60 to-primary/40" />

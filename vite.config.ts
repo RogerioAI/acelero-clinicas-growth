@@ -3,6 +3,8 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 import { writeFileSync, readFileSync, mkdirSync } from "fs";
+import prerender from "@prerenderer/rollup-plugin";
+import PuppeteerRenderer from "@prerenderer/renderer-puppeteer";
 
 const DOMAIN = "https://acelero.vc";
 
@@ -119,6 +121,9 @@ function sitemapPlugin(): Plugin {
   };
 }
 
+const blogSlugs = extractBlogDataFromSource().map((p) => `/blog/${p.slug}`);
+const prerenderRoutes = ["/", "/blog", ...blogSlugs];
+
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
   server: {
@@ -129,6 +134,19 @@ export default defineConfig(({ mode }) => ({
     react(),
     mode === "development" && componentTagger(),
     sitemapPlugin(),
+    mode === "production" &&
+      prerender({
+        routes: prerenderRoutes,
+        renderer: new PuppeteerRenderer({
+          renderAfterTime: 3000,
+          headless: true,
+          args: ["--no-sandbox", "--disable-setuid-sandbox"],
+        }),
+        postProcess(renderedRoute) {
+          renderedRoute.html = renderedRoute.html
+            .replace(/<script[^>]*data-react-helmet[^>]*><\/script>/g, "");
+        },
+      }),
   ].filter(Boolean),
   resolve: {
     alias: {

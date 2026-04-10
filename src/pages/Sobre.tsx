@@ -95,10 +95,10 @@ const Sobre = () => {
                     Consultor Comercial e Mentor de Vendas para Clínicas de Saúde
                   </p>
                   <div className="flex gap-4 justify-center md:justify-start">
-                    <a href="https://www.linkedin.com/in/lucasgrocha" target="_blank" rel="noopener noreferrer" className="p-3 bg-primary-foreground/10 rounded-full hover:bg-primary-foreground/20 transition-colors">
+                    <a href="https://www.linkedin.com/in/lucasgrocha/" target="_blank" rel="noopener noreferrer" className="p-3 bg-primary-foreground/10 rounded-full hover:bg-primary-foreground/20 transition-colors" aria-label="LinkedIn de Lucas Rocha">
                       <Linkedin className="w-5 h-5 text-primary-foreground" />
                     </a>
-                    <a href="https://www.instagram.com/acelero.vc/" target="_blank" rel="noopener noreferrer" className="p-3 bg-primary-foreground/10 rounded-full hover:bg-primary-foreground/20 transition-colors">
+                    <a href="https://www.instagram.com/acelero.vc/" target="_blank" rel="noopener noreferrer" className="p-3 bg-primary-foreground/10 rounded-full hover:bg-primary-foreground/20 transition-colors" aria-label="Instagram da Acelero">
                       <Instagram className="w-5 h-5 text-primary-foreground" />
                     </a>
                   </div>

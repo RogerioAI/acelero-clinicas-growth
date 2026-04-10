@@ -20,7 +20,7 @@ export const Footer = () => {
               <h4 className="font-semibold mb-4">Redes Sociais</h4>
               <div className="flex gap-4 md:justify-end justify-center">
                 <a
-                  href="https://instagram.com.br/acelero.vc"
+                  href="https://www.instagram.com/acelero.vc/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full bg-primary-foreground/10 hover:bg-cyan/20 flex items-center justify-center transition-colors"

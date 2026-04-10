@@ -79,7 +79,7 @@ export const Header = () => {
             <Button 
               variant="cyan" 
               size="default"
-              onClick={() => window.open('https://diagnostico.acelero.vc/', '_blank')}
+              onClick={() => window.open(getWhatsAppLink("Quero falar com o time da Acelero"), '_blank')}
             >
               Falar com o time
           </Button>

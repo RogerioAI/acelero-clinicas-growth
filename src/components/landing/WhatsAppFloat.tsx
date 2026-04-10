@@ -3,7 +3,7 @@ import { getWhatsAppLink } from "@/config/contact";
 
 export const WhatsAppFloat = () => {
   const handleClick = () => {
-    window.open('https://diagnostico.acelero.vc/', '_blank');
+    window.open(getWhatsAppLink(), '_blank');
   };
 
   return (

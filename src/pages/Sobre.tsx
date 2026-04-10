@@ -167,7 +167,7 @@ const Sobre = () => {
               </p>
               <a href="https://diagnostico.acelero.vc/" target="_blank" rel="noopener noreferrer" className="inline-block px-8 py-4 bg-cyan text-cyan-foreground font-bold rounded-lg hover:bg-cyan-light transition-colors">
                 Agendar Diagnóstico
-              </Link>
+              </a>
             </div>
           </section>
         </main>

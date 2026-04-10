@@ -78,7 +78,7 @@ export const Testimonials = () => {
             <Button
               variant="cta"
               size="xl"
-              onClick={() => window.open(getWhatsAppLink("Quero resultados assim na minha clínica"), "_blank")}
+              onClick={() => window.open('https://diagnostico.acelero.vc/', '_blank')}
             >
               Quero resultados assim <br></br>na minha clínica
             </Button>

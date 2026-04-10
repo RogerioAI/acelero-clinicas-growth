@@ -109,7 +109,7 @@ export const Mentors = () => {
               <Button
                 variant="cta"
                 size="xl"
-                onClick={() => window.open(getWhatsAppLink("Quero conhecer meus mentores"), "_blank")}
+                onClick={() => window.open('https://diagnostico.acelero.vc/', '_blank')}
               >
                 Quero conhecer<br></br> meus mentores
               </Button>

@@ -137,7 +137,7 @@ export const Method = () => {
               variant="cta"
               size="xl"
               onClick={() =>
-                window.open(getWhatsAppLink("Quero aplicar o método A.C.E.L.E.R.O na minha clínica"), "_blank")
+                window.open('https://diagnostico.acelero.vc/', '_blank')
               }
             >
               Quero aplicar o método <br></br> na minha clínica

@@ -168,7 +168,7 @@ Nossa mentoria oferece acompanhamento completo em gestão de vendas, atendimento
     metaDescription: "Aprenda a aplicar o método SPIN Selling na sua clínica odontológica para conduzir conversas estratégicas que aumentam conversão e fecham mais tratamentos.",
     thumbnail: whatsappLgpdImage,
     excerpt: "Vender na odontologia não é sobre convencer, é sobre conduzir conversas inteligentes. Descubra como aplicar o SPIN Selling para transformar atendimentos em fechamentos.",
-    date: "17 Nov 2024",
+    date: "17 Jan 2026",
     readTime: "10 min",
     content: `
 Em um mercado odontológico cada vez mais competitivo, onde o paciente tem inúmeras opções e a decisão de fechar um tratamento depende mais da conversa do que do preço, muitos dentistas ainda cometem o erro de tratar o atendimento como uma simples etapa burocrática. O resultado? Orçamentos parados, pacientes indecisos e oportunidades perdidas.
@@ -376,7 +376,7 @@ Nossa mentoria oferece acompanhamento completo em gestão de vendas, atendimento
     metaDescription: "Descubra como estruturar um fluxo comercial de telemedicina em 7 etapas que melhora captação, experiência e fidelização de pacientes.",
     thumbnail: telemedicinaImage,
     excerpt: "Telemedicina não é só tecnologia: é processo. Veja como implementar um fluxo em 7 etapas para captar, atender e fidelizar pacientes com eficiência.",
-    date: "28 Out 2024",
+    date: "28 Out 2025",
     readTime: "8 min",
     content: `
 ## A telemedicina como extensão da clínica
@@ -450,7 +450,7 @@ Nossa mentoria oferece acompanhamento completo em gestão de vendas, atendimento
     metaDescription: "Aprenda a estruturar planos pet e campanhas sazonais que geram retorno previsível para clínicas veterinárias. Inclui calendário comercial completo.",
     thumbnail: planosPetImage,
     excerpt: "Transforme sazonalidade em previsibilidade. Crie planos pet e campanhas de check-up para manter sua clínica cheia o ano inteiro.",
-    date: "20 Out 2024",
+    date: "20 Out 2025",
     readTime: "7 min",
     content: `
 ## O desafio da sazonalidade nas clínicas veterinárias

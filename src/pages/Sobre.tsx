@@ -119,7 +119,7 @@ const Sobre = () => {
                   Especialista em diagnosticar gargalos de conversão, treinar equipes de atendimento e construir máquinas de vendas adaptadas à realidade do setor de saúde.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  Com formação em gestão comercial e experiência prática em mais de 15 anos no mercado, Lucas desenvolveu o método A.C.E.L.E.R.O após identificar que a maioria das clínicas de saúde no Brasil opera sem processos comerciais estruturados, dependendo exclusivamente de indicações e do boca a boca para crescer.
+                  Com experiência comercial prática em mais de 15 anos no mercado, Lucas desenvolveu o método A.C.E.L.E.R.O após identificar que a maioria das clínicas de saúde no Brasil opera sem processos comerciais estruturados, dependendo exclusivamente de indicações e do boca a boca para crescer.
                 </p>
 
                 <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 not-prose">

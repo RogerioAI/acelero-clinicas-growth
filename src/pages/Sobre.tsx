@@ -165,7 +165,7 @@ const Sobre = () => {
               <p className="text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
                 Agende um diagnóstico comercial e descubra como estruturar a área comercial da sua clínica.
               </p>
-              <Link to="/" className="inline-block px-8 py-4 bg-cyan text-cyan-foreground font-bold rounded-lg hover:bg-cyan-light transition-colors">
+              <a href="https://diagnostico.acelero.vc/" target="_blank" rel="noopener noreferrer" className="inline-block px-8 py-4 bg-cyan text-cyan-foreground font-bold rounded-lg hover:bg-cyan-light transition-colors">
                 Agendar Diagnóstico
               </Link>
             </div>

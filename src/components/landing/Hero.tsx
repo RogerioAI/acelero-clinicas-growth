@@ -62,7 +62,7 @@ export const Hero = () => {
               variant="cta" 
               size="default" 
               className="text-sm sm:text-base md:text-lg px-6 py-3 sm:px-8 sm:py-4 md:px-10 h-auto"
-              onClick={() => window.open(getWhatsAppLink("Quero acelerar minhas vendas"), '_blank')}
+              onClick={() => window.open('https://diagnostico.acelero.vc/', '_blank')}
             >
               Quero acelerar minhas vendas
             </Button>

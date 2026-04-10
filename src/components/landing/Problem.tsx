@@ -120,7 +120,7 @@ export const Problem = () => {
           <Button
             variant="default"
             size="lg"
-            onClick={() => window.open(getWhatsAppLink("Quero destravar o comercial da minha clínica"), "_blank")}
+            onClick={() => window.open('https://diagnostico.acelero.vc/', '_blank')}
           >
             Destrave o comercial da sua clínica
           </Button>

@@ -116,10 +116,10 @@ const Sobre = () => {
                   Lucas Rocha é consultor comercial especializado em clínicas de saúde e odontológicas, com vasta experiência em gestão comercial. Fundador da Acelero.vc, já transformou mais de 250 clínicas através do método A.C.E.L.E.R.O, focado em estruturação comercial e crescimento de faturamento com previsibilidade.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  Sua trajetória inclui a implementação de processos comerciais em clínicas que faturavam de R$ 80 mil a R$ 5 milhões mensais. Especialista em diagnosticar gargalos de conversão, treinar equipes de atendimento e construir máquinas de vendas adaptadas à realidade do setor de saúde.
+                  Especialista em diagnosticar gargalos de conversão, treinar equipes de atendimento e construir máquinas de vendas adaptadas à realidade do setor de saúde.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  Com formação em gestão comercial e experiência prática em mais de 15 anos no mercado, Lucas desenvolveu o método A.C.E.L.E.R.O após identificar que a maioria das clínicas de saúde no Brasil opera sem processos comerciais estruturados, dependendo exclusivamente de indicações e do boca a boca para crescer.
+                  Com experiência comercial prática em mais de 15 anos no mercado, Lucas desenvolveu o método A.C.E.L.E.R.O após identificar que a maioria das clínicas de saúde no Brasil opera sem processos comerciais estruturados, dependendo exclusivamente de indicações e do boca a boca para crescer.
                 </p>
 
                 <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 not-prose">
@@ -165,9 +165,9 @@ const Sobre = () => {
               <p className="text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
                 Agende um diagnóstico comercial e descubra como estruturar a área comercial da sua clínica.
               </p>
-              <Link to="/" className="inline-block px-8 py-4 bg-cyan text-cyan-foreground font-bold rounded-lg hover:bg-cyan-light transition-colors">
+              <a href="https://diagnostico.acelero.vc/" target="_blank" rel="noopener noreferrer" className="inline-block px-8 py-4 bg-cyan text-cyan-foreground font-bold rounded-lg hover:bg-cyan-light transition-colors">
                 Agendar Diagnóstico
-              </Link>
+              </a>
             </div>
           </section>
         </main>

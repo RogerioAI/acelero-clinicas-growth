@@ -52,7 +52,7 @@ export const Footer = () => {
 
           {/* Copyright */}
           <div className="pt-8 border-t border-primary-foreground/20 text-center text-sm text-primary-foreground/60">
-            <p>© 2025 Acelero.vc - Todos os direitos reservados</p>
+            <p>© 2026 Acelero.vc - Todos os direitos reservados</p>
           </div>
         </div>
       </div>

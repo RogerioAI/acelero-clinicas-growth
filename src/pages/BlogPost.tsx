@@ -23,8 +23,9 @@ const BlogPost = () => {
     .slice(0, 3);
 
   const isoDate = ptDateToISO(post.date);
+  const modifiedIso = post.updatedAt ?? isoDate;
 
-  const articleSchema = {
+  const articleSchema: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": post.title,
@@ -37,9 +38,10 @@ const BlogPost = () => {
     },
     "publisher": { "@id": "https://acelero.vc/#organization" },
     "datePublished": isoDate,
-    "dateModified": isoDate,
+    "dateModified": modifiedIso,
     "mainEntityOfPage": `https://acelero.vc/blog/${post.slug}`,
-    "image": post.thumbnail
+    "image": post.thumbnail,
+    ...(post.keywords ? { keywords: post.keywords } : {})
   };
 
   const breadcrumbSchema = {
@@ -136,7 +138,7 @@ const BlogPost = () => {
                     </div>
                     <div className="flex items-center gap-2">
                       <Calendar className="w-4 h-4" />
-                      <span>Atualizado em {post.date}</span>
+                      <span>Atualizado em {post.updatedAt ? new Date(post.updatedAt).toLocaleDateString('pt-BR', { day: '2-digit', month: 'short', year: 'numeric' }) : post.date}</span>
                     </div>
                     {post.readTime && (
                       <div className="flex items-center gap-2">

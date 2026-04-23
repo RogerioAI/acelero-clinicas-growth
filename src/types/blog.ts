@@ -11,4 +11,6 @@ export interface BlogPost {
   content: string;
   date: string;
   readTime?: string;
+  updatedAt?: string;
+  keywords?: string;
 }

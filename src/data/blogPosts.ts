@@ -160,15 +160,17 @@ Nossa mentoria oferece acompanhamento completo em gestão de vendas, atendimento
   },
   {
     id: 3,
-    title: "SPIN Selling na odontologia: como transformar conversas em fechamento de tratamentos",
+    title: "SPIN Selling na Odontologia: guia completo com casos reais de clínicas que cresceram 600%",
     slug: "spin-selling-odontologia-transformar-conversas-fechamento",
     category: "Processos Comerciais",
     tags: ["spin selling", "vendas consultivas", "odontologia", "mentoria comercial", "fechamento"],
-    metaTitle: "SPIN Selling na odontologia: transformar conversas em fechamentos",
-    metaDescription: "Aprenda a aplicar o método SPIN Selling na sua clínica odontológica para conduzir conversas estratégicas que aumentam conversão e fecham mais tratamentos.",
+    metaTitle: "SPIN Selling na Odontologia: guia completo com casos reais de clínicas que cresceram 600%",
+    metaDescription: "Aprenda como aplicar o SPIN Selling em clínicas odontológicas com exemplos práticos, scripts e casos reais. Método usado por +250 clínicas para aumentar conversão de orçamentos e faturamento.",
     thumbnail: whatsappLgpdImage,
     excerpt: "Vender na odontologia não é sobre convencer, é sobre conduzir conversas inteligentes. Descubra como aplicar o SPIN Selling para transformar atendimentos em fechamentos.",
     date: "17 Jan 2026",
+    updatedAt: "2026-04-23",
+    keywords: "SPIN Selling odontologia, vendas para dentistas, como fechar orçamentos, estrutura comercial clínica",
     readTime: "10 min",
     content: `
 Em um mercado odontológico cada vez mais competitivo, onde o paciente tem inúmeras opções e a decisão de fechar um tratamento depende mais da conversa do que do preço, muitos dentistas ainda cometem o erro de tratar o atendimento como uma simples etapa burocrática. O resultado? Orçamentos parados, pacientes indecisos e oportunidades perdidas.
@@ -264,21 +266,23 @@ Essa metodologia funciona porque:
 
 Em diversas mentorias comerciais que conduzimos na Acelero, o SPIN é sempre uma das primeiras bases ensinadas às equipes, porque as perguntas certas valem mais do que qualquer argumento elaborado.
 
-## Como o Clinicorp ajuda a aplicar o SPIN Selling na prática
+## Como o Método A.C.E.L.E.R.O estrutura o SPIN Selling na prática
 
-A aplicação do SPIN depende de organização e registro de informações, e é exatamente aí que o Clinicorp se torna um diferencial competitivo.
+Conhecer o SPIN Selling é o primeiro passo. Aplicá-lo de forma consistente, com toda a equipe, em cada consulta de avaliação, é onde a maioria das clínicas trava.
 
-Dentro do sistema, a equipe da clínica pode:
+Na Mentoria A.C.E.L.E.R.O, o SPIN Selling é ensinado como parte da etapa "Estrutura Comercial", a terceira fase do método, onde organizamos o processo de pré-venda, venda e pós-venda da clínica.
 
-**Usar o CRM** para mapear o histórico do paciente, registrar objeções e anotar detalhes sobre contexto e dores, que são fundamentais para as etapas de Situação e Problema.
+Na prática, isso significa:
 
-**Aproveitar as observações** do paciente para personalizar abordagens em retornos ou follow-ups, reforçando as etapas de Implicação e Necessidade.
+**Criar scripts de perguntas personalizados** para a especialidade de cada clínica, porque as perguntas certas para implantes são diferentes das perguntas certas para ortodontia.
 
-**Acompanhar relatórios** de orçamentos em aberto, criando estratégias de reconexão com perguntas que despertem urgência e valor.
+**Treinar secretárias e recepcionistas** para aplicar as etapas de Situação e Problema já no primeiro contato, antes mesmo da consulta com o dentista.
 
-**No módulo CRC,** identificar pacientes faltantes e aplicar perguntas estratégicas que fortalecem o compromisso e reduzem as ausências em novos agendamentos.
+**Implementar um CRM** para registrar objeções, acompanhar orçamentos em aberto e criar follow-ups estratégicos.
 
-Em resumo: o Clinicorp permite colocar o SPIN Selling em prática com método, dados e tecnologia, garantindo que cada conversa gere aprendizado, registro e previsibilidade comercial.
+**Medir a taxa de conversão** de avaliações em tratamentos fechados e trabalhar para elevar esse número todo mês.
+
+Nas clínicas que implementaram esse processo completo, o aumento médio de faturamento no primeiro trimestre foi de 16,5%. Não por terem mais pacientes, mas por converterem melhor os pacientes que já chegavam.
 
 ## Dicas essenciais para treinar a equipe da clínica
 
@@ -290,11 +294,27 @@ Algumas práticas eficazes para integrar o SPIN à rotina da clínica:
 
 **Realize simulações** de atendimento. Grave ligações, revise abordagens e corrija vícios de linguagem.
 
-**Crie scripts personalizados** dentro do Clinicorp, baseados em cada etapa do SPIN, para padronizar o discurso sem perder naturalidade.
+**Crie scripts personalizados,** baseados em cada etapa do SPIN, para padronizar o discurso sem perder naturalidade.
 
 **Dê feedbacks semanais** com base nos resultados de conversão, pois isso ajuda o time a visualizar o impacto real de uma boa conversa.
 
 Treinar a equipe comercial não é sobre decorar frases, e sim compreender a lógica da conversa. Quando o time entende o raciocínio por trás de cada pergunta, o paciente sente segurança, que é um importante primeiro passo para o fechamento.
+
+## Resultados reais de clínicas que estruturaram o processo comercial
+
+### Dra. Natália Palmier
+
+Em abril de 2025, a Dra. Natália iniciou a Mentoria A.C.E.L.E.R.O faturando R$8.000 por mês, trabalhando em paralelo com um hospital, sem dedicação exclusiva ao consultório. Em março de 2026, o faturamento atingiu R$56.000 mensais: um crescimento de 600% em 11 meses, sem aumentar a carga horária no consultório particular.
+
+A transformação não veio de mais pacientes. Veio de converter melhor os pacientes que já chegavam, com uma equipe treinada para conduzir a consulta de avaliação com método.
+
+### Dra. Aline Preisler — Preisler Odontologia
+
+"Depois que contratamos a Acelero, nossa clínica vive uma nova fase. Os treinamentos foram um divisor de águas para nossa equipe, que agora entende a importância da área comercial. Hoje, sentimos que temos uma direção clara e queremos sempre mais."
+
+### Dr. Bruno e Dra. Thaís — Clínica Curattio
+
+"A Acelero revolucionou a forma como administramos nossa clínica e conduzimos nosso marketing. Trouxe clareza, estratégia e nos ajudou a tomar decisões mais assertivas."
 
 ## Conclusão: o dentista que domina conversas, domina resultados
 
@@ -302,15 +322,11 @@ No fim das contas, o SPIN Selling mostra que vender não é sobre convencer, mas
 
 O dentista que escuta com propósito, entende o que realmente incomoda o paciente e conduz o diálogo com empatia, não apenas fecha mais tratamentos, mas fideliza e cresce de forma sustentável.
 
-Se você quer implementar essa metodologia de forma prática, integrada à rotina da sua clínica e com o suporte tecnológico certo, o Clinicorp é o parceiro ideal.
+Se você quer implementar o SPIN Selling de forma prática, com scripts personalizados para a sua especialidade e uma equipe treinada para aplicar em cada consulta, o próximo passo é estruturar sua área comercial com método.
 
-E se quiser dar o próximo passo e treinar seu time comercial para dominar técnicas como o SPIN Selling, duas opções podem acelerar esse processo:
+A Mentoria A.C.E.L.E.R.O trabalha exatamente isso, do diagnóstico inicial até a implementação completa do processo comercial, com acompanhamento semanal e indicadores de conversão monitorados ao longo de todo o programa.
 
-**Assista ao episódio do meu podcast sobre o tema:** https://www.youtube.com/watch?v=vjoLpwfKwcc
-
-**Conheça a Mentoria A.C.E.L.E.R.O.,** onde estruturamos processos, treinamentos e indicadores de conversão para clínicas em todo o Brasil.
-
-Organize seu comercial, aplique o SPIN e veja suas conversas se transformarem em fechamentos de tratamentos.
+<div style="text-align:center;margin:2rem 0;"><a href="https://diagnostico.acelero.vc/" target="_blank" rel="noopener noreferrer" style="display:inline-block;background:linear-gradient(135deg,hsl(var(--cyan)),hsl(var(--primary)));color:#fff;font-weight:600;padding:1rem 2rem;border-radius:0.75rem;text-decoration:none;box-shadow:0 10px 30px -10px hsl(var(--primary)/0.4);">Quero agendar meu diagnóstico gratuito</a></div>
 
 **Boas vendas!**
     `,

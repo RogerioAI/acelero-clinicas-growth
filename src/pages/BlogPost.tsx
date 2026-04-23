@@ -23,8 +23,9 @@ const BlogPost = () => {
     .slice(0, 3);
 
   const isoDate = ptDateToISO(post.date);
+  const modifiedIso = post.updatedAt ?? isoDate;
 
-  const articleSchema = {
+  const articleSchema: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": post.title,
@@ -37,9 +38,10 @@ const BlogPost = () => {
     },
     "publisher": { "@id": "https://acelero.vc/#organization" },
     "datePublished": isoDate,
-    "dateModified": isoDate,
+    "dateModified": modifiedIso,
     "mainEntityOfPage": `https://acelero.vc/blog/${post.slug}`,
-    "image": post.thumbnail
+    "image": post.thumbnail,
+    ...(post.keywords ? { keywords: post.keywords } : {})
   };
 
   const breadcrumbSchema = {

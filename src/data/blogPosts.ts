@@ -302,13 +302,13 @@ Treinar a equipe comercial não é sobre decorar frases, e sim compreender a ló
 
 ## Resultados reais de clínicas que estruturaram o processo comercial
 
-### Dra. Natália Palmier
+### Dra. Natália
 
 Em abril de 2025, a Dra. Natália iniciou a Mentoria A.C.E.L.E.R.O faturando R$8.000 por mês, trabalhando em paralelo com um hospital, sem dedicação exclusiva ao consultório. Em março de 2026, o faturamento atingiu R$56.000 mensais: um crescimento de 600% em 11 meses, sem aumentar a carga horária no consultório particular.
 
 A transformação não veio de mais pacientes. Veio de converter melhor os pacientes que já chegavam, com uma equipe treinada para conduzir a consulta de avaliação com método.
 
-### Dra. Aline Preisler — Preisler Odontologia
+### Dra. Aline
 
 "Depois que contratamos a Acelero, nossa clínica vive uma nova fase. Os treinamentos foram um divisor de águas para nossa equipe, que agora entende a importância da área comercial. Hoje, sentimos que temos uma direção clara e queremos sempre mais."
 

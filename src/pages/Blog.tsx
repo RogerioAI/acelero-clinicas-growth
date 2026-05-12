@@ -4,9 +4,11 @@ import { Footer } from "@/components/landing/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { blogPosts } from "@/data/blogPosts";
-import { Link } from "react-router-dom";
-import { Clock } from "lucide-react";
+import { Link, useSearchParams } from "react-router-dom";
+import { Clock, X } from "lucide-react";
 import { JsonLd } from "@/components/JsonLd";
+import { sortPostsByDateDesc, slugify } from "@/lib/dateUtils";
+import { useMemo } from "react";
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
@@ -18,11 +20,36 @@ const breadcrumbSchema = {
 };
 
 const Blog = () => {
+  const [params, setParams] = useSearchParams();
+  const tagFilter = params.get('tag');
+
+  const sorted = useMemo(() => sortPostsByDateDesc(blogPosts), []);
+  const visible = useMemo(() => {
+    if (!tagFilter) return sorted;
+    return sorted.filter(p => p.tags?.some(t => slugify(t) === tagFilter));
+  }, [sorted, tagFilter]);
+
+  const activeTagLabel = tagFilter
+    ? sorted.flatMap(p => p.tags || []).find(t => slugify(t) === tagFilter)
+    : null;
+
+  const itemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": sorted.map((p, idx) => ({
+      "@type": "ListItem",
+      "position": idx + 1,
+      "url": `https://acelero.vc/blog/${p.slug}`,
+      "name": p.title
+    }))
+  };
+
   return (
     <>
        <Helmet>
         <title>Blog Acelero | Conteúdo sobre Vendas e Gestão Comercial para Clínicas</title>
         <meta name="description" content="Artigos, guias e insights sobre como estruturar vendas, captar pacientes e escalar faturamento em clínicas de saúde e odontológicas." />
+        <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1" />
         <link rel="alternate" hrefLang="pt-BR" href="https://acelero.vc/blog" />
         <link rel="alternate" hrefLang="x-default" href="https://acelero.vc/blog" />
         <meta property="og:type" content="website" />
@@ -40,6 +67,7 @@ const Blog = () => {
         <meta name="twitter:image" content="https://acelero.vc/og-image-home.jpg" />
       </Helmet>
       <JsonLd data={breadcrumbSchema} />
+      <JsonLd data={itemListSchema} />
     <div className="min-h-screen">
       <Header />
       <main id="main-content" className="pt-20">
@@ -60,8 +88,25 @@ const Blog = () => {
         {/* Blog Posts Grid */}
         <section className="py-20 bg-background">
           <div className="container mx-auto px-4">
+            {tagFilter && (
+              <div className="max-w-7xl mx-auto mb-8 flex items-center gap-3 flex-wrap">
+                <span className="text-sm text-muted-foreground">Filtrando por tag:</span>
+                <span className="inline-flex items-center gap-2 px-3 py-1 bg-cyan/10 text-cyan text-sm font-semibold rounded-full">
+                  {activeTagLabel || tagFilter}
+                  <button
+                    type="button"
+                    onClick={() => setParams({})}
+                    aria-label="Remover filtro"
+                    className="hover:bg-cyan/20 rounded-full p-0.5"
+                  >
+                    <X className="w-3 h-3" />
+                  </button>
+                </span>
+                <span className="text-sm text-muted-foreground">{visible.length} {visible.length === 1 ? 'artigo' : 'artigos'}</span>
+              </div>
+            )}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-              {blogPosts.map((post) => (
+              {visible.map((post) => (
                 <Link key={post.id} to={`/blog/${post.slug}`}>
                   <Card className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1 h-full overflow-hidden">
                     <div className="relative h-48 overflow-hidden">
@@ -71,6 +116,7 @@ const Blog = () => {
                         width={400}
                         height={192}
                         loading="lazy"
+                        decoding="async"
                         className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                       />
                     </div>

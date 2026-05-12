@@ -104,6 +104,7 @@ const BlogPost = () => {
       </Helmet>
       <JsonLd data={articleSchema} />
       <JsonLd data={breadcrumbSchema} />
+      {faqSchema && <JsonLd data={faqSchema} />}
       
       <div className="min-h-screen bg-background">
         <Header />

@@ -221,7 +221,7 @@ const BlogPost = () => {
                       className="w-full h-auto aspect-[2/1] object-cover rounded-xl mb-10"
                     />
 
-                    <BlogTOC headings={headings} />
+                    <BlogTOC headings={headings} variant="mobile" />
 
                     <MarkdownRenderer content={post.content} />
 
@@ -280,7 +280,7 @@ const BlogPost = () => {
                     )}
                   </article>
 
-                  <BlogTOC headings={headings} />
+                  <BlogTOC headings={headings} variant="desktop" />
                 </div>
               </div>
             </div>

@@ -13,4 +13,5 @@ export interface BlogPost {
   readTime?: string;
   updatedAt?: string;
   keywords?: string;
+  faq?: { question: string; answer: string }[];
 }

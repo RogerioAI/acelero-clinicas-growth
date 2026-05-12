@@ -40,9 +40,33 @@ const BlogPost = () => {
     "datePublished": isoDate,
     "dateModified": modifiedIso,
     "mainEntityOfPage": `https://acelero.vc/blog/${post.slug}`,
-    "image": post.thumbnail,
+    "image": {
+      "@type": "ImageObject",
+      "url": post.thumbnail,
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "pt-BR",
+    "isAccessibleForFree": true,
+    "about": [
+      { "@type": "Thing", "name": "Gestão comercial de clínicas" },
+      { "@type": "Thing", "name": "Método A.C.E.L.E.R.O" }
+    ],
     ...(post.keywords ? { keywords: post.keywords } : {})
   };
+
+  const faqSchema = post.faq && post.faq.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": post.faq.map((item) => ({
+      "@type": "Question",
+      "name": item.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.answer
+      }
+    }))
+  } : null;
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",

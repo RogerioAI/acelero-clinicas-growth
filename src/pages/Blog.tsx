@@ -92,7 +92,7 @@ const Blog = () => {
             {tagFilter && (
               <div className="max-w-7xl mx-auto mb-8 flex items-center gap-3 flex-wrap">
                 <span className="text-sm text-muted-foreground">Filtrando por tag:</span>
-                <span className="inline-flex items-center gap-2 px-3 py-1 bg-cyan/10 text-cyan text-sm font-semibold rounded-full">
+                <span className="inline-flex items-center gap-2 px-3 py-1 bg-cyan/10 text-cyan-dark text-sm font-semibold rounded-full">
                   {activeTagLabel || tagFilter}
                   <button
                     type="button"

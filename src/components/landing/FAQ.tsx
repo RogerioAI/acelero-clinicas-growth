@@ -54,7 +54,7 @@ export const FAQ = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-            Perguntas <span className="text-cyan">Frequentes</span>
+            Perguntas <span className="text-cyan-dark">Frequentes</span>
           </h2>
           <p className="text-center text-muted-foreground mb-12">
             Tudo o que você precisa saber sobre a mentoria comercial da Acelero

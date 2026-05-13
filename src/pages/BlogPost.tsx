@@ -160,7 +160,7 @@ const BlogPost = () => {
                 <div className="grid lg:grid-cols-[1fr_260px] gap-12">
                   <article className="max-w-3xl mx-auto lg:mx-0 w-full">
                     <header className="mb-6">
-                      <span className="inline-block px-4 py-1.5 bg-cyan/10 text-cyan font-semibold text-sm rounded-full mb-4">
+                      <span className="inline-block px-4 py-1.5 bg-cyan/10 text-cyan-dark font-semibold text-sm rounded-full mb-4">
                         {post.category}
                       </span>
                       <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">

@@ -547,8 +547,8 @@ Nossa mentoria oferece acompanhamento completo em gestão de vendas, atendimento
         answer: "A agência de marketing trabalha do lado de fora da clínica: tráfego, conteúdo, presença digital, atração de leads. Estruturar o comercial trabalha do lado de dentro: como esses leads são recebidos, qualificados, convertidos e retidos. Os dois trabalhos são complementares. Mas, na ordem, faz mais sentido estruturar o comercial primeiro. Sem estrutura interna, todo lead que a agência traz vira desperdício."
       },
       {
-        question: "O que é o Método A.C.E.L.E.R.O?",
-        answer: "É um sistema de organização comercial específico para clínicas da saúde, desenvolvido pela Acelero a partir da experiência prática em mais de 250 operações reais. É composto por sete etapas sequenciais e interdependentes: Alinhamento Estratégico, Canais de Aquisição, Estrutura Comercial, Liderança Comercial, Engrenagem de Vendas, Rampagem Comercial e Ousadia para Escalar."
+        question: "O que é a Mentoria A.C.E.L.E.R.O?",
+        answer: "É um programa de transformação comercial para clínicas médicas e odontológicas com duração de 6 a 12 meses, sessões semanais, diagnóstico inicial, dashboards de indicadores, scripts de vendas e templates operacionais. O programa é dividido em 7 fases que cobrem desde alinhamento estratégico até escalabilidade do faturamento."
       }
     ],
     content: `

@@ -199,9 +199,9 @@ const BlogPost = () => {
                           {post.tags.map((t) => (
                             <Link
                               key={t}
-                              to={`/blog?tag=${slugify(t)}`}
-                              className="text-xs px-2.5 py-1 rounded-full bg-muted text-muted-foreground hover:bg-cyan/10 hover:text-cyan transition-colors"
-                            >
+                            to={`/blog?tag=${slugify(t)}`}
+                            className="text-xs px-2.5 py-1 rounded-full bg-muted text-muted-foreground hover:bg-cyan/10 hover:text-cyan-dark transition-colors"
+                          >
                               #{t}
                             </Link>
                           ))}

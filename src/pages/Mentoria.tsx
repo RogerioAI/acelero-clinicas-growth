@@ -93,7 +93,7 @@ const Mentoria = () => {
   return (
     <>
       <Helmet>
-        <title>Mentoria A.C.E.L.E.R.O | Programa de Transformação Comercial para Clínicas</title>
+        <title>Mentoria A.C.E.L.E.R.O | Transformação Comercial</title>
         <meta name="description" content="Programa de 4 a 6 meses com sessões quinzenais, diagnóstico inicial, dashboards, scripts e templates. 7 fases para escalar o faturamento da sua clínica." />
         <link rel="canonical" href="https://acelero.vc/mentoria" />
         <link rel="alternate" hrefLang="pt-BR" href="https://acelero.vc/mentoria" />

@@ -50,7 +50,7 @@ const Sobre = () => {
   return (
     <>
       <Helmet>
-        <title>Sobre a Acelero | Lucas Rocha - Especialista em Vendas para Clínicas</title>
+        <title>Sobre | Lucas Rocha - Acelero</title>
         <meta name="description" content="Lucas Rocha, consultor comercial com vasta experiência em gestão de clínicas de saúde. Conheça a metodologia A.C.E.L.E.R.O e o propósito por trás da Acelero." />
         <link rel="canonical" href="https://acelero.vc/sobre" />
         <link rel="alternate" hrefLang="pt-BR" href="https://acelero.vc/sobre" />

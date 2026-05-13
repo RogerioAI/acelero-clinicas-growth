@@ -143,7 +143,7 @@ export const renderMarkdown = (md: string): string => {
 
 export const MarkdownRenderer = ({ content }: Props) => (
   <div
-    className="prose-headings:font-bold max-w-none prose-a:text-cyan prose-strong:text-foreground"
+    className="prose-headings:font-bold max-w-none prose-a:text-cyan-dark prose-a:underline prose-strong:text-foreground"
     dangerouslySetInnerHTML={{ __html: renderMarkdown(content) }}
   />
 );

@@ -234,11 +234,11 @@ const BlogPost = () => {
                       <img src={lucasRochaImage} alt="Lucas Rocha" width={96} height={96} loading="lazy" decoding="async" className="w-24 h-24 rounded-full object-cover flex-shrink-0" />
                       <div>
                         <h3 className="text-lg font-bold mb-1">Sobre o autor</h3>
-                        <p className="text-sm font-semibold text-cyan mb-2">Lucas Rocha · Mentor Comercial para Clínicas de Saúde</p>
+                        <p className="text-sm font-semibold text-cyan-dark mb-2">Lucas Rocha · Mentor Comercial para Clínicas de Saúde</p>
                         <p className="text-sm text-muted-foreground leading-relaxed">
                           Fundador da Acelero.vc, Lucas Rocha é especialista em gestão comercial de clínicas de saúde e odontológicas. Com mais de 15 anos de experiência e +250 clínicas transformadas, desenvolveu o método A.C.E.L.E.R.O para estruturar áreas comerciais e escalar faturamento com previsibilidade.
                         </p>
-                        <Link to="/sobre" className="text-sm text-cyan font-semibold hover:underline mt-2 inline-block">Conheça mais →</Link>
+                        <Link to="/sobre" className="text-sm text-cyan-dark font-semibold hover:underline mt-2 inline-block">Conheça mais →</Link>
                       </div>
                     </div>
 

@@ -269,8 +269,8 @@ const BlogPost = () => {
                                   <img src={related.thumbnail} alt={related.title} width={400} height={144} loading="lazy" decoding="async" className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
                                 </div>
                                 <div className="p-4">
-                                  <span className="text-xs text-cyan font-semibold">{related.category}</span>
-                                  <h3 className="text-sm font-bold mt-1 line-clamp-2 group-hover:text-cyan transition-colors">{related.title}</h3>
+                                  <span className="text-xs text-cyan-dark font-semibold">{related.category}</span>
+                                  <h3 className="text-sm font-bold mt-1 line-clamp-2 group-hover:text-cyan-dark transition-colors">{related.title}</h3>
                                 </div>
                               </div>
                             </Link>

@@ -1,0 +1,25 @@
+# Acelero
+
+> Mentoria comercial para clínicas médicas e odontológicas. Método A.C.E.L.E.R.O: estruture pré-venda, venda e pós-venda e escale o faturamento com previsibilidade.
+
+Acelero é uma aceleradora comercial especializada no setor da saúde. Através da Mentoria A.C.E.L.E.R.O, ajuda clínicas médicas e odontológicas a estruturar processos de vendas, treinar equipes de alto desempenho e aumentar o faturamento de forma sustentável. O método foi desenvolvido a partir da experiência prática em mais de 250 operações reais, com sete etapas sequenciais: Alinhamento Estratégico, Canais de Aquisição, Estrutura Comercial, Liderança Comercial, Engrenagem de Vendas, Rampagem Comercial e Ousadia para Escalar.
+
+## Pages
+
+- [/](/): Home — Mentoria comercial para clínicas de saúde, método A.C.E.L.E.R.O, depoimentos e formulário de contato.
+- [/sobre](/sobre): Sobre — Trajetória de Lucas Rocha, fundador da Acelero, e história da mentoria comercial.
+- [/mentoria](/mentoria): Mentoria — Detalhes do programa A.C.E.L.E.R.O, etapas, formatos e investimento.
+- [/blog](/blog): Blog — Artigos sobre gestão comercial, vendas, marketing e processos para clínicas.
+
+## Blog
+
+- [/blog/no-show-clinica-reduzir-faltas-ate-30](/blog/no-show-clinica-reduzir-faltas-ate-30): No-show na clínica: 5 táticas para reduzir faltas com economia comportamental.
+- [/blog/google-meu-negocio-clinicas-reviews-que-viram-agenda](/blog/google-meu-negocio-clinicas-reviews-que-viram-agenda): Google Meu Negócio para clínicas: otimização de reviews e presença local.
+- [/blog/spin-selling-odontologia-transformar-conversas-fechamento](/blog/spin-selling-odontologia-transformar-conversas-fechamento): SPIN Selling na odontologia: guia completo com casos reais.
+- [/blog/telemedicina-fluxo-comercial-clinica](/blog/telemedicina-fluxo-comercial-clinica): Telemedicina: fluxo comercial em 7 etapas para clínicas.
+- [/blog/planos-pet-checkups-sazonais-calendario-comercial](/blog/planos-pet-checkups-sazonais-calendario-comercial): Planos pet e check-ups sazonais: calendário comercial do ano.
+- [/blog/como-aumentar-faturamento-clinica-vendas](/blog/como-aumentar-faturamento-clinica-vendas): Como aumentar o faturamento da clínica: guia completo de vendas e gargalos comerciais.
+
+## Optional
+
+- [/diagnostico.acelero.vc/](https://diagnostico.acelero.vc/): Diagnóstico comercial gratuito para clínicas.

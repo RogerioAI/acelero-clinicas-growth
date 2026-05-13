@@ -123,7 +123,7 @@ const Blog = () => {
                     </div>
                     <CardHeader>
                       <div className="flex items-center justify-between mb-3">
-                        <span className="inline-block px-3 py-1 bg-cyan/10 text-cyan text-xs font-semibold rounded-full">
+                        <span className="inline-block px-3 py-1 bg-cyan/10 text-cyan-dark text-xs font-semibold rounded-full">
                           {post.category}
                         </span>
                         {post.readTime && (

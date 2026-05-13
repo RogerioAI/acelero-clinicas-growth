@@ -58,7 +58,7 @@ export const renderMarkdown = (md: string): string => {
       if (level === 2) {
         out.push(`<h2 id="${id}" class="scroll-mt-28 text-3xl md:text-4xl font-bold mt-14 mb-6 text-foreground border-l-4 border-cyan pl-4 leading-tight">${text}</h2>`);
       } else if (level === 3) {
-        out.push(`<h3 id="${id}" class="scroll-mt-28 text-2xl font-bold mt-10 mb-4 text-cyan leading-tight">${text}</h3>`);
+        out.push(`<h3 id="${id}" class="scroll-mt-28 text-2xl font-bold mt-10 mb-4 text-cyan-dark leading-tight">${text}</h3>`);
       } else {
         out.push(`<h4 id="${id}" class="scroll-mt-28 text-xl font-bold mt-6 mb-3 text-foreground">${text}</h4>`);
       }
@@ -143,7 +143,7 @@ export const renderMarkdown = (md: string): string => {
 
 export const MarkdownRenderer = ({ content }: Props) => (
   <div
-    className="prose-headings:font-bold max-w-none prose-a:text-cyan prose-strong:text-foreground"
+    className="prose-headings:font-bold max-w-none prose-a:text-cyan-dark prose-a:underline prose-strong:text-foreground"
     dangerouslySetInnerHTML={{ __html: renderMarkdown(content) }}
   />
 );

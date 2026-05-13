@@ -34,7 +34,7 @@ export const BlogTOC = ({ headings, variant = "desktop" }: Props) => {
             <a
               key={h.id}
               href={`#${h.id}`}
-              className={`block py-1 ${h.level === 3 ? 'pl-4' : ''} text-muted-foreground hover:text-cyan transition-colors`}
+              className={`block py-1 ${h.level === 3 ? 'pl-4' : ''} text-muted-foreground hover:text-cyan-dark transition-colors`}
             >
               {h.text}
             </a>
@@ -56,7 +56,7 @@ export const BlogTOC = ({ headings, variant = "desktop" }: Props) => {
               h.level === 3 ? 'pl-4 text-xs' : ''
             } ${
               active === h.id
-                ? 'text-cyan font-semibold border-l-2 border-cyan -ml-[1px] pl-3'
+                ? 'text-cyan-dark font-semibold border-l-2 border-cyan-dark -ml-[1px] pl-3'
                 : 'text-muted-foreground hover:text-foreground'
             }`}
           >

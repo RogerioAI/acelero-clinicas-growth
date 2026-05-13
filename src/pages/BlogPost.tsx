@@ -160,7 +160,7 @@ const BlogPost = () => {
                 <div className="grid lg:grid-cols-[1fr_260px] gap-12">
                   <article className="max-w-3xl mx-auto lg:mx-0 w-full">
                     <header className="mb-6">
-                      <span className="inline-block px-4 py-1.5 bg-cyan/10 text-cyan font-semibold text-sm rounded-full mb-4">
+                      <span className="inline-block px-4 py-1.5 bg-cyan/10 text-cyan-dark font-semibold text-sm rounded-full mb-4">
                         {post.category}
                       </span>
                       <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
@@ -199,9 +199,9 @@ const BlogPost = () => {
                           {post.tags.map((t) => (
                             <Link
                               key={t}
-                              to={`/blog?tag=${slugify(t)}`}
-                              className="text-xs px-2.5 py-1 rounded-full bg-muted text-muted-foreground hover:bg-cyan/10 hover:text-cyan transition-colors"
-                            >
+                            to={`/blog?tag=${slugify(t)}`}
+                            className="text-xs px-2.5 py-1 rounded-full bg-muted text-muted-foreground hover:bg-cyan/10 hover:text-cyan-dark transition-colors"
+                          >
                               #{t}
                             </Link>
                           ))}
@@ -234,11 +234,11 @@ const BlogPost = () => {
                       <img src={lucasRochaImage} alt="Lucas Rocha" width={96} height={96} loading="lazy" decoding="async" className="w-24 h-24 rounded-full object-cover flex-shrink-0" />
                       <div>
                         <h3 className="text-lg font-bold mb-1">Sobre o autor</h3>
-                        <p className="text-sm font-semibold text-cyan mb-2">Lucas Rocha · Mentor Comercial para Clínicas de Saúde</p>
+                        <p className="text-sm font-semibold text-cyan-dark mb-2">Lucas Rocha · Mentor Comercial para Clínicas de Saúde</p>
                         <p className="text-sm text-muted-foreground leading-relaxed">
                           Fundador da Acelero.vc, Lucas Rocha é especialista em gestão comercial de clínicas de saúde e odontológicas. Com mais de 15 anos de experiência e +250 clínicas transformadas, desenvolveu o método A.C.E.L.E.R.O para estruturar áreas comerciais e escalar faturamento com previsibilidade.
                         </p>
-                        <Link to="/sobre" className="text-sm text-cyan font-semibold hover:underline mt-2 inline-block">Conheça mais →</Link>
+                        <Link to="/sobre" className="text-sm text-cyan-dark font-semibold hover:underline mt-2 inline-block">Conheça mais →</Link>
                       </div>
                     </div>
 
@@ -269,8 +269,8 @@ const BlogPost = () => {
                                   <img src={related.thumbnail} alt={related.title} width={400} height={144} loading="lazy" decoding="async" className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
                                 </div>
                                 <div className="p-4">
-                                  <span className="text-xs text-cyan font-semibold">{related.category}</span>
-                                  <h3 className="text-sm font-bold mt-1 line-clamp-2 group-hover:text-cyan transition-colors">{related.title}</h3>
+                                  <span className="text-xs text-cyan-dark font-semibold">{related.category}</span>
+                                  <h3 className="text-sm font-bold mt-1 line-clamp-2 group-hover:text-cyan-dark transition-colors">{related.title}</h3>
                                 </div>
                               </div>
                             </Link>

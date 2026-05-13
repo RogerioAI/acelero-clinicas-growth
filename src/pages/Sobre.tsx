@@ -124,15 +124,15 @@ const Sobre = () => {
 
                 <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 not-prose">
                   <div className="text-center p-6 bg-muted/50 rounded-xl">
-                    <div className="text-4xl font-bold text-cyan mb-2">250+</div>
+                    <div className="text-4xl font-bold text-cyan-dark mb-2">250+</div>
                     <div className="text-sm text-muted-foreground">Clínicas Transformadas</div>
                   </div>
                   <div className="text-center p-6 bg-muted/50 rounded-xl">
-                    <div className="text-4xl font-bold text-cyan mb-2">15+</div>
+                    <div className="text-4xl font-bold text-cyan-dark mb-2">15+</div>
                     <div className="text-sm text-muted-foreground">Anos de Experiência</div>
                   </div>
                   <div className="text-center p-6 bg-muted/50 rounded-xl">
-                    <div className="text-4xl font-bold text-cyan mb-2">7</div>
+                    <div className="text-4xl font-bold text-cyan-dark mb-2">7</div>
                     <div className="text-sm text-muted-foreground">Fases do Método</div>
                   </div>
                 </div>

@@ -57,13 +57,13 @@ const Sobre = () => {
         <link rel="alternate" hrefLang="x-default" href="https://acelero.vc/sobre" />
         <meta property="og:type" content="profile" />
         <meta property="og:url" content="https://acelero.vc/sobre" />
-        <meta property="og:title" content="Sobre a Acelero | Lucas Rocha - Especialista em Vendas para Clínicas" />
+        <meta property="og:title" content="Sobre | Lucas Rocha - Acelero" />
         <meta property="og:description" content="Lucas Rocha, consultor comercial com vasta experiência em gestão de clínicas de saúde. Conheça a metodologia A.C.E.L.E.R.O." />
         <meta property="og:image" content="https://acelero.vc/og-image-home.jpg" />
         <meta property="og:locale" content="pt_BR" />
         <meta property="og:site_name" content="Acelero" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Sobre a Acelero | Lucas Rocha" />
+        <meta name="twitter:title" content="Sobre | Lucas Rocha - Acelero" />
         <meta name="twitter:description" content="Consultor comercial especializado em clínicas de saúde. +250 clínicas transformadas." />
         <meta name="twitter:image" content="https://acelero.vc/og-image-home.jpg" />
       </Helmet>

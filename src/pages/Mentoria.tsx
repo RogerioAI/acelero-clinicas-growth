@@ -93,20 +93,20 @@ const Mentoria = () => {
   return (
     <>
       <Helmet>
-        <title>Mentoria A.C.E.L.E.R.O | Programa de Transformação Comercial para Clínicas</title>
+        <title>Mentoria A.C.E.L.E.R.O | Transformação Comercial</title>
         <meta name="description" content="Programa de 4 a 6 meses com sessões quinzenais, diagnóstico inicial, dashboards, scripts e templates. 7 fases para escalar o faturamento da sua clínica." />
         <link rel="canonical" href="https://acelero.vc/mentoria" />
         <link rel="alternate" hrefLang="pt-BR" href="https://acelero.vc/mentoria" />
         <link rel="alternate" hrefLang="x-default" href="https://acelero.vc/mentoria" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://acelero.vc/mentoria" />
-        <meta property="og:title" content="Mentoria A.C.E.L.E.R.O | Transformação Comercial para Clínicas" />
+        <meta property="og:title" content="Mentoria A.C.E.L.E.R.O | Transformação Comercial" />
         <meta property="og:description" content="Programa de 4 a 6 meses com 7 fases para escalar o faturamento da sua clínica de saúde." />
         <meta property="og:image" content="https://acelero.vc/og-image-home.jpg" />
         <meta property="og:locale" content="pt_BR" />
         <meta property="og:site_name" content="Acelero" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Mentoria A.C.E.L.E.R.O | Transformação Comercial para Clínicas" />
+        <meta name="twitter:title" content="Mentoria A.C.E.L.E.R.O | Transformação Comercial" />
         <meta name="twitter:description" content="7 fases para escalar o faturamento da sua clínica de saúde." />
         <meta name="twitter:image" content="https://acelero.vc/og-image-home.jpg" />
       </Helmet>

@@ -154,14 +154,14 @@ const Sobre = () => {
           </section>
 
           {/* Bio */}
-          <section className="py-24 relative">
+          <section className="py-24 relative bg-gradient-to-b from-primary-dark to-primary">
             <div className="container mx-auto px-4">
               <div className="max-w-3xl mx-auto">
                 <div className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan mb-3">Trajetória</div>
                 <h2 className="text-3xl md:text-4xl font-bold mb-10">Quem é Lucas Rocha</h2>
                 <div className="space-y-5 text-base md:text-lg text-primary-foreground/75 leading-relaxed">
                   <p>Lucas Rocha é consultor comercial especializado em clínicas de saúde e fundador da Acelero.vc. Formado em Relações Públicas, com MBA em Comunicação e Marketing (UNICURITIBA) e MBA em Marketing e Varejo (FAEL), construiu sua carreira liderando áreas comerciais de alta performance antes de se dedicar à transformação de clínicas médicas e odontológicas.</p>
-                  <p>Sua trajetória no setor começou na <span className="text-primary-foreground font-medium">OralGift</span>, empresa de produtos de higiene bucal patenteados em mais de 40 países, onde teve o primeiro contato profundo com o mercado odontológico. Depois, no <span className="text-primary-foreground font-medium">Sistema Vitto</span>, estruturou do zero uma área comercial completa: entrou numa empresa com 4 vendedores e 30 vendas/mês, e saiu com equipe de 18 profissionais — 8 SDRs inbound, 4 BDRs outbound e 6 closers — alcançando 90 a 110 vendas mensais.</p>
+                  <p>Sua trajetória no setor começou na <span className="text-primary-foreground font-medium">OralGift</span>, empresa de produtos de higiene bucal patenteados em mais de 40 países, onde teve o primeiro contato profundo com o mercado odontológico. Depois, no <span className="text-primary-foreground font-medium">Sistema Vitto</span>, estruturou do zero uma área comercial completa: entrou numa empresa com 4 vendedores e 30 vendas/mês, e saiu com equipe de 18 profissionais. 8 SDRs inbound, 4 BDRs outbound e 6 closers, alcançando 90 a 110 vendas mensais.</p>
                   <p>Durante a pandemia, enxergou a oportunidade que mudaria sua carreira. As clínicas precisaram migrar para o digital sem qualquer preparo comercial. Lucas percebeu que todo o conhecimento acumulado em pré-vendas e agendamentos poderia virar uma metodologia específica para clínicas. Nasceu aí a <span className="text-primary-foreground font-medium">Acelero.vc</span>.</p>
                   <p>Depois de cinco anos e mais de 250 clínicas atendidas, sistematizou esse aprendizado no <span className="text-cyan font-semibold">Método A.C.E.L.E.R.O</span>, criado em 2025 para mapear a jornada completa de estruturação comercial em clínicas de saúde, do diagnóstico inicial até a escalabilidade do faturamento.</p>
                 </div>
@@ -170,7 +170,7 @@ const Sobre = () => {
           </section>
 
           {/* Especialidades */}
-          <section className="py-24 relative border-y border-primary-foreground/10 bg-primary/40">
+          <section className="py-24 relative border-y border-primary-foreground/10 bg-primary/30">
             <div className="container mx-auto px-4">
               <div className="max-w-5xl mx-auto">
                 <div className="text-center mb-14">
@@ -192,12 +192,12 @@ const Sobre = () => {
             </div>
           </section>
 
-          {/* Resultado */}
-          <section className="py-24">
+          {/* Case de Sucesso */}
+          <section className="py-24 bg-gradient-to-b from-primary to-primary-light/20">
             <div className="container mx-auto px-4">
               <div className="max-w-5xl mx-auto">
                 <div className="text-center mb-12">
-                  <div className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan mb-3">Estudo de caso</div>
+                  <div className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan mb-3">Case de Sucesso</div>
                   <h2 className="text-3xl md:text-4xl font-bold">Resultado que fala por si</h2>
                 </div>
                 <div className="relative rounded-3xl overflow-hidden border border-cyan/20 bg-gradient-to-br from-primary-light/40 to-primary/40 backdrop-blur-sm">
@@ -224,13 +224,13 @@ const Sobre = () => {
           </section>
 
           {/* Podcast */}
-          <section className="py-24 border-y border-primary-foreground/10 bg-primary/40">
+          <section className="py-24 border-y border-primary-foreground/10 bg-primary/30">
             <div className="container mx-auto px-4">
               <div className="max-w-3xl mx-auto text-center">
                 <div className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan mb-3">Podcast</div>
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">Clínica Sem Caos</h2>
                 <div className="text-left space-y-4 text-primary-foreground/75 leading-relaxed">
-                  <p>Um dos podcasts mais completos do mercado brasileiro de saúde. Focado em gestão, marketing, vendas e finanças para donos de clínicas médicas e odontológicas — 40 episódios no YouTube e Spotify, reunindo especialistas de referência nacional.</p>
+                  <p>Um dos podcasts mais completos do mercado brasileiro de saúde. Focado em gestão, marketing, vendas e finanças para donos de clínicas médicas e odontológicas. 40 episódios no YouTube e Spotify, reunindo especialistas de referência nacional.</p>
                   <p>Entre os convidados: <span className="font-semibold text-primary-foreground">Caio Carinhena</span> (CEO do Clinicorp), Matheus Bueno, Magnus Guérios, Rita Silva e dezenas de outros especialistas.</p>
                   <p>Apresentado por <span className="font-semibold text-primary-foreground">Lucas Rocha</span>, <span className="font-semibold text-primary-foreground">Thiago Caparroz</span> e <span className="font-semibold text-primary-foreground">Rogério Haboski</span>.</p>
                 </div>
@@ -249,14 +249,14 @@ const Sobre = () => {
           </section>
 
           {/* Propósito */}
-          <section className="py-24">
+          <section className="py-24 bg-gradient-to-b from-primary-light/20 to-primary-dark">
             <div className="container mx-auto px-4">
               <div className="max-w-3xl mx-auto">
                 <div className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan mb-3 text-center">Propósito</div>
                 <Quote className="w-12 h-12 text-cyan/40 mx-auto mb-8" aria-hidden="true" />
                 <blockquote className="space-y-5 text-lg md:text-xl text-primary-foreground/85 leading-relaxed text-center">
                   <p>"Antes de ser mentor, quando me tornei líder e gestor comercial, sempre quis trazer uma visão que me motivou a entrar em vendas: a da prosperidade financeira através do trabalho comercial."</p>
-                  <p>"Quando me tornei mentor comercial para clínicas, assumi um propósito de vida: fazer com que donos de clínica entendam que não são apenas profissionais da área da saúde — são donos de uma empresa, e essa empresa tem que ser próspera e lucrativa."</p>
+                  <p>"Quando me tornei mentor comercial para clínicas, assumi um propósito de vida: fazer com que donos de clínica entendam que não são apenas profissionais da área da saúde. São donos de uma empresa, e essa empresa tem que ser próspera e lucrativa."</p>
                   <p>"Eu transformo donos de clínica em pessoas mais prósperas. Esses donos transformam a vida de pacientes que conquistam saúde, estética e autoestima melhores. Essa cadeia completa é o que mais me motiva."</p>
                 </blockquote>
                 <footer className="mt-10 text-center">

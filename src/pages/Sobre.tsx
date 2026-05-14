@@ -154,15 +154,15 @@ const Sobre = () => {
           </section>
 
           {/* Bio */}
-          <section className="py-24 relative bg-gradient-to-b from-primary-dark to-primary">
+          <section className="py-24 bg-background">
             <div className="container mx-auto px-4">
               <div className="max-w-3xl mx-auto">
                 <div className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan mb-3">Trajetória</div>
-                <h2 className="text-3xl md:text-4xl font-bold mb-10">Quem é Lucas Rocha</h2>
-                <div className="space-y-5 text-base md:text-lg text-primary-foreground/75 leading-relaxed">
+                <h2 className="text-3xl md:text-4xl font-bold mb-10 text-foreground">Quem é Lucas Rocha</h2>
+                <div className="space-y-5 text-base md:text-lg text-muted-foreground leading-relaxed">
                   <p>Lucas Rocha é consultor comercial especializado em clínicas de saúde e fundador da Acelero.vc. Formado em Relações Públicas, com MBA em Comunicação e Marketing (UNICURITIBA) e MBA em Marketing e Varejo (FAEL), construiu sua carreira liderando áreas comerciais de alta performance antes de se dedicar à transformação de clínicas médicas e odontológicas.</p>
-                  <p>Sua trajetória no setor começou na <span className="text-primary-foreground font-medium">OralGift</span>, empresa de produtos de higiene bucal patenteados em mais de 40 países, onde teve o primeiro contato profundo com o mercado odontológico. Depois, no <span className="text-primary-foreground font-medium">Sistema Vitto</span>, estruturou do zero uma área comercial completa: entrou numa empresa com 4 vendedores e 30 vendas/mês, e saiu com equipe de 18 profissionais. 8 SDRs inbound, 4 BDRs outbound e 6 closers, alcançando 90 a 110 vendas mensais.</p>
-                  <p>Durante a pandemia, enxergou a oportunidade que mudaria sua carreira. As clínicas precisaram migrar para o digital sem qualquer preparo comercial. Lucas percebeu que todo o conhecimento acumulado em pré-vendas e agendamentos poderia virar uma metodologia específica para clínicas. Nasceu aí a <span className="text-primary-foreground font-medium">Acelero.vc</span>.</p>
+                  <p>Sua trajetória no setor começou na <span className="text-foreground font-semibold">OralGift</span>, empresa de produtos de higiene bucal patenteados em mais de 40 países, onde teve o primeiro contato profundo com o mercado odontológico. Depois, no <span className="text-foreground font-semibold">Sistema Vitto</span>, estruturou do zero uma área comercial completa: entrou numa empresa com 4 vendedores e 30 vendas/mês, e saiu com equipe de 18 profissionais. 8 SDRs inbound, 4 BDRs outbound e 6 closers, alcançando 90 a 110 vendas mensais.</p>
+                  <p>Durante a pandemia, enxergou a oportunidade que mudaria sua carreira. As clínicas precisaram migrar para o digital sem qualquer preparo comercial. Lucas percebeu que todo o conhecimento acumulado em pré-vendas e agendamentos poderia virar uma metodologia específica para clínicas. Nasceu aí a <span className="text-foreground font-semibold">Acelero.vc</span>.</p>
                   <p>Depois de cinco anos e mais de 250 clínicas atendidas, sistematizou esse aprendizado no <span className="text-cyan font-semibold">Método A.C.E.L.E.R.O</span>, criado em 2025 para mapear a jornada completa de estruturação comercial em clínicas de saúde, do diagnóstico inicial até a escalabilidade do faturamento.</p>
                 </div>
               </div>
@@ -170,21 +170,21 @@ const Sobre = () => {
           </section>
 
           {/* Especialidades */}
-          <section className="py-24 relative border-y border-primary-foreground/10 bg-primary/30">
+          <section className="py-24 bg-secondary border-y border-border">
             <div className="container mx-auto px-4">
               <div className="max-w-5xl mx-auto">
                 <div className="text-center mb-14">
                   <div className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan mb-3">Áreas de atuação</div>
-                  <h2 className="text-3xl md:text-4xl font-bold">Especialidades</h2>
+                  <h2 className="text-3xl md:text-4xl font-bold text-foreground">Especialidades</h2>
                 </div>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
                   {specialties.map((spec) => (
-                    <div key={spec.title} className="group relative p-7 rounded-2xl border border-primary-foreground/10 bg-primary-foreground/[0.03] hover:bg-primary-foreground/[0.06] hover:border-cyan/30 transition-all duration-300">
-                      <div className="w-12 h-12 rounded-xl bg-cyan/15 border border-cyan/30 flex items-center justify-center mb-5 group-hover:bg-cyan/25 transition-colors">
+                    <div key={spec.title} className="group relative p-7 rounded-2xl border border-border bg-card hover:border-cyan/40 hover:shadow-elegant transition-all duration-300">
+                      <div className="w-12 h-12 rounded-xl bg-cyan/10 border border-cyan/20 flex items-center justify-center mb-5 group-hover:bg-cyan/20 transition-colors">
                         <spec.icon className="w-5 h-5 text-cyan" />
                       </div>
-                      <h3 className="text-lg font-bold mb-2">{spec.title}</h3>
-                      <p className="text-sm text-primary-foreground/65 leading-relaxed">{spec.description}</p>
+                      <h3 className="text-lg font-bold mb-2 text-card-foreground">{spec.title}</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{spec.description}</p>
                     </div>
                   ))}
                 </div>
@@ -193,27 +193,27 @@ const Sobre = () => {
           </section>
 
           {/* Case de Sucesso */}
-          <section className="py-24 bg-gradient-to-b from-primary to-primary-light/20">
+          <section className="py-24 bg-background">
             <div className="container mx-auto px-4">
               <div className="max-w-5xl mx-auto">
                 <div className="text-center mb-12">
                   <div className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan mb-3">Case de Sucesso</div>
-                  <h2 className="text-3xl md:text-4xl font-bold">Resultado que fala por si</h2>
+                  <h2 className="text-3xl md:text-4xl font-bold text-foreground">Resultado que fala por si</h2>
                 </div>
-                <div className="relative rounded-3xl overflow-hidden border border-cyan/20 bg-gradient-to-br from-primary-light/40 to-primary/40 backdrop-blur-sm">
-                  <div className="absolute -top-32 -right-32 w-80 h-80 bg-cyan/20 rounded-full blur-3xl" aria-hidden="true" />
+                <div className="relative rounded-3xl overflow-hidden border border-primary/10 bg-gradient-to-br from-primary to-primary-dark text-primary-foreground shadow-lift">
+                  <div className="absolute -top-32 -right-32 w-80 h-80 bg-cyan/30 rounded-full blur-3xl" aria-hidden="true" />
                   <div className="relative grid md:grid-cols-2 gap-10 items-center p-10 md:p-14">
                     <div>
                       <p className="text-lg text-primary-foreground/85 leading-relaxed">
                         <span className="font-semibold text-primary-foreground">Dra. Natalia Palmier</span> entrou na Mentoria A.C.E.L.E.R.O em abril de 2025 faturando <span className="font-semibold">R$ 8.000/mês</span>, trabalhando em paralelo num hospital, sem dedicação exclusiva ao consultório.
                       </p>
                       <p className="text-lg text-primary-foreground/85 leading-relaxed mt-4">
-                        Em março de 2026, seu faturamento atingiu <span className="font-semibold text-cyan">R$ 56.000 mensais</span>.
+                        Em março de 2026, seu faturamento atingiu <span className="font-semibold text-cyan-light">R$ 56.000 mensais</span>.
                       </p>
                     </div>
                     <div className="text-center md:text-right">
                       <div className="text-7xl md:text-9xl font-extrabold bg-gradient-to-br from-cyan to-cyan-light bg-clip-text text-transparent leading-none tracking-tight">600%</div>
-                      <p className="text-primary-foreground/70 mt-5 leading-relaxed text-sm md:text-base">
+                      <p className="text-primary-foreground/75 mt-5 leading-relaxed text-sm md:text-base">
                         de crescimento em 11 meses.<br />Sem aumentar a carga horária.<br />Apenas com estrutura comercial.
                       </p>
                     </div>
@@ -224,22 +224,22 @@ const Sobre = () => {
           </section>
 
           {/* Podcast */}
-          <section className="py-24 border-y border-primary-foreground/10 bg-primary/30">
+          <section className="py-24 bg-secondary border-y border-border">
             <div className="container mx-auto px-4">
               <div className="max-w-3xl mx-auto text-center">
                 <div className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan mb-3">Podcast</div>
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">Clínica Sem Caos</h2>
-                <div className="text-left space-y-4 text-primary-foreground/75 leading-relaxed">
+                <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">Clínica Sem Caos</h2>
+                <div className="text-left space-y-4 text-muted-foreground leading-relaxed">
                   <p>Um dos podcasts mais completos do mercado brasileiro de saúde. Focado em gestão, marketing, vendas e finanças para donos de clínicas médicas e odontológicas. 40 episódios no YouTube e Spotify, reunindo especialistas de referência nacional.</p>
-                  <p>Entre os convidados: <span className="font-semibold text-primary-foreground">Caio Carinhena</span> (CEO do Clinicorp), Matheus Bueno, Magnus Guérios, Rita Silva e dezenas de outros especialistas.</p>
-                  <p>Apresentado por <span className="font-semibold text-primary-foreground">Lucas Rocha</span>, <span className="font-semibold text-primary-foreground">Thiago Caparroz</span> e <span className="font-semibold text-primary-foreground">Rogério Haboski</span>.</p>
+                  <p>Entre os convidados: <span className="font-semibold text-foreground">Caio Carinhena</span> (CEO do Clinicorp), Matheus Bueno, Magnus Guérios, Rita Silva e dezenas de outros especialistas.</p>
+                  <p>Apresentado por <span className="font-semibold text-foreground">Lucas Rocha</span>, <span className="font-semibold text-foreground">Thiago Caparroz</span> e <span className="font-semibold text-foreground">Rogério Haboski</span>.</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-3 justify-center mt-10">
-                  <a href="https://open.spotify.com/show/54Q8Dez47yEnEiqQHrxIAN" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 px-6 h-12 rounded-lg border border-primary-foreground/20 bg-primary-foreground/5 hover:bg-primary-foreground/10 hover:border-cyan/40 transition-colors font-medium">
+                  <a href="https://open.spotify.com/show/54Q8Dez47yEnEiqQHrxIAN" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 px-6 h-12 rounded-lg border border-border bg-card hover:bg-cyan/5 hover:border-cyan/40 transition-colors font-medium text-foreground">
                     Ouvir no Spotify
                     <ArrowRight className="w-4 h-4" />
                   </a>
-                  <a href="https://www.youtube.com/@clinicasemcaos" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 px-6 h-12 rounded-lg border border-primary-foreground/20 bg-primary-foreground/5 hover:bg-primary-foreground/10 hover:border-cyan/40 transition-colors font-medium">
+                  <a href="https://www.youtube.com/@clinicasemcaos" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 px-6 h-12 rounded-lg border border-border bg-card hover:bg-cyan/5 hover:border-cyan/40 transition-colors font-medium text-foreground">
                     <Youtube className="w-5 h-5" />
                     Assistir no YouTube
                   </a>
@@ -249,26 +249,25 @@ const Sobre = () => {
           </section>
 
           {/* Propósito */}
-          <section className="py-24 bg-gradient-to-b from-primary-light/20 to-primary-dark">
+          <section className="py-24 bg-background">
             <div className="container mx-auto px-4">
               <div className="max-w-3xl mx-auto">
                 <div className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan mb-3 text-center">Propósito</div>
-                <Quote className="w-12 h-12 text-cyan/40 mx-auto mb-8" aria-hidden="true" />
-                <blockquote className="space-y-5 text-lg md:text-xl text-primary-foreground/85 leading-relaxed text-center">
+                <Quote className="w-12 h-12 text-cyan/50 mx-auto mb-8" aria-hidden="true" />
+                <blockquote className="space-y-5 text-lg md:text-xl text-foreground/85 leading-relaxed text-center font-light italic">
                   <p>"Antes de ser mentor, quando me tornei líder e gestor comercial, sempre quis trazer uma visão que me motivou a entrar em vendas: a da prosperidade financeira através do trabalho comercial."</p>
                   <p>"Quando me tornei mentor comercial para clínicas, assumi um propósito de vida: fazer com que donos de clínica entendam que não são apenas profissionais da área da saúde. São donos de uma empresa, e essa empresa tem que ser próspera e lucrativa."</p>
                   <p>"Eu transformo donos de clínica em pessoas mais prósperas. Esses donos transformam a vida de pacientes que conquistam saúde, estética e autoestima melhores. Essa cadeia completa é o que mais me motiva."</p>
                 </blockquote>
-                <footer className="mt-10 text-center">
-                  <div className="inline-block w-10 h-px bg-cyan/50 mb-4" aria-hidden="true" />
-                  <div className="font-semibold">Lucas Rocha</div>
-                  <div className="text-sm text-primary-foreground/60">Fundador da Acelero.vc</div>
+                <footer className="mt-10 text-center not-italic">
+                  <div className="inline-block w-10 h-px bg-cyan/60 mb-4" aria-hidden="true" />
+                  <div className="font-semibold text-foreground">Lucas Rocha</div>
+                  <div className="text-sm text-muted-foreground">Fundador da Acelero.vc</div>
                 </footer>
               </div>
             </div>
           </section>
 
-          {/* CTA */}
           <section className="py-20 relative overflow-hidden border-t border-primary-foreground/10">
             <div className="absolute inset-0 bg-gradient-to-br from-primary-dark via-primary to-primary-dark" />
             <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-cyan/10 rounded-full blur-3xl" aria-hidden="true" />

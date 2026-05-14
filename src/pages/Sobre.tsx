@@ -87,7 +87,7 @@ const Sobre = () => {
       <JsonLd data={breadcrumbSchema} />
       <JsonLd data={faqSchema} />
 
-      <div className="min-h-screen bg-primary-dark text-primary-foreground">
+      <div className="min-h-screen bg-background text-foreground">
         <Header />
         <main id="main-content" className="pt-20">
           {/* Hero */}

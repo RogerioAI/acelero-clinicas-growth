@@ -1,54 +1,45 @@
-## Melhorias de fallback SEO no `index.html`
+## Plano de atualização da página /sobre
 
-Adicionar meta tags estáticas no `index.html` para que crawlers que não executam JavaScript (ou leem antes do React montar) já recebam descrição e imagem padrão do site.
+Todas as mudanças ficam concentradas em **um único arquivo**: `src/pages/Sobre.tsx`. Nenhuma outra rota, asset ou componente compartilhado precisa ser tocado.
 
-### Alterações em `index.html`
+### Arquivo alterado
 
-Dentro do `<head>`, adicionar:
+- `src/pages/Sobre.tsx`
 
-1. **Meta description global** (fallback para o site institucional)
-   ```html
-   <meta name="description" content="Mentoria comercial para clínicas médicas e odontológicas. Método A.C.E.L.E.R.O: estruture pré-venda, venda e pós-venda e escale o faturamento com previsibilidade." />
-   ```
+### Mudanças dentro de `src/pages/Sobre.tsx`
 
-2. **Robots padrão**
-   ```html
-   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1" />
-   ```
+1. **Helmet (SEO/AIO/Twitter)** — substituir title, description, og:*, twitter:* pelos textos exatos do briefing. Adicionar `<meta name="keywords">`, `<meta name="author" content="Lucas Rocha">`, `<meta name="robots" content="index, follow">`. Canonical já existe e fica.
 
-3. **Canonical fallback**
-   ```html
-   <link rel="canonical" href="https://acelero.vc/" />
-   ```
+2. **JSON-LD — Person enriquecido** — substituir o `personSchema` atual pela versão nova com `@id`, `alternateName`, `alumniOf` (UNICURITIBA + FAEL), `knowsAbout` ampliado, `sameAs` ampliado (LinkedIn, Instagram, YouTube Acelero, YouTube Clínica Sem Caos, Spotify). Manter o `breadcrumbSchema`.
 
-4. **Open Graph fallback** (usado quando o React Helmet ainda não substituiu)
-   ```html
-   <meta property="og:type" content="website" />
-   <meta property="og:site_name" content="Acelero" />
-   <meta property="og:locale" content="pt_BR" />
-   <meta property="og:title" content="Acelero | Mentoria Comercial para Clínicas de Saúde" />
-   <meta property="og:description" content="Mentoria comercial para clínicas médicas e odontológicas. Método A.C.E.L.E.R.O para escalar faturamento com previsibilidade." />
-   <meta property="og:url" content="https://acelero.vc/" />
-   <meta property="og:image" content="https://acelero.vc/og-image-home.jpg" />
-   <meta property="og:image:width" content="1200" />
-   <meta property="og:image:height" content="630" />
-   ```
+3. **JSON-LD — FAQPage** — novo objeto com as 5 perguntas/respostas do briefing, renderizado via `<JsonLd>` junto aos demais.
 
-5. **Twitter Card fallback**
-   ```html
-   <meta name="twitter:card" content="summary_large_image" />
-   <meta name="twitter:title" content="Acelero | Mentoria Comercial para Clínicas de Saúde" />
-   <meta name="twitter:description" content="Mentoria comercial para clínicas médicas e odontológicas. Método A.C.E.L.E.R.O para escalar faturamento com previsibilidade." />
-   <meta name="twitter:image" content="https://acelero.vc/og-image-home.jpg" />
-   ```
+4. **Bio (seção "Quem é Lucas Rocha")** — substituir os 3 parágrafos atuais pelos 4 novos parágrafos (OralGift → Sistema Vitto → pandemia → Método A.C.E.L.E.R.O em 2025). Stats 250+/15+/7 permanecem intactos.
 
-### Por que importa
+5. **Novo bloco "Resultado que fala por si"** (após Especialidades) — fundo escuro no estilo `bg-primary` / cards de depoimentos. Texto da Dra. Natalia Palmier + número grande `600%` em `text-cyan` + subtexto.
 
-- Garante preview correto no WhatsApp, LinkedIn, X, Slack mesmo se o scraper não executar JS.
-- Melhora indexação inicial do Google quando o bot pega o HTML estático antes do hydration.
-- Não conflita com `react-helmet-async`: nas páginas internas, o Helmet sobrescreve esses valores.
+6. **Novo bloco "Clínica Sem Caos: o podcast para donos de clínica"** (após o resultado) — fundo claro, texto descritivo, dois botões lado a lado (`variant="outline"`) linkando Spotify e YouTube com `target="_blank" rel="noopener noreferrer"`.
 
-### Arquivos alterados
-- `index.html` (apenas adições no `<head>`)
+7. **Novo bloco de propósito / citação** (após o podcast, antes do CTA final) — `<blockquote>` com fundo levemente diferenciado (`bg-muted/50` ou similar), aspas grandes decorativas, assinatura "Lucas Rocha, fundador da Acelero.vc".
 
-Nenhum outro arquivo é tocado. Sem mudança de comportamento, só metadados.
+### Ordem final das seções
+
+```text
+Hero (foto + nome + sociais)
+Bio "Quem é Lucas Rocha" (texto novo + stats)
+Especialidades (mantido)
+Resultado que fala por si        ← novo
+Clínica Sem Caos (podcast)        ← novo
+Propósito (citação)               ← novo
+CTA "Agendar Diagnóstico" (mantido)
+```
+
+### Detalhes técnicos
+
+- Usar tokens semânticos (`bg-primary`, `text-cyan`, `text-cyan-dark`, `bg-muted/50`, `text-muted-foreground`) — sem cores hardcoded.
+- Botões do podcast: `<Button asChild variant="outline" size="lg">` com `<a href=... target="_blank" rel="noopener noreferrer">`.
+- FAQ JSON-LD entra como terceiro `<JsonLd data={...} />` no topo do JSX retornado.
+- Contraste do `600%`: usar `text-cyan` sobre fundo escuro (`bg-primary`) — suficiente para WCAG no tamanho display.
+- Nada em `index.html`, `App.tsx`, `PersonSchema.tsx` (que é sitewide) ou outros componentes precisa mudar.
+
+Confirma que posso executar?

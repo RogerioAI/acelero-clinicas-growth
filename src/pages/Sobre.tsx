@@ -268,7 +268,7 @@ const Sobre = () => {
             </div>
           </section>
 
-          <section className="py-20 relative overflow-hidden border-t border-primary-foreground/10">
+          <section className="py-24 relative overflow-hidden border-t border-primary-foreground/10 text-primary-foreground">
             <div className="absolute inset-0 bg-gradient-to-br from-primary-dark via-primary to-primary-dark" />
             <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-cyan/10 rounded-full blur-3xl" aria-hidden="true" />
             <div className="container relative mx-auto px-4 text-center">

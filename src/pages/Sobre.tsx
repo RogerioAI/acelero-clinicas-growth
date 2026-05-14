@@ -91,7 +91,7 @@ const Sobre = () => {
         <Header />
         <main id="main-content" className="pt-20">
           {/* Hero */}
-          <section className="relative overflow-hidden py-24 md:py-32">
+          <section className="relative overflow-hidden py-24 md:py-32 text-primary-foreground">
             <div className="absolute inset-0 bg-gradient-to-br from-primary-dark via-primary to-primary-dark" />
             <div className="absolute top-1/4 -left-32 w-96 h-96 bg-cyan/20 rounded-full blur-3xl" aria-hidden="true" />
             <div className="absolute bottom-0 -right-32 w-96 h-96 bg-cyan/10 rounded-full blur-3xl" aria-hidden="true" />
@@ -268,7 +268,7 @@ const Sobre = () => {
             </div>
           </section>
 
-          <section className="py-20 relative overflow-hidden border-t border-primary-foreground/10">
+          <section className="py-24 relative overflow-hidden border-t border-primary-foreground/10 text-primary-foreground">
             <div className="absolute inset-0 bg-gradient-to-br from-primary-dark via-primary to-primary-dark" />
             <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-cyan/10 rounded-full blur-3xl" aria-hidden="true" />
             <div className="container relative mx-auto px-4 text-center">

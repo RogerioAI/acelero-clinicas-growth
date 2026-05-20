@@ -775,7 +775,7 @@ Antes de pensar em ferramentas, scripts ou contratações, é preciso entender e
 
 <img src="${preVenda3FuncoesImage}" alt="Infográfico: as 3 funções da pré-venda em clínicas, qualificar, aquecer e agendar com confirmação" loading="lazy" class="w-full h-auto rounded-xl my-8" />
 
-### Função 1: qualificar
+### Função 1: Qualificar
 
 Qualificar é separar quem tem perfil para o tratamento de quem não tem. Isso protege a agenda do dentista (ou do médico) e protege o orçamento da clínica. Um lead bem qualificado chega à consulta com expectativa alinhada, condição financeira compatível e intenção real de tratamento. Um lead não qualificado consome tempo e ainda gera frustração na equipe.
 

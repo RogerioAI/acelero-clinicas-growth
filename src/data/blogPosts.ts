@@ -787,7 +787,7 @@ Qualificar passa por três camadas:
 
 **Intenção real.** O lead está pesquisando ou está pronto para resolver? Pergunta simples como "você está coletando orçamentos ou já decidiu que vai fazer e está escolhendo onde?" separa os dois tipos com clareza.
 
-### Função 2: aquecer
+### Função 2: Aquecer
 
 Aquecer é manter o interesse vivo entre o primeiro contato e a consulta. É também construir confiança antes que o paciente entre na clínica. Em clínicas sem aquecimento, o paciente chega frio, desconfiado, e o dentista precisa convencer durante a avaliação. Em clínicas com aquecimento, o paciente chega praticamente decidido, e a avaliação é apenas a confirmação técnica.
 

@@ -1,45 +1,61 @@
-## Plano de atualização da página /sobre
+## Objetivo
 
-Todas as mudanças ficam concentradas em **um único arquivo**: `src/pages/Sobre.tsx`. Nenhuma outra rota, asset ou componente compartilhado precisa ser tocado.
+Publicar o 9º post do blog ("Pré-venda em clínica: o que é, como estruturar e por que ela define se você fatura ou não"), seguindo exatamente o padrão dos posts existentes (capa, autor, CTA de diagnóstico, FAQ, JSON-LD), e otimizado para SEO tradicional + AEO/GEO/AIO (busca por IAs como ChatGPT, Perplexity, Gemini).
 
-### Arquivo alterado
+## Assets
 
-- `src/pages/Sobre.tsx`
+1. **Capa do post** — gerar via `imagegen` em `src/assets/blog/pre-venda-clinica.jpg` (1920×1080, estilo dark/cyan coerente com o brand, conceito: funil comercial / WhatsApp / agendamento).
+2. **Imagem 1 (3 funções da pré-venda)** — copiar `user-uploads://3_funções_da_pre-venda_em_clinicas.png` → `src/assets/blog/pre-venda-3-funcoes.png`.
+3. **Imagem 2 (3 toques de confirmação)** — copiar `user-uploads://3_estrategias_que_reduzem_faltas_na_clinica.png` → `src/assets/blog/pre-venda-3-toques-confirmacao.png`.
 
-### Mudanças dentro de `src/pages/Sobre.tsx`
+As duas imagens serão importadas como ES6 e embutidas no `content` em markdown nos pontos `![][image1]` e `![][image2]` do texto original (substituídas por `![alt descritivo](url)` com `loading="lazy"` via tag `<img>` quando necessário para preservar atributos).
 
-1. **Helmet (SEO/AIO/Twitter)** — substituir title, description, og:*, twitter:* pelos textos exatos do briefing. Adicionar `<meta name="keywords">`, `<meta name="author" content="Lucas Rocha">`, `<meta name="robots" content="index, follow">`. Canonical já existe e fica.
+## Conteúdo
 
-2. **JSON-LD — Person enriquecido** — substituir o `personSchema` atual pela versão nova com `@id`, `alternateName`, `alumniOf` (UNICURITIBA + FAEL), `knowsAbout` ampliado, `sameAs` ampliado (LinkedIn, Instagram, YouTube Acelero, YouTube Clínica Sem Caos, Spotify). Manter o `breadcrumbSchema`.
+Adicionar novo objeto em `src/data/blogPosts.ts`:
 
-3. **JSON-LD — FAQPage** — novo objeto com as 5 perguntas/respostas do briefing, renderizado via `<JsonLd>` junto aos demais.
+- `id: 9`
+- `slug: "pre-venda-clinica-como-estruturar"`
+- `category: "Processos Comerciais"`
+- `tags: ["pré-venda", "SDR", "WhatsApp", "no-show", "agendamento", "mentoria comercial"]`
+- `date: "20 Mai 2026"`, `updatedAt: "2026-05-20"`
+- `readTime: "11 min"`
+- `thumbnail`: capa gerada
+- `excerpt`: 1 frase de gancho (versão curta do resumo executivo)
+- `content`: texto do .md adaptado (h2 = `##`, h3 = `###`), imagens nos pontos corretos, sem long-dash (regra do projeto), com o CTA final apontando para `https://diagnostico.acelero.vc/` (não para `/metodo`)
+- `faq`: 5 perguntas do bloco "Perguntas frequentes" do .md (já vêm prontas no texto)
 
-4. **Bio (seção "Quem é Lucas Rocha")** — substituir os 3 parágrafos atuais pelos 4 novos parágrafos (OralGift → Sistema Vitto → pandemia → Método A.C.E.L.E.R.O em 2025). Stats 250+/15+/7 permanecem intactos.
+## SEO / AEO / GEO / AIO
 
-5. **Novo bloco "Resultado que fala por si"** (após Especialidades) — fundo escuro no estilo `bg-primary` / cards de depoimentos. Texto da Dra. Natalia Palmier + número grande `600%` em `text-cyan` + subtexto.
+Otimizações para busca tradicional + busca por IAs:
 
-6. **Novo bloco "Clínica Sem Caos: o podcast para donos de clínica"** (após o resultado) — fundo claro, texto descritivo, dois botões lado a lado (`variant="outline"`) linkando Spotify e YouTube com `target="_blank" rel="noopener noreferrer"`.
+**SEO clássico (campos já existentes):**
+- `metaTitle`: ≤60 chars — `"Pré-venda em clínica: como estruturar e faturar mais"`
+- `metaDescription`: ≤155 chars com keyword principal
+- `keywords`: "pré-venda clínica, SDR clínica odontológica, qualificação de lead, no-show, agendamento WhatsApp, mentoria comercial"
+- Slug curto e descritivo
 
-7. **Novo bloco de propósito / citação** (após o podcast, antes do CTA final) — `<blockquote>` com fundo levemente diferenciado (`bg-muted/50` ou similar), aspas grandes decorativas, assinatura "Lucas Rocha, fundador da Acelero.vc".
+**AEO (Answer Engine Optimization):**
+- Resumo executivo no topo (já vem no .md) — responde direto a "o que é pré-venda em clínica"
+- Headings em forma de pergunta/resposta
+- `faq` populado → renderiza `BlogFAQ` + injeta `FAQPage` JSON-LD (já implementado em `BlogPost.tsx`)
+- Frases curtas, declarativas (formato ideal para featured snippet)
 
-### Ordem final das seções
+**GEO (Generative Engine Optimization) / AIO (AI Optimization):**
+- Definições objetivas e citáveis (1 frase, sujeito + verbo + objeto) que IAs extraem como citação
+- Listas numeradas com dados concretos (% de no-show, R$ de custo, prazos em dias) — IAs preferem citar fontes com números específicos
+- Bloco de atribuição no final ("Texto produzido pela Acelero. Lucas Rocha…") — sinaliza autoridade
+- `Article` JSON-LD já inclui `author`, `publisher`, `wordCount`, `speakable`, `about` (BlogPost.tsx)
+- `BreadcrumbList` JSON-LD já incluído
+- Cobertura de intenções de busca: "o que é", "como estruturar", "em quanto tempo", "quanto custa", "diferença entre" — todas presentes nas H2/H3 e FAQ
 
-```text
-Hero (foto + nome + sociais)
-Bio "Quem é Lucas Rocha" (texto novo + stats)
-Especialidades (mantido)
-Resultado que fala por si        ← novo
-Clínica Sem Caos (podcast)        ← novo
-Propósito (citação)               ← novo
-CTA "Agendar Diagnóstico" (mantido)
-```
+**Sem código novo necessário** para JSON-LD: `src/pages/BlogPost.tsx` já gera `Article`, `FAQPage` e `BreadcrumbList` automaticamente a partir dos campos do post. Sitemap também é auto-descoberto via `scripts/generate-sitemap` parseando `blogPosts.ts`.
 
-### Detalhes técnicos
+## Arquivos afetados
 
-- Usar tokens semânticos (`bg-primary`, `text-cyan`, `text-cyan-dark`, `bg-muted/50`, `text-muted-foreground`) — sem cores hardcoded.
-- Botões do podcast: `<Button asChild variant="outline" size="lg">` com `<a href=... target="_blank" rel="noopener noreferrer">`.
-- FAQ JSON-LD entra como terceiro `<JsonLd data={...} />` no topo do JSX retornado.
-- Contraste do `600%`: usar `text-cyan` sobre fundo escuro (`bg-primary`) — suficiente para WCAG no tamanho display.
-- Nada em `index.html`, `App.tsx`, `PersonSchema.tsx` (que é sitewide) ou outros componentes precisa mudar.
+- `src/assets/blog/pre-venda-clinica.jpg` (novo, gerado)
+- `src/assets/blog/pre-venda-3-funcoes.png` (novo, copiado do upload)
+- `src/assets/blog/pre-venda-3-toques-confirmacao.png` (novo, copiado do upload)
+- `src/data/blogPosts.ts` (adiciona import dos 3 assets + objeto do post 9 no array)
 
-Confirma que posso executar?
+Nada mais precisa ser editado: header, footer, autor, CTA de diagnóstico, related posts, JSON-LD, sitemap e blog index já consomem `blogPosts` automaticamente.

@@ -7,6 +7,9 @@ import telemedicinaImage from "@/assets/blog/telemedicina-fluxo-comercial.jpg";
 import planosPetImage from "@/assets/blog/planos-pet-checkups.jpg";
 import faturamentoClinicaImage from "@/assets/blog/faturamento-clinica-vendas.jpg";
 import gargalosComerciaisImage from "@/assets/blog/gargalos-comerciais-clinica.png";
+import preVendaClinicaImage from "@/assets/blog/pre-venda-clinica.jpg";
+import preVenda3FuncoesImage from "@/assets/blog/pre-venda-3-funcoes.png";
+import preVenda3ToquesImage from "@/assets/blog/pre-venda-3-toques-confirmacao.png";
 
 export const blogPosts: BlogPost[] = [
   {
@@ -697,6 +700,180 @@ A agência de marketing trabalha do lado de fora da clínica: tráfego, conteúd
 ### O que é a Mentoria A.C.E.L.E.R.O?
 
 É um programa de transformação comercial para clínicas médicas e odontológicas com duração de 6 a 12 meses, sessões semanais, diagnóstico inicial, dashboards de indicadores, scripts de vendas e templates operacionais. O programa é dividido em 7 fases que cobrem desde alinhamento estratégico até escalabilidade do faturamento.
+    `,
+  },
+  {
+    id: 9,
+    title: "Pré-venda em clínica: o que é, como estruturar e por que ela define se você fatura ou não",
+    slug: "pre-venda-clinica-como-estruturar",
+    category: "Processos Comerciais",
+    tags: ["pré-venda", "SDR", "WhatsApp", "no-show", "agendamento", "mentoria comercial"],
+    metaTitle: "Pré-venda em clínica: como estruturar e faturar mais",
+    metaDescription: "Pré-venda é a etapa comercial entre o lead e a consulta. Veja as 3 funções, o roteiro de 30 dias e como reduzir no-show pela metade em clínicas.",
+    thumbnail: preVendaClinicaImage,
+    excerpt: "9 em 10 clínicas perdem dinheiro antes de tentar vender. Veja como estruturar pré-venda em 30 dias, reduzir no-show pela metade e aumentar 20% a 40% na conversão pós-avaliação.",
+    date: "20 Mai 2026",
+    updatedAt: "2026-05-20",
+    readTime: "11 min",
+    keywords: "pré-venda clínica, SDR clínica odontológica, qualificação de lead, no-show, agendamento WhatsApp, mentoria comercial, processo comercial clínica",
+    faq: [
+      {
+        question: "Qual a diferença entre pré-venda e atendimento de recepção?",
+        answer: "Atendimento de recepção é uma função operacional: receber paciente, organizar agenda, acolher quem chega na clínica. Pré-venda é uma função comercial: qualificar lead, aquecer interesse e converter em consulta com taxa de comparecimento alta. As duas funções podem ser exercidas pela mesma pessoa em clínicas pequenas, mas precisam ser tratadas como funções diferentes, com tempo dedicado e indicadores próprios. Misturar as duas é o que faz pré-venda nunca acontecer de verdade."
+      },
+      {
+        question: "Quanto tempo leva para implantar pré-venda numa clínica?",
+        answer: "Em uma clínica pequena, pré-venda básica pode ser implantada em 30 dias. Em uma clínica média, leva de 60 a 90 dias para que o processo esteja maduro. Em clínicas grandes, com várias unidades, a implantação completa pode levar de 4 a 6 meses, principalmente porque exige padronização entre unidades e treinamento de várias pessoas."
+      },
+      {
+        question: "Preciso de um CRM para fazer pré-venda?",
+        answer: "Não nos primeiros meses. WhatsApp Business com etiquetas de cor e uma planilha de controle dão conta da operação inicial de uma clínica pequena ou média. CRM faz diferença quando o volume cresce (acima de 100 leads por mês) ou quando há mais de uma pessoa na pré-venda. Implantar CRM antes de ter processo definido é colocar a carruagem na frente dos cavalos: a ferramenta vai registrar bagunça em vez de organizar trabalho."
+      },
+      {
+        question: "Quanto custa contratar alguém dedicado à pré-venda?",
+        answer: "Varia muito por região e por porte da clínica. Em geral, uma pessoa dedicada à pré-venda custa entre R$ 2.500 e R$ 4.500 mensais (CLT, com encargos) no Brasil. O cálculo certo é comparar esse custo com o ganho gerado: redução de no-show, aumento de qualificação e redução do tempo do dentista perdido com leads sem perfil. Em clínicas com 80 ou mais leads mensais, o investimento se paga em 2 a 4 meses."
+      },
+      {
+        question: "Pré-venda funciona para clínica de medicina e estética também?",
+        answer: "Funciona, e em alguns nichos funciona ainda melhor que em odontologia. Estética e medicina particulares operam com tickets médios mais altos, ciclo de venda mais longo e maior necessidade de aquecimento. Quanto maior o ticket, maior a importância da pré-venda. O método é o mesmo, muda o conteúdo das perguntas de qualificação e o tipo de prova social usada no aquecimento."
+      }
+    ],
+    content: `
+## Resumo executivo
+
+Pré-venda é o conjunto de etapas comerciais que acontecem antes da consulta de avaliação. Sua função é qualificar o lead, aquecer o interesse e agendar com taxa de comparecimento alta. Em 9 de cada 10 clínicas, essa etapa simplesmente não existe: a recepcionista responde mensagens quando dá tempo, marca avaliação para qualquer pessoa que pediu e depois a clínica reclama do no-show de 80%.
+
+Estruturar pré-venda começa por definir três coisas: quem responde os leads e em quanto tempo, quais perguntas qualificam antes do agendamento, e como o agendamento é confirmado nas 24 horas anteriores. Pode ser feito com WhatsApp Business e uma planilha antes de qualquer CRM. Este artigo mostra cada etapa e dá um roteiro prático para implantar em até 30 dias.
+
+## O que é pré-venda em clínica
+
+Pré-venda é o conjunto de etapas comerciais que ocorrem entre o primeiro contato do lead e o momento em que ele entra na clínica para a consulta de avaliação. Sua função é tripla: qualificar (filtrar quem realmente tem perfil para o tratamento), aquecer (manter o interesse vivo entre o contato e a consulta) e agendar (marcar com taxa de comparecimento alta).
+
+Esse conceito não vem do mundo das clínicas. Vem de operações comerciais B2B maduras, onde a função do SDR (Sales Development Representative) existe há décadas justamente para preparar o lead antes que ele chegue ao vendedor. A diferença é que em clínicas, na maioria absoluta dos casos, ninguém ocupa esse papel formalmente. A recepcionista vira atendente, vendedora e agendadora ao mesmo tempo, e nenhuma das três funções é executada com método.
+
+A consequência direta é que clínicas estão perdendo dinheiro em uma etapa que sequer reconhecem como existente. O lead chega, recebe uma resposta lenta e sem critério, é agendado sem qualquer filtro, não recebe nenhuma confirmação, e muito mais da metade simplesmente não aparece. Esse buraco se chama ausência de pré-venda.
+
+## Por que sua clínica perde dinheiro antes mesmo de tentar vender
+
+A maior parte das clínicas pensa que o problema comercial está na hora de fechar o orçamento. Não está. Está antes. Está no intervalo entre "alguém demonstrou interesse" e "essa pessoa entrou na clínica para conversar".
+
+Veja como o dinheiro escorre nesse intervalo:
+
+**Tempo de resposta longo.** Um lead que pergunta sobre implante no Instagram às 19h espera resposta nos próximos 30 minutos. Se a clínica responde no dia seguinte às 10h, o lead já conversou com mais duas concorrentes ou simplesmente esfriou. Pesquisas de comportamento de consumidor em saúde apontam que a primeira clínica a responder fecha entre 50% e 70% das oportunidades.
+
+**Agendamento sem qualificação.** A recepcionista marca avaliação para qualquer pessoa que ligou. O agendamento fica cheio, mas a agenda é populada por leads sem condição financeira para o tratamento, sem perfil para o procedimento, ou sem real intenção de compra. O dentista atende, gasta uma hora, e o orçamento não fecha porque nunca tinha chance de fechar.
+
+**Falta de aquecimento.** Entre o agendamento e a consulta, podem se passar três, sete, dez dias. Nesse intervalo, a clínica desaparece. O lead não recebe nenhum conteúdo, nenhum lembrete que reforce a decisão, nenhuma prova social. Quando chega o dia, metade não aparece, e a outra metade chega frio.
+
+**Confirmação inexistente.** Não há um fluxo formal de confirmação 24 horas antes. A clínica torce para o paciente lembrar. Resultado: no-show entre 50% e 80% em clínicas sem processo de confirmação, contra 15% a 30% em clínicas com confirmação estruturada.
+
+A soma desses quatro vazamentos é o que separa uma clínica que cresce de uma clínica que estagnou. Não é falta de marketing. É falta de pré-venda.
+
+## As 3 funções obrigatórias da pré-venda
+
+Antes de pensar em ferramentas, scripts ou contratações, é preciso entender exatamente o que a pré-venda precisa entregar. Toda decisão de implantação parte daí.
+
+<img src="${preVenda3FuncoesImage}" alt="Infográfico: as 3 funções da pré-venda em clínicas, qualificar, aquecer e agendar com confirmação" loading="lazy" class="w-full h-auto rounded-xl my-8" />
+
+### Função 1: qualificar
+
+Qualificar é separar quem tem perfil para o tratamento de quem não tem. Isso protege a agenda do dentista (ou do médico) e protege o orçamento da clínica. Um lead bem qualificado chega à consulta com expectativa alinhada, condição financeira compatível e intenção real de tratamento. Um lead não qualificado consome tempo e ainda gera frustração na equipe.
+
+Qualificar passa por três camadas:
+
+**Perfil técnico.** O caso é compatível com o que a clínica faz? Um paciente que precisa de cirurgia ortognática chegando numa clínica que só faz ortodontia simples não deveria ser agendado para avaliação geral. Deveria ser direcionado ou transformado em outra conversa.
+
+**Perfil financeiro.** O lead consegue arcar com o tratamento? Isso não é grosseria. É respeito com o tempo de todos. Existem formas de descobrir essa informação sem ser invasivo (pergunta sobre forma de pagamento preferida, sobre interesse em tratamentos específicos cujo ticket é conhecido, sobre experiências anteriores com procedimentos similares).
+
+**Intenção real.** O lead está pesquisando ou está pronto para resolver? Pergunta simples como "você está coletando orçamentos ou já decidiu que vai fazer e está escolhendo onde?" separa os dois tipos com clareza.
+
+### Função 2: aquecer
+
+Aquecer é manter o interesse vivo entre o primeiro contato e a consulta. É também construir confiança antes que o paciente entre na clínica. Em clínicas sem aquecimento, o paciente chega frio, desconfiado, e o dentista precisa convencer durante a avaliação. Em clínicas com aquecimento, o paciente chega praticamente decidido, e a avaliação é apenas a confirmação técnica.
+
+Aquecer não é encher o lead de mensagens. É enviar 2 ou 3 toques estratégicos: um conteúdo que responde a uma dúvida comum sobre o tratamento, uma prova social (depoimento real ou case visual), um lembrete antes da consulta com instruções claras (o que trazer, onde estacionar, quanto tempo dura).
+
+### Função 3: agendar com confirmação
+
+Agendar é o ato. Confirmar é o que faz o agendamento virar consulta efetiva. Sem fluxo formal de confirmação, no-show é regra, não exceção.
+
+Confirmação efetiva tem três pontos: 48 horas antes (mensagem reforçando a consulta e abrindo espaço para reagendamento se necessário), 24 horas antes (confirmação direta com pedido de resposta), e 2 horas antes (último lembrete prático). Esse fluxo simples leva o no-show para abaixo de 15% em clínicas que executam com disciplina.
+
+<img src="${preVenda3ToquesImage}" alt="Infográfico: os 3 toques de confirmação que reduzem o no-show pela metade, 48h, 24h e 2h antes da consulta" loading="lazy" class="w-full h-auto rounded-xl my-8" />
+
+## Como estruturar pré-venda em 4 etapas
+
+Estruturar pré-venda não é um projeto de transformação digital. É uma sequência de quatro decisões que podem ser tomadas em uma reunião de duas horas.
+
+### Etapa 1: Definir o responsável
+
+A primeira decisão é quem responde pela pré-venda. Pode ser uma pessoa dedicada (CRC ou SDR), pode ser uma recepcionista com pré-venda como função declarada (e prioritária), pode ser uma divisão de turnos entre duas pessoas. O que não pode é ser "todo mundo um pouco". Sem um responsável claro, ninguém é cobrado e nada é melhorado.
+
+Em clínicas pequenas, a recepcionista pode acumular a função, desde que isso seja explicitado e que ela tenha tempo bloqueado na agenda para responder leads (não enquanto atende telefone, recebe paciente e cobra inadimplência ao mesmo tempo).
+
+Em clínicas médias e grandes, faz sentido contratar uma pessoa dedicada. O ROI dessa contratação costuma se pagar em 60 a 90 dias só com a redução de no-show e o aumento de qualificação.
+
+### Etapa 2: Definir o tempo máximo de resposta
+
+Lead em saúde tem uma janela curta de decisão. A regra prática que recomendamos é responder em até 10 minutos durante o horário comercial e até 2 horas fora dele. Para isso funcionar, é preciso definir em qual canal a pré-venda opera (WhatsApp Business é o padrão), quem tem acesso, e como a comunicação é registrada (planilha, CRM básico, qualquer coisa que não dependa da memória).
+
+Velocidade é, isoladamente, o maior multiplicador de conversão de leads em consulta. Clínicas que respondem em até 5 minutos costumam converter 2 a 3 vezes mais que clínicas que respondem no dia seguinte.
+
+### Etapa 3: Criar o roteiro de qualificação
+
+O roteiro de qualificação é uma sequência de 4 a 6 perguntas que a pré-venda faz antes de agendar. Não precisa ser script rígido. Precisa ser uma checklist mental.
+
+Exemplo de roteiro para clínicas médicas e odontologia:
+
+1. O que motivou você a procurar a gente agora?
+2. É a primeira vez que está pensando nesse tratamento ou já tinha pesquisado antes?
+3. Você está coletando orçamentos ou já decidiu que vai fazer?
+4. Tem alguma preferência de forma de pagamento (à vista, parcelado, financiamento)?
+5. Você prefere consulta de manhã, à tarde ou no sábado?
+
+Essas cinco perguntas, em uma conversa natural de WhatsApp, levantam quase toda a informação necessária para decidir se o lead deve ser agendado, deve ser nutrido por mais alguns dias, ou deve ser direcionado para outro tipo de atendimento.
+
+### Etapa 4: Implementar o fluxo de confirmação
+
+O fluxo de confirmação tem três toques fixos: 48h antes, 24h antes e 2h antes. As mensagens podem ser padronizadas, mas precisam soar humanas. Confirmação automática genérica do tipo "sua consulta é amanhã, confirme" tem efeito baixo. Mensagens nominais, com o nome do profissional que vai atender e instruções práticas, têm efeito alto.
+
+A automação pode ser feita por WhatsApp Business com mensagens programadas, por CRM com fluxo de cadência, ou por uma planilha controlada manualmente nos primeiros meses. Ferramenta vem depois do processo.
+
+## Roteiro prático para implantar em 30 dias
+
+Implantar pré-venda do zero numa clínica que nunca operou com método pode ser feito em 30 dias, dividido em quatro semanas.
+
+**Semana 1: diagnóstico e responsável.** Mapear como os leads chegam hoje (canais, volume, tempo de resposta atual, taxa de no-show, taxa de fechamento). Definir quem será o responsável pela pré-venda e bloquear sua agenda.
+
+**Semana 2: roteiro de qualificação e tempo de resposta.** Escrever as perguntas de qualificação, treinar o responsável, definir SLA de tempo máximo de resposta. Começar a operar com o novo padrão e medir.
+
+**Semana 3: aquecimento e fluxo de confirmação.** Criar 2 ou 3 conteúdos de aquecimento (texto curto sobre o tratamento, depoimento, instruções da consulta). Implantar o fluxo de confirmação 48h/24h/2h.
+
+**Semana 4: medição e ajuste.** Comparar os números do mês com a linha de base da semana 1. Ajustar o que estiver com pior performance. A partir daqui, é repetir o ciclo de medir e ajustar mensalmente.
+
+Em clínicas que executaram esse roteiro com disciplina, o ganho típico nos primeiros 90 dias é redução de no-show pela metade e aumento de 20% a 40% na taxa de pacientes que efetivamente entram para tratamento depois da avaliação.
+
+## Erros comuns ao montar a pré-venda
+
+Alguns erros aparecem com frequência quando clínicas tentam estruturar pré-venda sozinhas, e vale conhecer antes de tropeçar neles.
+
+**Confundir pré-venda com automação.** Comprar um chatbot e achar que pré-venda está resolvida. Chatbot ajuda em volume e em primeira resposta, mas não substitui a qualificação humana nem o aquecimento. Ferramenta sem processo é gasto.
+
+**Tornar a qualificação um interrogatório.** Disparar 10 perguntas seguidas no primeiro contato afasta o lead. A qualificação precisa ser conversacional, distribuída ao longo da conversa, e nunca dar a impressão de "passar pelo filtro".
+
+**Ignorar aquecimento.** Agendar e desaparecer até a consulta. Esse é o erro mais comum e o que mais infla o no-show. O aquecimento entre agendamento e consulta vale mais que toda a confirmação posterior.
+
+**Não medir.** Estruturar processo e nunca olhar os números. Sem medição, não há melhoria. Os 4 indicadores mínimos a acompanhar são: tempo médio de resposta, taxa de qualificação (quantos leads viram agendamento), taxa de comparecimento (quantos agendamentos viram consulta), taxa de fechamento na consulta (quantas consultas viram tratamento).
+
+**Não treinar quem está na linha de frente.** Pré-venda é função técnica, exige treino. Recepcionista que nunca foi treinada para vender não vai virar pré-vendedora porque você mudou a placa da função. Treine, acompanhe, dê feedback.
+
+## Conclusão
+
+A pré-venda é a primeira frente comercial de qualquer clínica que quer crescer com previsibilidade. É também a etapa mais negligenciada e a que mais rápido devolve resultado quando é estruturada. É por onde começa a etapa "E" do Método A.C.E.L.E.R.O (Estrutura Comercial), e é o que separa clínicas que dependem de sorte de clínicas que dependem de processo.
+
+Se você quer entender exatamente onde está o gargalo de pré-venda da sua clínica, e como ele se conecta com os outros gargalos comerciais, **agende um diagnóstico comercial gratuito com nosso time pelo botão abaixo.**
+
+*Texto produzido pela Acelero. Lucas Rocha é CEO e Mentor da Acelero, criador do Método A.C.E.L.E.R.O e responsável por mais de 250 clínicas atendidas e R$ 50 milhões em faturamento influenciado.*
     `,
   },
 ];

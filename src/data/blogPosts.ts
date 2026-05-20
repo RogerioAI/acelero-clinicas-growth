@@ -775,7 +775,7 @@ Antes de pensar em ferramentas, scripts ou contratações, é preciso entender e
 
 <img src="${preVenda3FuncoesImage}" alt="Infográfico: as 3 funções da pré-venda em clínicas, qualificar, aquecer e agendar com confirmação" loading="lazy" class="w-full h-auto rounded-xl my-8" />
 
-### Função 1: qualificar
+### Função 1: Qualificar
 
 Qualificar é separar quem tem perfil para o tratamento de quem não tem. Isso protege a agenda do dentista (ou do médico) e protege o orçamento da clínica. Um lead bem qualificado chega à consulta com expectativa alinhada, condição financeira compatível e intenção real de tratamento. Um lead não qualificado consome tempo e ainda gera frustração na equipe.
 
@@ -787,13 +787,13 @@ Qualificar passa por três camadas:
 
 **Intenção real.** O lead está pesquisando ou está pronto para resolver? Pergunta simples como "você está coletando orçamentos ou já decidiu que vai fazer e está escolhendo onde?" separa os dois tipos com clareza.
 
-### Função 2: aquecer
+### Função 2: Aquecer
 
 Aquecer é manter o interesse vivo entre o primeiro contato e a consulta. É também construir confiança antes que o paciente entre na clínica. Em clínicas sem aquecimento, o paciente chega frio, desconfiado, e o dentista precisa convencer durante a avaliação. Em clínicas com aquecimento, o paciente chega praticamente decidido, e a avaliação é apenas a confirmação técnica.
 
 Aquecer não é encher o lead de mensagens. É enviar 2 ou 3 toques estratégicos: um conteúdo que responde a uma dúvida comum sobre o tratamento, uma prova social (depoimento real ou case visual), um lembrete antes da consulta com instruções claras (o que trazer, onde estacionar, quanto tempo dura).
 
-### Função 3: agendar com confirmação
+### Função 3: Agendar com confirmação
 
 Agendar é o ato. Confirmar é o que faz o agendamento virar consulta efetiva. Sem fluxo formal de confirmação, no-show é regra, não exceção.
 

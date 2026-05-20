@@ -1,4 +1,5 @@
 import { Linkedin, Link2, Check } from "lucide-react";
+
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -14,11 +15,6 @@ const WhatsAppIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
-const XIcon = ({ className }: { className?: string }) => (
-  <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-    <path d="M18.244 2H21l-6.5 7.43L22 22h-6.844l-4.78-6.27L4.8 22H2l7-8L2 2h7l4.32 5.71L18.244 2zm-1.2 18h1.62L7.06 4H5.34l11.704 16z"/>
-  </svg>
-);
 
 export const ShareButtons = ({ url, title, className = "" }: Props) => {
   const [copied, setCopied] = useState(false);
@@ -28,7 +24,7 @@ export const ShareButtons = ({ url, title, className = "" }: Props) => {
   const links = [
     { label: "WhatsApp", href: `https://wa.me/?text=${enc(`${title} — ${url}`)}`, Icon: WhatsAppIcon, color: "hover:bg-[#25D366]/15 hover:text-[#25D366]" },
     { label: "LinkedIn", href: `https://www.linkedin.com/sharing/share-offsite/?url=${enc(url)}`, Icon: Linkedin, color: "hover:bg-[#0A66C2]/15 hover:text-[#0A66C2]" },
-    { label: "X / Twitter", href: `https://twitter.com/intent/tweet?text=${enc(title)}&url=${enc(url)}`, Icon: XIcon, color: "hover:bg-foreground/15" },
+    
   ];
 
   const copy = async () => {

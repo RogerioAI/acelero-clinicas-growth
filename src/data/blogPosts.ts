@@ -793,7 +793,7 @@ Aquecer é manter o interesse vivo entre o primeiro contato e a consulta. É tam
 
 Aquecer não é encher o lead de mensagens. É enviar 2 ou 3 toques estratégicos: um conteúdo que responde a uma dúvida comum sobre o tratamento, uma prova social (depoimento real ou case visual), um lembrete antes da consulta com instruções claras (o que trazer, onde estacionar, quanto tempo dura).
 
-### Função 3: agendar com confirmação
+### Função 3: Agendar com confirmação
 
 Agendar é o ato. Confirmar é o que faz o agendamento virar consulta efetiva. Sem fluxo formal de confirmação, no-show é regra, não exceção.
 

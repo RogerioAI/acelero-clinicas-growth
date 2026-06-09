@@ -11,6 +11,8 @@ import preVendaClinicaImage from "@/assets/blog/pre-venda-clinica.jpg";
 import preVenda3FuncoesImage from "@/assets/blog/pre-venda-3-funcoes.png";
 import preVenda3ToquesImage from "@/assets/blog/pre-venda-3-toques-confirmacao.png";
 import fecharOrcamentosImage from "@/assets/blog/fechar-orcamentos-clinica.jpg";
+import fecharOrcamentosApresentacaoImage from "@/assets/blog/fechar-orcamentos-apresentacao-valor.jpg";
+import fecharOrcamentosFollowupImage from "@/assets/blog/fechar-orcamentos-followup.jpg";
 
 export const blogPosts: BlogPost[] = [
   {
@@ -947,6 +949,8 @@ Depois do exame clínico, antes de falar em reais, é preciso criar uma ponte en
 
 Só depois dessas três frases é que o preço entra. Nesse momento, o paciente já está avaliando o custo contra um benefício que ele mesmo ajudou a construir.
 
+<figure class="my-10"><img src="${fecharOrcamentosApresentacaoImage}" alt="Dentista apresentando plano de tratamento em tablet para paciente em consulta comercial estruturada" class="w-full h-auto rounded-xl" loading="lazy" decoding="async" /></figure>
+
 ### Etapa 3: Manejo de objeções com método
 
 Objeção não é rejeição. É uma pergunta disfarçada. "Tá caro" geralmente significa "ainda não entendi o valor" ou "não sei se cabe no meu orçamento agora". "Vou pensar" quase sempre significa "faltou algo nessa conversa que não me deu segurança para decidir".
@@ -994,6 +998,8 @@ A apresentação do orçamento é o momento de maior risco na consulta. Três pr
 **No próximo mês:** Mapeie as três objeções mais comuns que aparecem nas consultas da sua clínica e crie respostas padrão para cada uma. Treine até que sejam naturais.
 
 **Em 90 dias:** Compare a taxa de conversão do período anterior com o período após a implantação. Meta: melhora de 15% a 20%. Se o número não melhorou, alguma etapa não foi executada.
+
+<figure class="my-10"><img src="${fecharOrcamentosFollowupImage}" alt="Recepcionista de clínica realizando follow-up por telefone com paciente após apresentação de orçamento" class="w-full h-auto rounded-xl" loading="lazy" decoding="async" /></figure>
 
 ## Erros que derrubam a conversão
 

@@ -3,7 +3,7 @@ import { CircularTestimonials } from "@/components/ui/circular-testimonials";
 import { getWhatsAppLink } from "@/config/contact";
 import nataliaPalmierVideo from "@/assets/natalia-palmier-video.mp4";
 import brunoThaisVideo from "@/assets/bruno-thais-curattio.mp4";
-import alinePreislerImage from "@/assets/aline-preisler.png";
+import alinePreislerImage from "@/assets/aline-preisler.jpg";
 import laisKeilaImage from "@/assets/lais-keila-viva.jpg";
 
 export const Testimonials = () => {

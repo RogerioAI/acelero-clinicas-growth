@@ -1,36 +1,54 @@
-## Ajustes no post "Como fechar mais orçamentos na clínica"
+# Plano: melhorias de performance mobile
 
-### 1. Refazer a capa no padrão dos demais posts
+Diagnóstico do Lighthouse: **LCP 13,9s**, **FCP 1,9s**, Speed Index 4,4s. Causas principais identificadas no código:
 
-A capa atual ficou escura (consultório sombrio, dentista de máscara) e destoa do grid do blog, onde todas as capas têm:
-- Iluminação clara e ambiente bright
-- Paleta cyan/azul claro com brancos
-- Cena clínica moderna e arejada
+- `hero-mentors.png` com **2 MB** (PNG) é carregado com `fetchpriority="high"` e domina o LCP.
+- `hero-video.mp4` (1,8 MB) faz autoplay no Hero, competindo pela banda.
+- `hero-background.png` (1,6 MB) e `aline-preisler.png` (825 KB) também são pesados.
+- Vídeos de testimonials (`bruno-thais` 14 MB, `natalia-palmier` 15 MB) são importados estaticamente em `Testimonials.tsx`, entrando no bundle inicial.
+- GTM carregado no `<head>` sem `defer`.
+- Sem `Cache-Control` longo (estática Lovable já cuida, mas podemos pré-conectar/pré-carregar correto).
 
-**Ação:** regerar `src/assets/blog/fechar-orcamentos-clinica.jpg` (1216×640, JPG) em modo `standard`, com cena: dentista sorridente apresentando plano de tratamento em tablet para paciente, em consultório odontológico claro, paredes brancas e detalhes cyan, luz natural, estilo fotográfico realista, sem texto, no mesmo padrão visual dos outros covers do blog.
+## O que vou alterar
 
-### 2. Inserir as 2 imagens internas que estavam no .md original
+### 1. Hero (maior ganho de LCP)
+- Trocar `hero-mentors.png` (2 MB) por versão **JPG otimizada** (~150 KB) — converter via `sharp` em script e salvar como `hero-mentors.jpg`.
+- Pré-carregar essa imagem no `index.html` com `<link rel="preload" as="image" fetchpriority="high">`.
+- Mudar o `<video>` do Hero para `preload="none"` + `poster` da própria imagem hero, e só atribuir `src` após a imagem ter sido renderizada (montagem com `useEffect`/IntersectionObserver). Em mobile (≤768px) **não carregar o vídeo** — apenas a imagem estática. Isso elimina ~1,8 MB de tráfego mobile.
+- Remover `hero-background.png` se não estiver em uso (verificar e excluir).
 
-O .md de origem trazia `![][image1]` (linha 88) e `![][image2]` (linha 154) embutidas como base64. Foram removidas na primeira versão; agora serão geradas como JPGs reais e referenciadas no `content` via Markdown padrão (`![alt](url)` — o `MarkdownRenderer` já suporta via `startsWithHtmlBlock` fallback, mas para garantir vamos inserir como `<figure>` HTML inline para passar pelo passthrough do renderer).
+### 2. Imagens em geral
+- Converter `aline-preisler.png` (825 KB) para JPG (~80 KB).
+- Adicionar `loading="lazy"` e `decoding="async"` em todas as `<img>` abaixo da dobra (Testimonials, Mentors, Method, About) que ainda não tenham.
+- Garantir `width`/`height` em todas as imagens (já existe na maioria) para evitar CLS.
 
-**Imagens a gerar (mesmo padrão visual claro/cyan):**
-- `src/assets/blog/fechar-orcamentos-apresentacao-valor.jpg` (1216×640) — Dentista apresentando plano de tratamento em tablet para paciente atento, sorridente, consultório claro, paleta cyan/branco. **Posição:** entre Etapa 2 (Apresentação de valor) e Etapa 3 (Manejo de objeções).
-- `src/assets/blog/fechar-orcamentos-followup.jpg` (1216×640) — Recepcionista de clínica fazendo follow-up por celular/WhatsApp, sorrindo, ambiente claro, paleta cyan/branco. **Posição:** antes da seção "Erros que derrubam a conversão".
+### 3. Vídeos de testimonials (corte grande no bundle inicial)
+- Trocar `import nataliaPalmierVideo from "@/assets/...mp4"` por **import dinâmico/lazy** dentro de um componente que só monta o `<video>` quando entra no viewport (IntersectionObserver).
+- Adicionar `preload="none"` aos `<video>` de testimonials.
 
-**Inserção no content:** dois blocos HTML inline (o `MarkdownRenderer` passa `<figure>` direto):
+### 4. Render-blocking & cache
+- Mover o script GTM para o fim do `<body>` com `defer` (ou usar `async`), mantendo a tag noscript. Mantém o tracking, mas libera a thread principal.
+- Adicionar `<link rel="preload" as="video" ...>` **apenas** se decidirmos manter o hero-video em desktop.
+- Garantir `font-display: swap` já está aplicado (Tailwind/Google Fonts já injetam — checar).
 
-```html
-<figure class="my-10">
-  <img src="<url-importada>" alt="..." class="w-full h-auto rounded-xl" loading="lazy" />
-</figure>
-```
+### 5. Vite build
+- Adicionar `build.rollupOptions.output.manualChunks` simples (vendor split: react, radix-ui, framer-motion) para reduzir o tamanho do chunk inicial e melhorar cache de longo prazo.
 
-### 3. Arquivos editados
+## Arquivos editados
 
-- `src/assets/blog/fechar-orcamentos-clinica.jpg` — regenerada
-- `src/assets/blog/fechar-orcamentos-apresentacao-valor.jpg` — novo
-- `src/assets/blog/fechar-orcamentos-followup.jpg` — novo
-- `src/data/blogPosts.ts` — 2 novos imports + 2 blocos `<figure>` no content
-- regerar `public/sitemap.xml`, `public/rss.xml`, `public/llms-full.txt` via `npm run gen:seo`
+- `index.html` — preload da hero image, GTM com `defer` no fim do body.
+- `src/components/landing/Hero.tsx` — JPG otimizado, vídeo lazy/desktop-only.
+- `src/components/landing/Testimonials.tsx` — vídeos lazy com IntersectionObserver e `preload="none"`.
+- `src/assets/hero-mentors.jpg` (novo) — versão otimizada da PNG.
+- `src/assets/aline-preisler.jpg` (novo) — versão otimizada.
+- `vite.config.ts` — `manualChunks` para vendor split.
+- `src/components/landing/About.tsx`, `Mentors.tsx`, `Method.tsx` — `loading="lazy"` + `decoding="async"` onde faltar.
+
+## Resultado esperado
+
+- LCP mobile: de ~13,9s para **< 4s** (preload da imagem otimizada + remoção do vídeo no mobile).
+- Bundle inicial: queda significativa (testimonials videos saem do JS principal).
+- Speed Index: queda esperada para **< 2,5s**.
+- Performance score mobile: alvo **85+**.
 
 Posso seguir?

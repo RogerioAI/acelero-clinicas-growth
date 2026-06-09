@@ -1,12 +1,26 @@
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
-import { getWhatsAppLink } from "@/config/contact";
+import { useEffect, useState } from "react";
 
-import heroImage from "@/assets/hero-mentors.png";
+import heroImage from "@/assets/hero-mentors.jpg";
 import heroVideo from "@/assets/hero-video.mp4";
 
 export const Hero = () => {
+  const [showVideo, setShowVideo] = useState(false);
   const [imageOpacity, setImageOpacity] = useState(0);
+
+  useEffect(() => {
+    // Only load the heavy hero video on desktop, after first paint and idle.
+    const isDesktop = window.matchMedia("(min-width: 1024px)").matches;
+    const saveData = (navigator as any).connection?.saveData;
+    if (!isDesktop || saveData) return;
+
+    const trigger = () => setShowVideo(true);
+    if ("requestIdleCallback" in window) {
+      (window as any).requestIdleCallback(trigger, { timeout: 2500 });
+    } else {
+      setTimeout(trigger, 1500);
+    }
+  }, []);
 
   const handleTimeUpdate = (e: React.SyntheticEvent<HTMLVideoElement>) => {
     const video = e.currentTarget;
@@ -19,25 +33,32 @@ export const Hero = () => {
     <section className="relative min-h-screen flex items-center justify-center pb-16 md:pb-24 pt-24 md:pt-24 overflow-hidden bg-gradient-hero">
       {/* Background Video/Image with Overlay */}
       <div className="absolute inset-0 z-0">
-        <video
-          src={heroVideo}
-          autoPlay
-          muted
-          playsInline
-          onTimeUpdate={handleTimeUpdate}
-          className="w-full h-full object-cover object-center"
-          width={1920}
-          height={1080}
-        />
-        <img 
-          src={heroImage} 
+        <img
+          src={heroImage}
           alt="Mentores Acelero - Lucas e Rogério"
-          width={1920}
-          height={1080}
+          width={1600}
+          height={900}
           loading="eager"
           fetchPriority="high"
-          className={`w-full h-full object-cover object-center absolute inset-0 ${imageOpacity > 0 ? 'animate-cinematic-reveal' : 'opacity-0'}`}
+          decoding="async"
+          className={`w-full h-full object-cover object-center absolute inset-0 ${
+            showVideo && imageOpacity > 0 ? "animate-cinematic-reveal" : ""
+          }`}
         />
+        {showVideo && (
+          <video
+            src={heroVideo}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="none"
+            onTimeUpdate={handleTimeUpdate}
+            className="w-full h-full object-cover object-center"
+            width={1920}
+            height={1080}
+          />
+        )}
         <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/60 to-primary/40" />
       </div>
 

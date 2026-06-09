@@ -256,14 +256,15 @@ export const CircularTestimonials = ({
               <video
                 key={testimonial.src}
                 ref={(el) => (videoRefs.current[index] = el)}
-                src={testimonial.src}
+                src={isActive ? testimonial.src : undefined}
                 className="testimonial-image"
                 data-index={index}
                 style={getImageStyle(index)}
-                autoPlay
+                autoPlay={isActive}
                 muted={mutedStates[index]}
                 loop
                 playsInline
+                preload="none"
               />
             ) : (
               <img

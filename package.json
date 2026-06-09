@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "gen:seo": "tsx --import ./scripts/_asset-loader.mjs scripts/generate-sitemap.ts && tsx --import ./scripts/_asset-loader.mjs scripts/generate-rss.ts && tsx --import ./scripts/_asset-loader.mjs scripts/generate-llms-full.ts",
+    "gen:seo": "tsx --import ./scripts/_register.mjs scripts/generate-sitemap.ts && tsx --import ./scripts/_register.mjs scripts/generate-rss.ts && tsx --import ./scripts/_register.mjs scripts/generate-llms-full.ts",
     "predev": "bun run gen:seo",
     "dev": "vite",
     "prebuild": "bun run gen:seo",

@@ -4,8 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "predev": "tsx scripts/generate-sitemap.ts && tsx scripts/generate-rss.ts && tsx scripts/generate-llms-full.ts",
     "dev": "vite",
+    "prebuild": "tsx scripts/generate-sitemap.ts && tsx scripts/generate-rss.ts && tsx scripts/generate-llms-full.ts",
     "build": "vite build",
+    "postbuild": "tsx scripts/prerender.ts",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview"

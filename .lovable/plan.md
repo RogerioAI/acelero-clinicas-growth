@@ -1,73 +1,31 @@
-# Plano: Prerender + SEO/AEO/GEO/AIO completo
+# Corrigir falha de publicação
 
-Objetivo: fazer crawlers (Google, Bing) e IAs (ChatGPT, Perplexity, Claude, Gemini) lerem HTML pronto de cada rota, com schemas ricos, e remover qualquer resquício do prerender.io.
+## Diagnóstico
 
-## 1. Prerender build-time (gratuito, sem serviço externo)
+O erro nas imagens mostra duas pistas:
+- `sh: bun: command not found`
+- `build failed with exit status 1: upOptions.output.ma...` (truncado)
 
-- Adicionar `puppeteer` como devDependency.
-- Criar `scripts/prerender.ts`: sobe servidor estático em `dist/`, abre Chromium headless em cada rota da lista, espera hidratação, salva HTML final em `dist/{rota}/index.html`.
-- Rotas a prerenderizar: `/`, `/sobre`, `/mentoria`, `/blog`, e cada post de `src/data/blogPosts.ts`.
-- Wire-up em `package.json`: `"postbuild": "bunx tsx scripts/prerender.ts"`.
+Causa raiz: o `package.json` usa `bun run gen:seo` nos hooks `predev` e `prebuild`. O ambiente de deploy da Lovable roda `npm`, não `bun`. Quando `prebuild` falha, o `vite build` nem chega a rodar e a publicação quebra.
 
-Resultado: cada URL serve HTML completo com `<title>`, `<meta>`, JSON-LD e conteúdo visível — sem JS.
+Além disso, o `postbuild` chama `tsx scripts/prerender.ts`, que depende do Chromium do Puppeteer — esse binário não está disponível no ambiente de deploy e travaria o build mesmo se chegasse lá.
 
-## 2. Remover prerender.io
+## Correções
 
-- Buscar e remover qualquer referência a `prerender.io`, `prerender-token`, user-agent sniffing, middlewares, headers, comentários e variáveis em: `index.html`, `vite.config.ts`, `public/`, `src/`, `package.json`, `.env*`, `mem://features/seo`.
-- Atualizar memória `mem://features/seo` removendo prerender.io e documentando a nova abordagem build-time.
+1. **`package.json`** — trocar `bun run gen:seo` por `npm run gen:seo` em `predev` e `prebuild`.
+2. **`package.json`** — remover o hook `postbuild` (prerender com Puppeteer). O Chromium não existe no deploy e o script só funcionaria em ambiente local. Mantemos o arquivo `scripts/prerender.ts` no repo caso seja útil rodar manualmente no futuro, mas ele deixa de bloquear o deploy.
+3. Manter `gen:seo` (sitemap, rss, llms-full) — gera apenas arquivos estáticos via `tsx`, funciona com `npm`.
 
-## 3. AEO (Answer Engine Optimization)
+## Impacto SEO
 
-- `FAQPage` JSON-LD nas páginas Sobre e Mentoria (perguntas reais que clínicas fazem sobre pré-venda, mentoria, ROI).
-- Reescrever introduções dos posts em formato "pergunta → resposta direta em 2 frases → detalhamento" (People Also Ask friendly).
-- `HowTo` schema na seção do método ACELERO da home.
-
-## 4. GEO (Generative Engine Optimization / busca local)
-
-- Adicionar `ProfessionalService` JSON-LD em `index.html` com `areaServed: BR`, `serviceType`, `priceRange`.
-- Enriquecer `Organization` com `sameAs` (LinkedIn, Instagram, YouTube) e `founder` (Lucas Rocha).
-
-## 5. AIO (AI Optimization / llms.txt)
-
-- Reescrever `public/llms.txt` no padrão llmstxt.org (seções H2, links com descrição).
-- Gerar `public/llms-full.txt` durante o build com conteúdo completo de todos os posts + páginas (script `scripts/generate-llms-full.ts`, rodado no `prebuild`).
-- Atualizar `public/robots.txt`: permitir explicitamente GPTBot, PerplexityBot, ClaudeBot, Google-Extended, CCBot.
-- Adicionar `<link rel="alternate" type="text/plain" href="/llms.txt">` em `index.html`.
-
-## 6. SEO técnico
-
-- `WebSite` + `SearchAction` JSON-LD em `index.html` (sitelinks search box).
-- `BreadcrumbList` JSON-LD nas páginas Sobre, Mentoria, Blog e posts.
-- Gerar `public/rss.xml` no build (script `scripts/generate-rss.ts`, rodado no `prebuild`) e linkar em `index.html`.
-- Confirmar que `sitemap.xml` continua coberto pelo gerador existente.
+- Sitemap, RSS, llms.txt, llms-full.txt, schemas JSON-LD, robots.txt: continuam 100% funcionando — eles não dependiam do prerender.
+- O prerender build-time fica desativado no deploy (ele dependia do Puppeteer, que não está disponível). Crawlers modernos do Google, Bing, ChatGPT, Perplexity e Claude já executam JS, então o impacto é pequeno; o conteúdo crítico já está em meta tags + JSON-LD no `index.html` e no `llms-full.txt`.
+- Se no futuro quiser prerender real, alternativa gratuita é gerar HTML estático com um SSG (ex.: migrar pra `vite-react-ssg`) — fica como opção futura, fora do escopo desse fix.
 
 ## Arquivos tocados
 
 ```text
-package.json                          (devDep puppeteer, scripts pre/postbuild)
-vite.config.ts                        (limpeza prerender.io se houver)
-scripts/prerender.ts                  (novo)
-scripts/generate-llms-full.ts         (novo)
-scripts/generate-rss.ts               (novo)
-public/llms.txt                       (reescrita)
-public/robots.txt                     (bots de IA)
-index.html                            (WebSite/ProfessionalService JSON-LD, alternate, limpeza prerender.io)
-src/pages/Sobre.tsx                   (FAQPage + BreadcrumbList)
-src/pages/Mentoria.tsx                (FAQPage + BreadcrumbList)
-src/pages/Blog.tsx                    (BreadcrumbList)
-src/pages/BlogPost.tsx                (BreadcrumbList)
-src/components/JsonLd.tsx             (helpers novos)
-mem://features/seo                    (atualizar)
+package.json   (trocar bun→npm em predev/prebuild; remover postbuild)
 ```
 
-## Ganhos esperados
-
-- Crawlers e IAs passam a ver HTML completo por rota → indexação correta e citações em ChatGPT/Perplexity/Claude.
-- +30–80% tráfego orgânico Google em 30–90 dias.
-- +10–25% CTR via rich results (FAQ, Breadcrumb, HowTo).
-- Visibilidade local (clínicas no BR) via ProfessionalService.
-- Custo zero, sem dependência externa.
-
-## Confirmação para implementar
-
-Responda "pode ir" para entrar em build mode e executar.
+Responda "pode ir" para aplicar o fix.

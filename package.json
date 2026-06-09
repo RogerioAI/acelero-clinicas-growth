@@ -5,11 +5,10 @@
   "type": "module",
   "scripts": {
     "gen:seo": "tsx --import ./scripts/_register.mjs scripts/generate-sitemap.ts && tsx --import ./scripts/_register.mjs scripts/generate-rss.ts && tsx --import ./scripts/_register.mjs scripts/generate-llms-full.ts",
-    "predev": "bun run gen:seo",
+    "predev": "npm run gen:seo",
     "dev": "vite",
-    "prebuild": "bun run gen:seo",
+    "prebuild": "npm run gen:seo",
     "build": "vite build",
-    "postbuild": "tsx scripts/prerender.ts",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview"

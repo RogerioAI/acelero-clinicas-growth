@@ -112,6 +112,17 @@ const Mentoria = () => {
       </Helmet>
       <JsonLd data={courseSchema} />
       <JsonLd data={breadcrumbSchema} />
+      <JsonLd data={{
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "Para quem é a Mentoria A.C.E.L.E.R.O?", "acceptedAnswer": { "@type": "Answer", "text": "Para donos e gestores de clínicas médicas e odontológicas que querem estruturar a área comercial, aumentar a conversão e escalar o faturamento com previsibilidade." } },
+          { "@type": "Question", "name": "Qual a duração da mentoria?", "acceptedAnswer": { "@type": "Answer", "text": "Programa de 4 a 6 meses com sessões quinzenais, diagnóstico inicial, dashboards, scripts e templates prontos para sua operação." } },
+          { "@type": "Question", "name": "Quais são as 7 fases do método?", "acceptedAnswer": { "@type": "Answer", "text": "1) Alinhamento Estratégico, 2) Canais de Aquisição, 3) Estrutura Comercial, 4) Liderança Comercial, 5) Engrenagem de Vendas, 6) Rampagem Comercial e 7) Ousadia para Escalar." } },
+          { "@type": "Question", "name": "Como faço para contratar?", "acceptedAnswer": { "@type": "Answer", "text": "O primeiro passo é o diagnóstico comercial gratuito em https://diagnostico.acelero.vc/ — a partir dele apresentamos o plano e o investimento adequados à realidade da sua clínica." } },
+          { "@type": "Question", "name": "A mentoria atende todo o Brasil?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. As sessões são online, ao vivo, e atendemos clínicas em todo o território brasileiro." } }
+        ]
+      }} />
 
       <div className="min-h-screen">
         <Header />

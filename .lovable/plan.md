@@ -1,61 +1,73 @@
-## Objetivo
+# Plano: Prerender + SEO/AEO/GEO/AIO completo
 
-Publicar o 9º post do blog ("Pré-venda em clínica: o que é, como estruturar e por que ela define se você fatura ou não"), seguindo exatamente o padrão dos posts existentes (capa, autor, CTA de diagnóstico, FAQ, JSON-LD), e otimizado para SEO tradicional + AEO/GEO/AIO (busca por IAs como ChatGPT, Perplexity, Gemini).
+Objetivo: fazer crawlers (Google, Bing) e IAs (ChatGPT, Perplexity, Claude, Gemini) lerem HTML pronto de cada rota, com schemas ricos, e remover qualquer resquício do prerender.io.
 
-## Assets
+## 1. Prerender build-time (gratuito, sem serviço externo)
 
-1. **Capa do post** — gerar via `imagegen` em `src/assets/blog/pre-venda-clinica.jpg` (1920×1080, estilo dark/cyan coerente com o brand, conceito: funil comercial / WhatsApp / agendamento).
-2. **Imagem 1 (3 funções da pré-venda)** — copiar `user-uploads://3_funções_da_pre-venda_em_clinicas.png` → `src/assets/blog/pre-venda-3-funcoes.png`.
-3. **Imagem 2 (3 toques de confirmação)** — copiar `user-uploads://3_estrategias_que_reduzem_faltas_na_clinica.png` → `src/assets/blog/pre-venda-3-toques-confirmacao.png`.
+- Adicionar `puppeteer` como devDependency.
+- Criar `scripts/prerender.ts`: sobe servidor estático em `dist/`, abre Chromium headless em cada rota da lista, espera hidratação, salva HTML final em `dist/{rota}/index.html`.
+- Rotas a prerenderizar: `/`, `/sobre`, `/mentoria`, `/blog`, e cada post de `src/data/blogPosts.ts`.
+- Wire-up em `package.json`: `"postbuild": "bunx tsx scripts/prerender.ts"`.
 
-As duas imagens serão importadas como ES6 e embutidas no `content` em markdown nos pontos `![][image1]` e `![][image2]` do texto original (substituídas por `![alt descritivo](url)` com `loading="lazy"` via tag `<img>` quando necessário para preservar atributos).
+Resultado: cada URL serve HTML completo com `<title>`, `<meta>`, JSON-LD e conteúdo visível — sem JS.
 
-## Conteúdo
+## 2. Remover prerender.io
 
-Adicionar novo objeto em `src/data/blogPosts.ts`:
+- Buscar e remover qualquer referência a `prerender.io`, `prerender-token`, user-agent sniffing, middlewares, headers, comentários e variáveis em: `index.html`, `vite.config.ts`, `public/`, `src/`, `package.json`, `.env*`, `mem://features/seo`.
+- Atualizar memória `mem://features/seo` removendo prerender.io e documentando a nova abordagem build-time.
 
-- `id: 9`
-- `slug: "pre-venda-clinica-como-estruturar"`
-- `category: "Processos Comerciais"`
-- `tags: ["pré-venda", "SDR", "WhatsApp", "no-show", "agendamento", "mentoria comercial"]`
-- `date: "20 Mai 2026"`, `updatedAt: "2026-05-20"`
-- `readTime: "11 min"`
-- `thumbnail`: capa gerada
-- `excerpt`: 1 frase de gancho (versão curta do resumo executivo)
-- `content`: texto do .md adaptado (h2 = `##`, h3 = `###`), imagens nos pontos corretos, sem long-dash (regra do projeto), com o CTA final apontando para `https://diagnostico.acelero.vc/` (não para `/metodo`)
-- `faq`: 5 perguntas do bloco "Perguntas frequentes" do .md (já vêm prontas no texto)
+## 3. AEO (Answer Engine Optimization)
 
-## SEO / AEO / GEO / AIO
+- `FAQPage` JSON-LD nas páginas Sobre e Mentoria (perguntas reais que clínicas fazem sobre pré-venda, mentoria, ROI).
+- Reescrever introduções dos posts em formato "pergunta → resposta direta em 2 frases → detalhamento" (People Also Ask friendly).
+- `HowTo` schema na seção do método ACELERO da home.
 
-Otimizações para busca tradicional + busca por IAs:
+## 4. GEO (Generative Engine Optimization / busca local)
 
-**SEO clássico (campos já existentes):**
-- `metaTitle`: ≤60 chars — `"Pré-venda em clínica: como estruturar e faturar mais"`
-- `metaDescription`: ≤155 chars com keyword principal
-- `keywords`: "pré-venda clínica, SDR clínica odontológica, qualificação de lead, no-show, agendamento WhatsApp, mentoria comercial"
-- Slug curto e descritivo
+- Adicionar `ProfessionalService` JSON-LD em `index.html` com `areaServed: BR`, `serviceType`, `priceRange`.
+- Enriquecer `Organization` com `sameAs` (LinkedIn, Instagram, YouTube) e `founder` (Lucas Rocha).
 
-**AEO (Answer Engine Optimization):**
-- Resumo executivo no topo (já vem no .md) — responde direto a "o que é pré-venda em clínica"
-- Headings em forma de pergunta/resposta
-- `faq` populado → renderiza `BlogFAQ` + injeta `FAQPage` JSON-LD (já implementado em `BlogPost.tsx`)
-- Frases curtas, declarativas (formato ideal para featured snippet)
+## 5. AIO (AI Optimization / llms.txt)
 
-**GEO (Generative Engine Optimization) / AIO (AI Optimization):**
-- Definições objetivas e citáveis (1 frase, sujeito + verbo + objeto) que IAs extraem como citação
-- Listas numeradas com dados concretos (% de no-show, R$ de custo, prazos em dias) — IAs preferem citar fontes com números específicos
-- Bloco de atribuição no final ("Texto produzido pela Acelero. Lucas Rocha…") — sinaliza autoridade
-- `Article` JSON-LD já inclui `author`, `publisher`, `wordCount`, `speakable`, `about` (BlogPost.tsx)
-- `BreadcrumbList` JSON-LD já incluído
-- Cobertura de intenções de busca: "o que é", "como estruturar", "em quanto tempo", "quanto custa", "diferença entre" — todas presentes nas H2/H3 e FAQ
+- Reescrever `public/llms.txt` no padrão llmstxt.org (seções H2, links com descrição).
+- Gerar `public/llms-full.txt` durante o build com conteúdo completo de todos os posts + páginas (script `scripts/generate-llms-full.ts`, rodado no `prebuild`).
+- Atualizar `public/robots.txt`: permitir explicitamente GPTBot, PerplexityBot, ClaudeBot, Google-Extended, CCBot.
+- Adicionar `<link rel="alternate" type="text/plain" href="/llms.txt">` em `index.html`.
 
-**Sem código novo necessário** para JSON-LD: `src/pages/BlogPost.tsx` já gera `Article`, `FAQPage` e `BreadcrumbList` automaticamente a partir dos campos do post. Sitemap também é auto-descoberto via `scripts/generate-sitemap` parseando `blogPosts.ts`.
+## 6. SEO técnico
 
-## Arquivos afetados
+- `WebSite` + `SearchAction` JSON-LD em `index.html` (sitelinks search box).
+- `BreadcrumbList` JSON-LD nas páginas Sobre, Mentoria, Blog e posts.
+- Gerar `public/rss.xml` no build (script `scripts/generate-rss.ts`, rodado no `prebuild`) e linkar em `index.html`.
+- Confirmar que `sitemap.xml` continua coberto pelo gerador existente.
 
-- `src/assets/blog/pre-venda-clinica.jpg` (novo, gerado)
-- `src/assets/blog/pre-venda-3-funcoes.png` (novo, copiado do upload)
-- `src/assets/blog/pre-venda-3-toques-confirmacao.png` (novo, copiado do upload)
-- `src/data/blogPosts.ts` (adiciona import dos 3 assets + objeto do post 9 no array)
+## Arquivos tocados
 
-Nada mais precisa ser editado: header, footer, autor, CTA de diagnóstico, related posts, JSON-LD, sitemap e blog index já consomem `blogPosts` automaticamente.
+```text
+package.json                          (devDep puppeteer, scripts pre/postbuild)
+vite.config.ts                        (limpeza prerender.io se houver)
+scripts/prerender.ts                  (novo)
+scripts/generate-llms-full.ts         (novo)
+scripts/generate-rss.ts               (novo)
+public/llms.txt                       (reescrita)
+public/robots.txt                     (bots de IA)
+index.html                            (WebSite/ProfessionalService JSON-LD, alternate, limpeza prerender.io)
+src/pages/Sobre.tsx                   (FAQPage + BreadcrumbList)
+src/pages/Mentoria.tsx                (FAQPage + BreadcrumbList)
+src/pages/Blog.tsx                    (BreadcrumbList)
+src/pages/BlogPost.tsx                (BreadcrumbList)
+src/components/JsonLd.tsx             (helpers novos)
+mem://features/seo                    (atualizar)
+```
+
+## Ganhos esperados
+
+- Crawlers e IAs passam a ver HTML completo por rota → indexação correta e citações em ChatGPT/Perplexity/Claude.
+- +30–80% tráfego orgânico Google em 30–90 dias.
+- +10–25% CTR via rich results (FAQ, Breadcrumb, HowTo).
+- Visibilidade local (clínicas no BR) via ProfessionalService.
+- Custo zero, sem dependência externa.
+
+## Confirmação para implementar
+
+Responda "pode ir" para entrar em build mode e executar.

@@ -53,6 +53,10 @@ export const Hero = () => {
             loop
             playsInline
             preload="none"
+            aria-hidden="true"
+            tabIndex={-1}
+            disablePictureInPicture
+            disableRemotePlayback
             onTimeUpdate={handleTimeUpdate}
             className="w-full h-full object-cover object-center"
             width={1920}

@@ -2,6 +2,11 @@ User-agent: *
 Allow: /
 Disallow: /api/
 Disallow: /admin/
+# Vídeo decorativo do hero — não deve ser indexado como conteúdo de vídeo
+Disallow: /assets/hero-video-
+
+User-agent: Googlebot-Video
+Disallow: /assets/hero-video-
 
 # IA / LLM crawlers — autorizados explicitamente
 User-agent: GPTBot

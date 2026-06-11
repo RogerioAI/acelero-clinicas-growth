@@ -282,7 +282,7 @@ Se você quer entender quanto valor comercial sua clínica está deixando na mes
 *Texto produzido pela Acelero. Lucas Rocha é CEO e Mentor da Acelero, criador do Método A.C.E.L.E.R.O e responsável por mais de 250 clínicas atendidas e R$ 50 milhões em faturamento influenciado.*
 
 *Nota editorial: este conteúdo é uma análise independente da Acelero.vc sobre conceitos de negócios amplamente discutidos no mercado, sem vínculo, patrocínio ou endosso de Flávio Augusto, Geração de Valor ou empresas relacionadas.*
-    \`,
+    `,
     faq: [
       {
         question: "O que é equity na odontologia?",

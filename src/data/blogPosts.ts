@@ -177,7 +177,7 @@ E isso muda completamente o valor do negócio. Porque uma clínica com processo 
 
 Construir equity na odontologia não começa com uma planilha bonita de valuation. Começa com execução. Nos próximos 90 dias, uma clínica já pode sair do escuro e começar a construir uma operação comercial mais valiosa.
 
-<figure class="my-10"><img src="${'${equityRoteiro90Image}'}" alt="Roteiro de 90 dias para construir valor comercial em uma clínica odontológica com o Método A.C.E.L.E.R.O" class="w-full h-auto rounded-xl" loading="lazy" decoding="async" /><figcaption class="text-sm text-muted-foreground text-center mt-3">Roteiro de 90 dias para transformar operação comercial em valor de negócio.</figcaption></figure>
+<figure class="my-10"><img src="${equityRoteiro90Image}" alt="Roteiro de 90 dias para construir valor comercial em uma clínica odontológica com o Método A.C.E.L.E.R.O" class="w-full h-auto rounded-xl" loading="lazy" decoding="async" /><figcaption class="text-sm text-muted-foreground text-center mt-3">Roteiro de 90 dias para transformar operação comercial em valor de negócio.</figcaption></figure>
 
 ### Nas próximas 48 horas: medir a operação atual
 

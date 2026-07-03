@@ -17,6 +17,7 @@ import equityOdontoImage from "@/assets/blog/equity-odontologia-crescimento.jpg"
 import equityRoteiro90Image from "@/assets/blog/equity-roteiro-90-dias.png";
 import posVendaClinicaImage from "@/assets/blog/pos-venda-clinica-relacionamento.jpg";
 import posVenda3FrentesImage from "@/assets/blog/pos-venda-3-frentes.png";
+import posVendaCadenciaImage from "@/assets/blog/pos-venda-cadencia.png";
 
 export const blogPosts: BlogPost[] = [
   {
@@ -142,13 +143,10 @@ Os quatro indicadores que o pós-venda precisa acompanhar mensalmente:
 
 A cadência de pós-venda é o que transforma boas intenções em processo executável. Sem ela, cada colaborador age por intuição, e o resultado varia de paciente para paciente.
 
-| Momento | Ação | Objetivo |
-| --- | --- | --- |
-| 24-48h após consulta | Follow-up pós-consulta ou pós-procedimento | Cuidado percebido + vínculo |
-| 7 a 15 dias | Pedido de indicação (quando o resultado é visível) | Gerar canal previsível |
-| 30 a 90 dias | Agendamento de manutenção conforme protocolo | Recorrência e LTV |
-| 6 meses de inatividade | Reativação com pretexto de cuidado | Resgatar receita parada |
-| Etapas intermediárias | Contato cadenciado em tratamentos longos | Reduzir abandono |
+<figure class="my-10">
+  <img src="${posVendaCadenciaImage}" alt="Cadência de pós-venda por tempo: 24-48h follow-up, 7-15 dias pedido de indicação, 30-90 dias próximo tratamento ou manutenção, 6-12 meses reativação de inativos" loading="lazy" width="1280" height="720" class="rounded-2xl w-full h-auto border border-border" />
+  <figcaption class="text-sm text-muted-foreground text-center mt-3">Cadência de pós-venda por tempo. Cada momento tem ação e objetivo definidos.</figcaption>
+</figure>
 
 A cadência não é rígida. Adapta-se ao tipo de tratamento, ao perfil do paciente e à especialidade da clínica. O que não muda é a lógica: contato proativo, no momento certo, com objetivo claro.
 

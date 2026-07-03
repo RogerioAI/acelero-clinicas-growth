@@ -178,6 +178,9 @@ Pós-venda não é o detalhe que pode ser deixado para depois. É o que determin
 
 É aqui que atua o Momento 03 da Estrutura Comercial do [Método A.C.E.L.E.R.O](/mentoria). Se você quer entender como estruturar o pós-venda da sua clínica de forma específica para a sua especialidade e o seu porte, **agende um diagnóstico comercial gratuito com nosso time pelo botão abaixo.**
 
+<div style="text-align:center;margin:2.5rem 0;"><a href="https://diagnostico.acelero.vc/" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;justify-content:center;background-color:#17C8D0;color:#ffffff;font-weight:700;padding:0 2.5rem;height:3.5rem;border-radius:0.5rem;text-decoration:none;font-size:1rem;box-shadow:0 10px 30px -10px rgba(23,200,208,0.5);transition:transform 0.3s;">Fazer diagnóstico gratuito</a></div>
+
+
 
 
 *Texto produzido pela Acelero. [Lucas Rocha](/sobre) é CEO e Mentor da Acelero, criador do Método A.C.E.L.E.R.O e responsável por mais de 250 clínicas atendidas e R$ 50 milhões em faturamento influenciado.*

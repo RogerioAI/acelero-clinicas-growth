@@ -87,7 +87,7 @@ A soma dessas três perdas é o que explica a diferença de LTV entre clínicas 
 Pós-venda eficiente opera em três frentes simultaneamente. Cada uma tem objetivo, responsável e métrica próprios.
 
 <figure class="my-10">
-  <img src="${"${posVenda3FrentesImage}"}" alt="As 3 frentes do pós-venda estruturado em clínica: follow-up pós-consulta, retenção e reativação, indicação estruturada" loading="lazy" width="1280" height="832" class="rounded-2xl w-full h-auto border border-border" />
+  <img src="${posVenda3FrentesImage}" alt="As 3 frentes do pós-venda estruturado em clínica: follow-up pós-consulta, retenção e reativação, indicação estruturada" loading="lazy" width="1280" height="832" class="rounded-2xl w-full h-auto border border-border" />
   <figcaption class="text-sm text-muted-foreground text-center mt-3">As 3 frentes operam ao mesmo tempo. Cada uma tem responsável, cadência e indicador próprio.</figcaption>
 </figure>
 
@@ -185,7 +185,7 @@ Pós-venda não é o detalhe que pode ser deixado para depois. É o que determin
 </div>
 
 *Texto produzido pela Acelero. [Lucas Rocha](/sobre) é CEO e Mentor da Acelero, criador do Método A.C.E.L.E.R.O e responsável por mais de 250 clínicas atendidas e R$ 50 milhões em faturamento influenciado.*
-    \`,
+    `,
     faq: [
       {
         question: "O que é pós-venda em clínica?",

@@ -1,7 +1,7 @@
 // Build-time prerender: renders each route to static HTML in dist/.
 // Uses puppeteer headless Chromium. If puppeteer is missing or fails, logs and exits 0
 // so the build never breaks. Run after `vite build`.
-import { existsSync, mkdirSync, writeFileSync, readFileSync } from "fs";
+import { existsSync, mkdirSync, writeFileSync, readFileSync, statSync } from "fs";
 import { resolve, join } from "path";
 import { createServer } from "http";
 import { extname } from "path";
@@ -57,7 +57,7 @@ async function main() {
       const url = (req.url || "/").split("?")[0];
       const filePath = join(DIST, url);
       if (existsSync(filePath) && !filePath.endsWith("/")) {
-        const stat = require("fs").statSync(filePath);
+        const stat = statSync(filePath);
         if (stat.isFile()) {
           const ct = MIME[extname(filePath)] || "application/octet-stream";
           res.writeHead(200, { "Content-Type": ct });

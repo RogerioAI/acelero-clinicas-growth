@@ -76,6 +76,7 @@ async function main() {
   await new Promise<void>((r) => server.listen(PORT, r));
 
   let browser;
+  let rendered = 0;
   try {
     browser = await puppeteer.launch({ headless: "new", args: ["--no-sandbox"] });
     for (const route of routes) {
@@ -90,12 +91,14 @@ async function main() {
         if (!existsSync(outDir)) mkdirSync(outDir, { recursive: true });
         writeFileSync(join(outDir, "index.html"), html);
         console.log(`[prerender] ${route}`);
+        rendered++;
       } catch (e) {
         console.warn(`[prerender] failed ${route}:`, (e as Error).message);
       } finally {
         await page.close();
       }
     }
+    console.log(`[prerender] Páginas pré-renderizadas: ${rendered}`);
   } catch (e) {
     console.warn("[prerender] browser error:", (e as Error).message);
   } finally {

@@ -9,6 +9,7 @@
     "dev": "vite",
     "prebuild": "npm run gen:seo",
     "build": "vite build",
+    "postbuild": "tsx --import ./scripts/_register.mjs scripts/prerender.ts",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview"

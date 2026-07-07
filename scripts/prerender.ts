@@ -87,6 +87,13 @@ async function main() {
       page.on("response", (res) => {
         if (!res.ok()) console.log(`[browser:${route}] response ${res.status()}:`, res.url());
       });
+      // Skip audio/video downloads: crawlers only need the HTML/text, and large
+      // videos never reach "networkidle0", causing navigation timeouts (seen on "/").
+      await page.setRequestInterception(true);
+      page.on("request", (req) => {
+        if (req.resourceType() === "media") req.abort();
+        else req.continue();
+      });
       try {
         await page.goto(`http://localhost:${PORT}${route}`, { waitUntil: "networkidle0", timeout: 30000 });
         await page.waitForSelector("#root > *", { timeout: 10000 });

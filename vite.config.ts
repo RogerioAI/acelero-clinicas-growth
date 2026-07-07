@@ -63,12 +63,6 @@ function buildSitemapXml(posts: Array<{ slug: string; date: string }>): string {
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>`);
-  entries.push(`  <url>
-    <loc>${DOMAIN}/contato</loc>
-    <lastmod>${today}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>`);
 
   for (const post of posts) {
     const lastmod = parsePtDate(post.date);
@@ -110,7 +104,7 @@ function sitemapPlugin(): Plugin {
         const distDir = path.resolve(__dirname, "dist");
         mkdirSync(distDir, { recursive: true });
         writeFileSync(path.resolve(distDir, "sitemap.xml"), xml, "utf-8");
-        console.log(`✅ sitemap.xml generated with ${posts.length} blog posts + 2 static pages`);
+        console.log(`✅ sitemap.xml generated with ${posts.length} blog posts + 4 static pages`);
       } catch (e) {
         console.error("Failed to generate sitemap at build time:", e);
       }

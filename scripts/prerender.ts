@@ -81,6 +81,12 @@ async function main() {
     browser = await puppeteer.launch({ headless: "new", args: ["--no-sandbox"] });
     for (const route of routes) {
       const page = await browser.newPage();
+      page.on("console", (msg) => console.log(`[browser:${route}] console.${msg.type()}:`, msg.text()));
+      page.on("pageerror", (err) => console.log(`[browser:${route}] pageerror:`, err.message));
+      page.on("requestfailed", (req) => console.log(`[browser:${route}] requestfailed:`, req.url(), req.failure()?.errorText));
+      page.on("response", (res) => {
+        if (!res.ok()) console.log(`[browser:${route}] response ${res.status()}:`, res.url());
+      });
       try {
         await page.goto(`http://localhost:${PORT}${route}`, { waitUntil: "networkidle0", timeout: 30000 });
         await page.waitForSelector("#root > *", { timeout: 10000 });

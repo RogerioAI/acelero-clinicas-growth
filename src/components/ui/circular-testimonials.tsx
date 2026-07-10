@@ -284,7 +284,7 @@ export const CircularTestimonials = ({
                 style={getImageStyle(index)}
                 autoPlay={isActive}
                 muted={mutedStates[index]}
-                loop
+                loop={mutedStates[index]}
                 playsInline
                 preload="none"
               />

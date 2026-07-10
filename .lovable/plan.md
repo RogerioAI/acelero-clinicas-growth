@@ -1,17 +1,13 @@
-## Objetivo
-Evitar "áudio fantasma" nos depoimentos em vídeo da seção "Mais de 250 clínicas impactadas": o som deve parar automaticamente quando o vídeo terminar ou quando a pessoa mudar para outro depoimento.
+## Problema
+No componente `CircularTestimonials`, o `<video>` está com o atributo `loop`. Isso faz o vídeo reiniciar automaticamente ao terminar, então o evento `ended` nunca dispara e o áudio fica se repetindo indefinidamente.
 
-## Escopo
-Somente `src/components/ui/circular-testimonials.tsx`. Nenhuma mudança de layout, textos ou outros componentes.
+## Correção
+Tornar o `loop` condicional: só ativar quando o vídeo está mutado (modo carrossel silencioso). Quando o usuário desmuta, o vídeo toca uma vez, dispara `ended` e o handler existente:
+1. muta o vídeo atual,
+2. avança para o próximo depoimento do carrossel,
+3. o `useEffect` de troca já pausa/reinicia os demais vídeos, cortando o áudio.
 
-## Comportamento novo
-1. **Ao terminar o vídeo** — o vídeo é automaticamente mutado (ícone volta para "Ativar som") e o autoplay do carrossel volta a rodar.
-2. **Ao trocar de depoimento** (setas, teclado ou autoplay) — todos os vídeos que não são o ativo são mutados e pausados, garantindo que nenhum áudio continue tocando em segundo plano.
+## Alteração
+- `src/components/ui/circular-testimonials.tsx`, linha ~287: trocar `loop` por `loop={mutedStates[index]}` no `<video>`.
 
-## Detalhes técnicos
-- Adicionar `onEnded` no `<video>` (linha ~256) que faz `setMutedStates` marcando o índice atual como `true` e pausa o vídeo.
-- Adicionar um `useEffect` dependente de `activeIndex` que percorre `videoRefs.current` e, para cada vídeo cujo índice for diferente do ativo, seta `muted = true`, pausa e reinicia (`currentTime = 0`) — além de atualizar `mutedStates` para refletir o ícone correto.
-- Manter a lógica atual de pausa do autoplay quando o vídeo ativo está com som.
-
-## Arquivos alterados
-- `src/components/ui/circular-testimonials.tsx`
+Nenhuma outra mudança de comportamento, layout ou lógica.

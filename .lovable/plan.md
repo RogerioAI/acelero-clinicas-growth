@@ -1,35 +1,17 @@
-## Diagnóstico
+## Objetivo
+Evitar "áudio fantasma" nos depoimentos em vídeo da seção "Mais de 250 clínicas impactadas": o som deve parar automaticamente quando o vídeo terminar ou quando a pessoa mudar para outro depoimento.
 
-Após analisar o site depois das últimas atualizações (novo post "Pós-venda em clínica: como transformar pacientes em receita recorrente"), identifiquei que a infraestrutura de SEO/GEO/AEO/AIO está muito sólida (JSON-LD Article + FAQPage + BreadcrumbList, Helmet por rota, llms.txt/llms-full.txt, RSS, robots com liberação explícita para GPTBot/PerplexityBot/ClaudeBot etc.). Porém o novo post **não foi propagado** para os arquivos de descoberta. Isso derruba AEO/AIO justamente no conteúdo mais fresco.
+## Escopo
+Somente `src/components/ui/circular-testimonials.tsx`. Nenhuma mudança de layout, textos ou outros componentes.
 
-## Correções necessárias
+## Comportamento novo
+1. **Ao terminar o vídeo** — o vídeo é automaticamente mutado (ícone volta para "Ativar som") e o autoplay do carrossel volta a rodar.
+2. **Ao trocar de depoimento** (setas, teclado ou autoplay) — todos os vídeos que não são o ativo são mutados e pausados, garantindo que nenhum áudio continue tocando em segundo plano.
 
-### 1. Sitemap (SEO — indexação)
-`public/sitemap.xml` não contém a URL do novo post.
-- Adicionar `<url>` para `https://acelero.vc/blog/pos-venda-clinica-receita-recorrente-indicacao-previsivel` com `lastmod`, `changefreq: monthly`, `priority: 0.7`.
+## Detalhes técnicos
+- Adicionar `onEnded` no `<video>` (linha ~256) que faz `setMutedStates` marcando o índice atual como `true` e pausa o vídeo.
+- Adicionar um `useEffect` dependente de `activeIndex` que percorre `videoRefs.current` e, para cada vídeo cujo índice for diferente do ativo, seta `muted = true`, pausa e reinicia (`currentTime = 0`) — além de atualizar `mutedStates` para refletir o ícone correto.
+- Manter a lógica atual de pausa do autoplay quando o vídeo ativo está com som.
 
-### 2. RSS (AIO — descoberta por LLMs e leitores)
-`public/rss.xml` não lista o novo post.
-- Adicionar `<item>` no topo do feed com `title`, `link`, `guid`, `pubDate`, `description` e `category`, seguindo o padrão dos demais itens.
-
-### 3. llms-full.txt (AIO — conteúdo consumido por LLMs)
-O arquivo não inclui o conteúdo do novo post.
-- Anexar seção com título, meta-descrição e corpo do post de pós-venda, no mesmo formato dos posts existentes.
-- Atualizar `public/llms.txt` incluindo o link e resumo curto do novo post na lista "Blog".
-
-### 4. Verificação de consistência (SEO/AEO)
-- Confirmar que a página do novo post renderiza Article + FAQPage + BreadcrumbList (já herda de `BlogPost.tsx` — apenas validar visualmente).
-- Manter o domínio `acelero.vc` em canonical/og:url/sitemap (é o domínio real; o scanner sugeriu o preview `.lovable.app`, mas isso seria regressão — vou ignorar essa sugestão específica).
-
-## O que **não** vou mexer
-
-- `index.html`, `robots.txt`, `PersonSchema`, JSON-LD sitewide — estão corretos e completos.
-- Domínio canônico — permanece `acelero.vc`.
-- Estrutura do post ou componentes de blog — sem mudanças de UI.
-
-## Arquivos a editar
-
-- `public/sitemap.xml`
-- `public/rss.xml`
-- `public/llms.txt`
-- `public/llms-full.txt`
+## Arquivos alterados
+- `src/components/ui/circular-testimonials.tsx`

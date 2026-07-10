@@ -144,6 +144,28 @@ export const CircularTestimonials = ({
     };
   }, [activeIndex, mutedStates, testimonialsLength]);
 
+  // Ao trocar de depoimento, muta e pausa todos os vídeos que não são o ativo
+  // para evitar "áudio fantasma" tocando em segundo plano.
+  useEffect(() => {
+    videoRefs.current.forEach((video, idx) => {
+      if (!video) return;
+      if (idx !== activeIndex) {
+        video.muted = true;
+        video.pause();
+        try {
+          video.currentTime = 0;
+        } catch {
+          /* noop */
+        }
+      }
+    });
+    setMutedStates((prev) => {
+      const newStates = prev.map((state, idx) => (idx === activeIndex ? state : true));
+      const changed = newStates.some((s, i) => s !== prev[i]);
+      return changed ? newStates : prev;
+    });
+  }, [activeIndex]);
+
   // Keyboard navigation
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {

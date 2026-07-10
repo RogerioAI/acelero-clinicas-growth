@@ -1,0 +1,20 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  RewriteRule ^home/?$ / [R=301,L]
+
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  RewriteCond %{REQUEST_URI} \.(js|css|xml|png|jpg|jpeg|gif|pdf|txt|ico|zip|mp3|mp4|mov|wmv|avi|ttf|woff|woff2|svg|eot|webp|avif)$ [NC]
+  RewriteRule ^ - [L]
+
+  RewriteCond %{HTTP_USER_AGENT} (googlebot|bingbot|yandex|baiduspider|twitterbot|facebookexternalhit|rogerbot|linkedinbot|slackbot|whatsapp|telegrambot|applebot|duckduckbot|discordbot|gptbot|anthropic-ai|claude-web|cohere-ai|perplexity|ia_archiver|outbrain|pinterest) [NC,OR]
+  RewriteCond %{QUERY_STRING} _escaped_fragment_
+  RewriteRule ^(.*) https://service.prerender.io/Zn0AfZskChjF81k2oLni/%{REQUEST_SCHEME}://%{HTTP_HOST}/$1 [R=302,L]
+
+  RewriteRule ^ index.html [L]
+
+</IfModule>

@@ -1,0 +1,33 @@
+# Acelero
+
+> Mentoria comercial para clínicas médicas e odontológicas. Método A.C.E.L.E.R.O: estruture pré-venda, venda e pós-venda e escale o faturamento com previsibilidade.
+
+Acelero é uma aceleradora comercial especializada no setor da saúde, fundada por Lucas Rocha (+15 anos de experiência, +250 clínicas atendidas). O Método A.C.E.L.E.R.O foi desenvolvido a partir de operações reais e tem 7 fases: Alinhamento Estratégico, Canais de Aquisição, Estrutura Comercial, Liderança Comercial, Engrenagem de Vendas, Rampagem Comercial e Ousadia para Escalar.
+
+## Páginas
+
+- [Home](https://acelero.vc/): Mentoria comercial para clínicas, método A.C.E.L.E.R.O, depoimentos e formulário de contato.
+- [Sobre](https://acelero.vc/sobre): Trajetória e credenciais de Lucas Rocha, fundador da Acelero.
+- [Mentoria](https://acelero.vc/mentoria): Detalhes do programa A.C.E.L.E.R.O — etapas, formato, duração e investimento.
+- [Blog](https://acelero.vc/blog): Artigos sobre vendas, gestão, marketing e processos comerciais para clínicas.
+
+## Blog (artigos selecionados)
+
+- [Pós-venda em clínica: receita recorrente e indicação previsível](https://acelero.vc/blog/pos-venda-clinica-receita-recorrente-indicacao-previsivel): As 3 frentes do pós-venda estruturado (retenção, recorrência, indicação) e roteiro de 30 dias para 3x o LTV.
+- [Pré-venda em clínica: como estruturar](https://acelero.vc/blog/pre-venda-clinica-como-estruturar): As 3 funções da pré-venda (qualificar, aquecer, agendar com confirmação) e o modelo dos 3 toques.
+- [No-show na clínica: 5 táticas para reduzir faltas](https://acelero.vc/blog/no-show-clinica-reduzir-faltas-ate-30): Economia comportamental aplicada a confirmação e compromisso do paciente.
+- [SPIN Selling na odontologia](https://acelero.vc/blog/spin-selling-odontologia-transformar-conversas-fechamento): Guia completo com perguntas de Situação, Problema, Implicação e Necessidade.
+- [Google Meu Negócio para clínicas](https://acelero.vc/blog/google-meu-negocio-clinicas-reviews-que-viram-agenda): Otimização de reviews e presença local que vira agenda.
+- [Telemedicina: fluxo comercial em 7 etapas](https://acelero.vc/blog/telemedicina-captacao-fidelizacao-fluxo-comercial-7-etapas): Captação e fidelização na telemedicina.
+- [Como aumentar o faturamento da clínica](https://acelero.vc/blog/como-aumentar-faturamento-clinica-vendas): Guia completo de vendas e gargalos comerciais.
+- [Planos pet e check-ups sazonais](https://acelero.vc/blog/planos-pet-checkups-sazonais-calendario-comercial): Calendário comercial do ano para clínicas veterinárias.
+
+## Recursos para LLMs
+
+- [llms-full.txt](https://acelero.vc/llms-full.txt): Conteúdo completo de todos os artigos para indexação por IA.
+- [RSS](https://acelero.vc/rss.xml): Feed dos artigos do blog.
+- [Sitemap](https://acelero.vc/sitemap.xml): Estrutura completa de URLs.
+
+## Diagnóstico gratuito
+
+- [Diagnóstico comercial gratuito](https://diagnostico.acelero.vc/): Sessão para análise da operação comercial e plano inicial.
